@@ -1,0 +1,1236 @@
+<!DOCTYPE HTML>
+<html lang="ko" >
+    
+    <head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161001174-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-161001174-4');
+</script>
+
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Pattern Rules | Introduction</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./static_pattern_rules.html" />
+    
+    
+    <link rel="prev" href="./double_colon_rules.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="5.2"
+        data-chapter-title="Pattern Rules"
+        data-filepath="pattern_rules.md"
+        data-basepath="."
+
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="bug_reports.html">
+            
+                
+                    <a href="./bug_reports.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Bug Reports
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="variables_and_functions.html">
+            
+                
+                    <a href="./variables_and_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Variables and Functions
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="multiline_variables.html">
+            
+                
+                    <a href="./multiline_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Multi-Line Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="target_specific_variables.html">
+            
+                
+                    <a href="./target_specific_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Target-Specific Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="automatic_variables.html">
+            
+                
+                    <a href="./automatic_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Automatic Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="substitution_references.html">
+            
+                
+                    <a href="./substitution_references.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Substitution References
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="special_variables.html">
+            
+                
+                    <a href="./special_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Special Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="directives.html">
+            
+                
+                    <a href="./directives.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Directives
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="conditional_directives.html">
+            
+                
+                    <a href="./conditional_directives.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Conditional Directives
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="rules.html">
+            
+                
+                    <a href="./rules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Rules
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="double_colon_rules.html">
+            
+                
+                    <a href="./double_colon_rules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Double-Colon Rules
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.2" data-path="pattern_rules.html">
+            
+                
+                    <a href="./pattern_rules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Pattern Rules
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="static_pattern_rules.html">
+            
+                
+                    <a href="./static_pattern_rules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Static Pattern Rules
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="recipes.html">
+            
+                
+                    <a href="./recipes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Recipes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="DAG.html">
+            
+                
+                    <a href="./DAG.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        DAG
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="special_targets.html">
+            
+                
+                    <a href="./special_targets.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Special Targets
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="recursive_make.html">
+            
+                
+                    <a href="./recursive_make.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Recursive Make
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="include.html">
+            
+                
+                    <a href="./include.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Include
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="one_DAG.html">
+            
+                
+                    <a href="./one_DAG.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        One DAG
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="parallel_execution.html">
+            
+                
+                    <a href="./parallel_execution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Parallel Execution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="builtin_functions.html">
+            
+                
+                    <a href="./builtin_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Built-in Functions
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="builtin_functions/text_functions.html">
+            
+                
+                    <a href="./builtin_functions/text_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Text Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="builtin_functions/file_name_functions.html">
+            
+                
+                    <a href="./builtin_functions/file_name_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        File Name Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="builtin_functions/conditional_functions.html">
+            
+                
+                    <a href="./builtin_functions/conditional_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.3.</b>
+                        
+                        Conditional Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="builtin_functions/foreach_function.html">
+            
+                
+                    <a href="./builtin_functions/foreach_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.4.</b>
+                        
+                        Foreach Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="builtin_functions/file_function.html">
+            
+                
+                    <a href="./builtin_functions/file_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.5.</b>
+                        
+                        File Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="builtin_functions/call_function.html">
+            
+                
+                    <a href="./builtin_functions/call_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.6.</b>
+                        
+                        Call Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.7" data-path="builtin_functions/eval_function.html">
+            
+                
+                    <a href="./builtin_functions/eval_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.7.</b>
+                        
+                        Eval Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.8" data-path="builtin_functions/value_function.html">
+            
+                
+                    <a href="./builtin_functions/value_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.8.</b>
+                        
+                        Value Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.9" data-path="builtin_functions/origin_function.html">
+            
+                
+                    <a href="./builtin_functions/origin_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.9.</b>
+                        
+                        Origin Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.10" data-path="builtin_functions/flavor_function.html">
+            
+                
+                    <a href="./builtin_functions/flavor_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.10.</b>
+                        
+                        Flavor Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.11" data-path="builtin_functions/make_control_functions.html">
+            
+                
+                    <a href="./builtin_functions/make_control_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.11.</b>
+                        
+                        Make Control Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.12" data-path="builtin_functions/shell_function.html">
+            
+                
+                    <a href="./builtin_functions/shell_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.12.</b>
+                        
+                        Shell Function
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="command_line_options.html">
+            
+                
+                    <a href="./command_line_options.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Command-line Options
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="debugging.html">
+            
+                
+                    <a href="./debugging.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Debugging
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="tips.html">
+            
+                
+                    <a href="./tips.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Tips
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="closing.html">
+            
+                
+                    <a href="./closing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        맺음말
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Introduction</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="pattern-rules">Pattern Rules</h1>
+<p>rule &#xC744; &#xC791;&#xC131;&#xD560; &#xB54C; &#xD0C0;&#xAC9F; &#xC704;&#xCE58;&#xC5D0;&#xB294; multiple targets &#xC774; &#xC62C; &#xC218; &#xC788;&#xC9C0;&#xB9CC;
+&#xADF8;&#xB807;&#xB2E4;&#xACE0; prerequisites &#xC790;&#xB9AC;&#xC5D0;&#xB3C4; &#xBAA8;&#xB4E0; &#xD0C0;&#xAC9F;&#xC758; prerequisites &#xB4E4;&#xC744; &#xC704;&#xCE58;&#xC2DC;&#xD0AC; &#xC218;&#xB294; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC65C;&#xB0D0;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xB8F0;&#xC744; &#xC791;&#xC131;&#xD558;&#xBA74; &#xAC01; &#xD0C0;&#xAC9F;&#xC758; &#xC758;&#xC874;&#xC131;&#xC73C;&#xB85C; &#xBAA8;&#xB4E0; prerequisites &#xB4E4;&#xC774; &#xC124;&#xC815;&#xB418;&#xACE0;
+foo.o &#xD0C0;&#xAC9F;&#xC744; &#xC0DD;&#xC131;&#xD560; &#xB54C;&#xB294; foo.c foo.h &#xB9CC; &#xC0AC;&#xC6A9;&#xD558;&#xACE0;
+bar.o &#xD0C0;&#xAC9F;&#xC744; &#xC0DD;&#xC131;&#xD560; &#xB54C;&#xB294; bar.c bar.h &#xB9CC; &#xC0AC;&#xC6A9;&#xD560; &#xC218;&#xAC00; &#xC5C6;&#xAE30; &#xB54C;&#xBB38;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">foo.o bar.o zoo.o : foo.c foo.h bar.c bar.h zoo.c zoo.h
+    gcc -c -o $@ ???
+</code></pre>
+<p>&#xB530;&#xB77C;&#xC11C; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB8F0;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xB824;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAC01; &#xD0C0;&#xAC9F;&#xC5D0; &#xB300;&#xD55C; &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC744; &#xBD84;&#xB9AC;&#xD574;&#xC11C; &#xC791;&#xC131;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.
+&#xADF8;&#xB7F0;&#xB370; &#xC774; &#xBC29;&#xBC95;&#xC740; &#xC18C;&#xC2A4;&#xD30C;&#xC77C;&#xC758; &#xAC1C;&#xC218;&#xAC00; &#xB9CE;&#xC544;&#xC9C0;&#xBA74; &#xB3D9;&#xC77C;&#xD55C; &#xD328;&#xD134;&#xC758; &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC774; &#xACC4;&#xC18D; &#xCD94;&#xAC00;&#xB418;&#xACE0; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xACB0;&#xACFC;&#xB97C; &#xAC16;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.
+&#xADF8;&#xB798;&#xC11C; &#xC774;&#xC640; &#xAC19;&#xC740; &#xACBD;&#xC6B0; &#xC911;&#xBCF5;&#xC744; &#xC81C;&#xAC70;&#xD558;&#xACE0; &#xAC04;&#xB2E8;&#xD788; &#xD558;&#xAE30; &#xC704;&#xD574; &#xB098;&#xC628; &#xAC83;&#xC774; <code>%</code> &#xBB38;&#xC790;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xB294; pattern rule &#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">foo.o : foo.c foo.h
+bar.o : bar.c bar.h
+zoo.o : zoo.c zoo.h   <span class="hljs-comment"># &#xC18C;&#xC2A4;&#xD30C;&#xC77C;&#xC758; &#xAC1C;&#xC218;&#xAC00; &#xB9CE;&#xC544;&#xC9C0;&#xBA74; &#xB3D9;&#xC77C;&#xD55C; &#xD328;&#xD134;&#xC758; &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC774; &#xC911;&#xBCF5;&#xB41C;&#xB2E4;.</span>
+
+foo.o bar.o zoo.o :
+    @echo gcc -c -o $@ $&lt;
+
+.DEFAULT: ;
+
+<span class="hljs-comment">#######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #######</span>
+
+sh$ make foo.o
+gcc -c -o foo.o foo.c
+
+sh$ make bar.o
+gcc -c -o bar.o bar.c
+
+sh$ make zoo.o
+gcc -c -o zoo.o zoo.c
+</code></pre>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC704;&#xC640; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xB3D9;&#xC791;&#xD558;&#xB294; rule &#xC744; pattern rule &#xC744; &#xC774;&#xC6A9;&#xD574; &#xC791;&#xC131;&#xD55C; &#xAC83;&#xC778;&#xB370;&#xC694;.
+pattern rule &#xC740; &#xC18C;&#xC2A4;&#xD30C;&#xC77C;&#xC758; &#xAC1C;&#xC218;&#xAC00; &#xC544;&#xBB34;&#xB9AC; &#xB9CE;&#xC544;&#xC838;&#xB3C4; &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC744; &#xCD94;&#xAC00;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-constant">MAKEFLAGS</span> += -rR     # builtin rule &#xACFC; &#xBCC0;&#xC218;&#xB97C; disable &#xD558;&#xAE30; &#xC704;&#xD55C;&#xAC83;
+
+%.o : %.c %.h
+    @echo gcc -c -o $@ $&lt;
+
+%.c %.h : ;   <span class="hljs-comment"># &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xC704;&#xD55C; &#xAC83;&#xC73C;&#xB85C; explicit rule &#xC5D0;&#xC11C; &apos;.DEFAULT: ;&apos; &#xC640; &#xAC19;&#xC740; &#xC5ED;&#xD560;&#xC744; &#xD569;&#xB2C8;&#xB2E4;.</span>
+
+<span class="hljs-comment">#######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #######</span>
+
+sh$ make foo.o                <span class="hljs-comment"># &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xB3D9;&#xC791;&#xD55C;&#xB2E4;.</span>
+gcc -c -o foo.o foo.c
+
+sh$ make bar.o
+gcc -c -o bar.o bar.c
+
+sh$ make zoo.o
+gcc -c -o zoo.o zoo.c
+</code></pre>
+<h5 id="explicit-rule-&#xACFC;-implicit-rule">explicit rule &#xACFC; implicit rule</h5>
+<p>rule &#xC744; &#xC791;&#xC131;&#xD560; &#xB54C; &#xCCAB; &#xBC88;&#xC9F8;&#xC640; &#xAC19;&#xC774; &#xD0C0;&#xAC9F;&#xC5D0; &#xC9C1;&#xC811; &#xD30C;&#xC77C;&#xBA85;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC744; explicit rule &#xC774;&#xB77C;&#xACE0; &#xD558;&#xACE0;,
+&#xB450; &#xBC88;&#xC9F8;&#xC640; &#xAC19;&#xC774; pattern &#xC774;&#xB098; <a href="#suffix_rules">suffix</a> &#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;&#xC744; implicit rule &#xC774;&#xB77C;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<h4 id="targetspecific-&#xBCC0;&#xC218;&#xB3C4;-&#xC0AC;&#xC6A9;-&#xAC00;&#xB2A5;">Target-specific &#xBCC0;&#xC218;&#xB3C4; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;</h4>
+<p>pattern rule &#xC5D0;&#xC11C;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; target-specific &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xC2DC;&#xBA74; global &#xC601;&#xC5ED;&#xC5D0; CFLAGS &#xBCC0;&#xC218;&#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xC9C0;&#xB9CC;
+<code>%.o</code> &#xD0C0;&#xAC9F;&#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; &#xAC12;&#xC774; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-constant">MAKEFLAGS</span> += -rR
+
+<span class="hljs-constant">CFLAGS</span> := -g
+%.o : CFLAGS := -O2
+%.o : %.c
+    @echo $@ : $^ : $(CFLAGS)
+
+%.c : ;
+
+<span class="hljs-comment">########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ########</span>
+
+sh$ make foo.o
+foo.o : foo.c : -O2
+</code></pre>
+<h4 id="pattern-rule-&#xACFC;-explicit-&#xD0C0;&#xAC9F;-&#xB77C;&#xC778;&#xC744;-&#xAC19;&#xC774;-&#xC0AC;&#xC6A9;">Pattern rule &#xACFC; explicit &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC744; &#xAC19;&#xC774; &#xC0AC;&#xC6A9;</h4>
+<p>pattern rule &#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C; explicit &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xD2B9;&#xC815; &#xD0C0;&#xAC9F;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xC124;&#xC815;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xC2DC;&#xBA74; <code>foo.o</code> &#xD0C0;&#xAC9F;&#xC774; pattern rule &#xACFC; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC5B4; &#xC2E4;&#xD589;&#xB420; &#xB54C;
+explicit &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; &#xAC12;&#xC774; &#xC801;&#xC6A9;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-constant">MAKEFLAGS</span> += -rR
+
+%.o : CFLAGS := -g
+%.o : %.c
+    @echo $@ : $^ : $(CFLAGS)
+
+foo.o: foo.c foo.h bar.h zoo.h
+foo.o: CFLAGS := -O2
+
+.DEFAULT: ;
+%.c : ;
+
+<span class="hljs-comment">########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #######</span>
+
+sh$ make bar.o
+bar.o : bar.c : -g
+
+sh$ make foo.o
+foo.o : foo.c foo.h bar.h zoo.h : -O2
+</code></pre>
+<h3 id="rule-&#xC774;-&#xC120;&#xD0DD;&#xB418;&#xB294;-&#xC6B0;&#xC120;&#xC21C;&#xC704;">Rule &#xC774; &#xC120;&#xD0DD;&#xB418;&#xB294; &#xC6B0;&#xC120;&#xC21C;&#xC704;</h3>
+<p>makefile &#xB0B4;&#xC5D0; explicit rule &#xACFC; implicit rule &#xC774; &#xB3D9;&#xC2DC;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xB9E4;&#xCE6D;&#xC774; &#xC911;&#xBCF5;&#xB420; &#xC218; &#xC788;&#xB294;&#xB370;
+&#xC774;&#xB54C;&#xB294; explicit rule &#xC774; &#xC6B0;&#xC120;&#xC21C;&#xC704;&#xAC00; &#xB192;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">%.o :
+    @echo 11111
+
+foo.o :
+    @echo 22222
+
+<span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
+
+sh$ make           <span class="hljs-comment"># %.o &#xB8F0;&#xC774; &#xC81C;&#xC77C; &#xC704;&#xC5D0; &#xC704;&#xCE58;&#xD558;&#xC9C0;&#xB9CC; explicit &#xB8F0;&#xC774; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</span>
+22222
+
+sh$ make foo.o     <span class="hljs-comment"># foo.o &#xB294; %.o &#xB8F0;&#xACFC;&#xB3C4; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC9C0;&#xB9CC; explicit &#xB8F0;&#xC774; &#xC6B0;&#xC120;&#xC21C;&#xC704;&#xAC00; &#xB192;&#xB2E4;.</span>
+22222
+
+sh$ make bar.o     <span class="hljs-comment"># bar.o &#xD0C0;&#xAC9F;&#xC758; explicit &#xB8F0;&#xC740; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBBC0;&#xB85C; %.o &#xB8F0;&#xC774; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</span>
+11111
+</code></pre>
+<p>explicit rule &#xACFC;&#xB2EC;&#xB9AC; pattern rule &#xC740; recipe &#xB97C; &#xAC16;&#xB294; &#xB8F0;&#xC758; &#xD0C0;&#xAC9F; &#xC774;&#xB984;&#xC774; &#xC911;&#xBCF5;&#xB3FC;&#xB3C4; &#xB429;&#xB2C8;&#xB2E4;.
+&#xB530;&#xB77C;&#xC11C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xB8F0;&#xC744; &#xC815;&#xC758;&#xD574; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xB3C4; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.
+&#xCCAB; &#xBC88;&#xC9F8; &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0; &#xCEF4;&#xD30C;&#xC77C; &#xD558;&#xB294;&#xB370; <code>.c</code> &#xC18C;&#xC2A4;&#xD30C;&#xC77C;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xBA74; 11111 &#xB8F0;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xACE0;
+<code>.m</code> &#xC18C;&#xC2A4;&#xD30C;&#xC77C;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xBA74; 22222 &#xB8F0;&#xC774; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.
+&#xB450; &#xBC88;&#xC9F8;&#xC640; &#xAC19;&#xC774; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC758;&#xBBF8;&#xAC00; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xC55E;&#xC120; &#xB8F0;&#xC774; override &#xB418;&#xB294;&#xB370;
+&#xC774;&#xB54C;&#xB3C4; warning &#xC740; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">%.o : %.c                               %.o : %.c
+    @echo 11111                             @echo 11111
+
+%.o : %.m                               %.o : %.c
+    @echo 22222                             @echo 22222
+</code></pre>
+<p>&#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC2DD;&#xC73C;&#xB85C; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;&#xB3C4; &#xAC00;&#xB2A5;&#xD55C;&#xB370; &#xC774;&#xB54C;&#xB294; &#xC791;&#xC131; &#xC21C;&#xC11C;&#xAC00; &#xC911;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.
+&#xC67C;&#xCABD; &#xC608;&#xC81C;&#xB97C; &#xC608;&#xB85C; &#xB4E4;&#xBA74; &#xD604;&#xC7AC; <code>.c</code> , <code>.h</code> &#xD30C;&#xC77C;&#xC774; &#xBAA8;&#xB450; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xCCAB; &#xBC88;&#xC9F8; &#xB8F0;&#xC774; &#xC120;&#xD0DD;&#xB418;&#xACE0;,
+<code>.c</code> &#xD30C;&#xC77C;&#xB9CC; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xB450; &#xBC88;&#xC9F8; &#xB8F0;&#xC774;, &#xBAA8;&#xB450; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xB9C8;&#xC9C0;&#xB9C9; &#xB8F0;&#xC774; &#xC120;&#xD0DD;&#xB418;&#xC5B4; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.
+&#xD558;&#xC9C0;&#xB9CC; &#xC624;&#xB978;&#xCABD;&#xACFC; &#xAC19;&#xC774; &#xC791;&#xC131;&#xD558;&#xBA74; prerequisites &#xACFC;&#xC758; &#xB9E4;&#xCE6D;&#xC5D0; &#xC0C1;&#xAD00;&#xC5C6;&#xC774; &#xD56D;&#xC0C1; &#xCCAB; &#xBC88;&#xC9F8; &#xB8F0;&#xC774; &#xC120;&#xD0DD;&#xB418;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-constant">MAKEFLAGS</span> += -rR                         MAKEFLAGS += -rR
+
+%.o : %.c %.h                            %.o :
+    @echo 11111                              @echo 11111
+
+%.o : %.c                                %.o : %.c
+    @echo 22222                              @echo 22222
+
+%.o :                                    %.o : %.c %.h
+    @echo 33333                              @echo 33333
+</code></pre>
+<p>&#xC704; &#xCCAB;&#xBC88;&#xC9F8; &#xC608;&#xC81C;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xD574;&#xBCF4;&#xBA74; <code>foo.c</code> , <code>foo.h</code> &#xD30C;&#xC77C;&#xC774; &#xC0DD;&#xC131;&#xB428;&#xC5D0; &#xB530;&#xB77C; 
+&#xAC01;&#xAE30; &#xB2E4;&#xB978; rule &#xC774; &#xC120;&#xD0DD;&#xB418;&#xC5B4; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">sh$ make foo.o         <span class="hljs-comment"># %.o &#xB8F0;&#xC774; &#xC120;&#xD0DD;&#xB41C;&#xB2E4;.</span>
+<span class="hljs-number">33333</span>
+
+sh$ touch foo.c        <span class="hljs-comment"># foo.c &#xD30C;&#xC77C; &#xC0DD;&#xC131;</span>
+
+sh$ make foo.o         <span class="hljs-comment"># %.o : %.c &#xB8F0;&#xC774; &#xC120;&#xD0DD;&#xB41C;&#xB2E4;.</span>
+<span class="hljs-number">22222</span>
+
+sh$ touch foo.h        <span class="hljs-comment"># foo.h &#xD30C;&#xC77C;&#xB3C4; &#xC0DD;&#xC131;</span>
+
+sh$ make foo.o         <span class="hljs-comment"># %.o : %.c %.h &#xB8F0;&#xC774; &#xC120;&#xD0DD;&#xB41C;&#xB2E4;.</span>
+<span class="hljs-number">11111</span>
+</code></pre>
+<h4 id="&#xB9E4;&#xCE6D;&#xB418;&#xB294;-&#xB8F0;&#xC774;-&#xC5EC;&#xB7EC;&#xAC1C;-&#xC874;&#xC7AC;&#xD558;&#xBA74;-stem-&#xC774;-&#xC9E7;&#xC740;-&#xB8F0;&#xC774;-&#xC120;&#xD0DD;&#xB41C;&#xB2E4;">&#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xB8F0;&#xC774; &#xC5EC;&#xB7EC;&#xAC1C; &#xC874;&#xC7AC;&#xD558;&#xBA74; stem &#xC774; &#xC9E7;&#xC740; &#xB8F0;&#xC774; &#xC120;&#xD0DD;&#xB41C;&#xB2E4;.</h4>
+<p><code>%</code> &#xD328;&#xD134; &#xBB38;&#xC790;&#xC640; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xBD80;&#xBD84;&#xC744; <code>stem</code> &#xC774;&#xB77C;&#xACE0; &#xD558;&#xB294;&#xB370;
+&#xB9E4;&#xCE6D;&#xB418;&#xB294; pattern rule &#xC774; &#xC5EC;&#xB7EC;&#xAC1C; &#xC874;&#xC7AC;&#xD560; &#xACBD;&#xC6B0;&#xB294; stem &#xC774; &#xC9E7;&#xC740; &#xB8F0;&#xC774; &#xC120;&#xD0DD;&#xB429;&#xB2C8;&#xB2E4;.
+&#xB2E4;&#xC74C; &#xC608;&#xC81C;&#xB97C; &#xBCF4;&#xBA74; &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; <code>foo/bar/zoo.o</code> &#xD0C0;&#xAC9F;&#xC740; 
+&#xC138; &#xAC1C;&#xC758; &#xB8F0;&#xC5D0; &#xBAA8;&#xB450; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC9C0;&#xB9CC; &#xB9C8;&#xC9C0;&#xB9C9; &#xB8F0;&#xC758; stem &#xC774; &#xAC00;&#xC7A5; &#xC9E7;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC120;&#xD0DD;&#xB418;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code>MAKEFLAGS += -rR
+
+%.o : %.c                      # stem : foo/bar/zoo
+    @echo 11111 : $*           # &apos;$*&apos; &#xB294; stem &#xAC12;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xB294; automatic &#xBCC0;&#xC218;
+
+foo/%.o : foo/%.c              # stem : bar/zoo
+    @echo 22222 : $*
+
+foo/bar/%.o : foo/bar/%.c      # stem : zoo
+    @echo 33333 : $*
+
+%.c : ;
+
+########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ########
+
+sh$ make foo/bar/zoo.o
+33333 : zoo
+</code></pre><h4 id="&#xD328;&#xD134;&#xC774;-&#xB9E4;&#xCE6D;&#xB418;&#xACE0;-stem-&#xC774;-&#xC815;&#xC758;&#xB418;&#xB294;-&#xBC29;&#xC2DD;">&#xD328;&#xD134;&#xC774; &#xB9E4;&#xCE6D;&#xB418;&#xACE0; stem &#xC774; &#xC815;&#xC758;&#xB418;&#xB294; &#xBC29;&#xC2DD;</h4>
+<p><code>/</code> &#xBB38;&#xC790;&#xB294; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xBB38;&#xC790;&#xC774;&#xBBC0;&#xB85C; &#xD328;&#xD134;&#xC5D0; <code>/</code> &#xBB38;&#xC790;&#xAC00; &#xC5C6;&#xC73C;&#xBA74; 
+&#xADF8;&#xAC83;&#xC740; &#xB2E8;&#xC21C; &#xD30C;&#xC77C;&#xBA85;&#xB9CC; &#xAC00;&#xB9AC;&#xD0A4;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.
+&#xB530;&#xB77C;&#xC11C; &#xC544;&#xB798; &#xC67C;&#xCABD; &#xC608;&#xC81C;&#xC758; &#xB450; &#xBC88;&#xC9F8; &#xD0C0;&#xAC9F;&#xC778; <code>foo.bar/zoo</code> &#xC758;&#xACBD;&#xC6B0; &#xB9E4;&#xCE6D;&#xC2DC;
+&#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xBD80;&#xBD84;&#xC778; <code>foo.bar/</code> &#xC744; &#xC81C;&#xC678;&#xD558;&#xACE0; <code>zoo</code> &#xB9CC; &#xAC00;&#xC9C0;&#xACE0; &#xB9E4;&#xCE6D;&#xC744; &#xD558;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.
+( &#xADF8;&#xB7EC;&#xBBC0;&#xB85C; &#xACB0;&#xACFC;&#xC801;&#xC73C;&#xB85C; &#xB9E4;&#xCE6D;&#xC774; &#xC548;&#xB429;&#xB2C8;&#xB2E4;. )</p>
+<p>&#xD328;&#xD134;&#xC5D0; <code>/</code> &#xBB38;&#xC790;&#xAC00; &#xC5C6;&#xC744;&#xB54C; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xBC29;&#xC2DD;&#xC744; &#xC138; &#xBC88;&#xC9F8; &#xD0C0;&#xAC9F;&#xC778; <code>foo.bar/foo.zoo</code> &#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC124;&#xBA85;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<ol>
+<li>&#xBA3C;&#xC800; &#xD0C0;&#xAC9F;&#xC5D0;&#xC11C; <code>/</code> &#xBB38;&#xC790;&#xB97C; &#xD3EC;&#xD568;&#xD558;&#xB294; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xBD80;&#xBD84;&#xC744; &#xC81C;&#xC678;&#xD569;&#xB2C8;&#xB2E4;. ( foo.bar/foo.zoo -&gt; foo.zoo )</li>
+<li>&#xD30C;&#xC77C;&#xBA85;&#xB9CC; &#xAC00;&#xC9C0;&#xACE0; &#xD328;&#xD134;&#xACFC; &#xB9E4;&#xCE6D;&#xC744; &#xD569;&#xB2C8;&#xB2E4;. ( foo.zoo &#xB294; foo.% &#xC640; &#xB9E4;&#xCE6D;&#xC774;&#xB418;&#xACE0; % &#xB294; zoo &#xAC00;&#xB41C;&#xB2E4; )</li>
+<li>&#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xBA74; <code>%</code> &#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBD80;&#xBD84;&#xC5D0; 1 &#xBC88;&#xC5D0;&#xC11C; &#xC81C;&#xC678;&#xD588;&#xB358; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB97C; &#xBD99;&#xC785;&#xB2C8;&#xB2E4;. ( foo.bar/zoo )</li>
+</ol>
+<pre><code class="lang-makefile"><span class="hljs-comment"># &#xD328;&#xD134;&#xC5D0; &apos;/&apos; &#xBB38;&#xC790;&#xAC00; &#xC5C6;&#xB294; &#xACBD;&#xC6B0;                               # &#xD328;&#xD134;&#xC5D0; &apos;/&apos; &#xBB38;&#xC790;&#xAC00; &#xC788;&#xB294; &#xACBD;&#xC6B0;</span>
+
+foo.% :                                                  foo/% :    
+    @echo $@ : $*                                            @echo $@ : $*
+
+<span class="hljs-comment">#######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #######                                #######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
+sh$ make foo.bar                                         sh$ make foo/bar
+foo.bar : bar                                            foo/bar : bar
+
+sh$ make foo.bar/zoo                                     sh$ make foo/bar/zoo
+make: *** No rule to make target &apos;foo.bar/zoo&apos;.  Stop.   foo/bar/zoo : bar/zoo
+
+sh$ make foo.bar/foo.zoo
+foo.bar/foo.zoo : foo.bar/zoo
+</code></pre>
+<p><code>%</code> &#xD328;&#xD134; &#xBB38;&#xC790;&#xAC00; &#xC81C;&#xC77C; &#xC67C;&#xCABD;&#xC5D0; &#xC704;&#xCE58;&#xD560; &#xACBD;&#xC6B0;&#xB294; &#xC608;&#xC678;&#xB85C; &#xC774;&#xB54C;&#xB294; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xACBD;&#xB85C;&#xB3C4; &#xB9E4;&#xCE6D;&#xC5D0; &#xD3EC;&#xD568;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">%zoo :
+    @echo $@ : $*
+
+<span class="hljs-comment">#######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #######</span>
+sh$ make bar.zoo
+bar.zoo : bar.
+
+sh$ make bar/zoo
+bar/zoo : bar/
+
+sh$ make foo/bar/zoo
+foo/bar/zoo : foo/bar/
+</code></pre>
+<h4 id="&#xD328;&#xD134;-&#xBB38;&#xC790;&#xB294;-&#xBCC0;&#xC218;-&#xD568;&#xC218;-&#xCC98;&#xB9AC;&#xAC00;-&#xC644;&#xB8CC;&#xB41C;-&#xD6C4;&#xC5D0;-&#xCC98;&#xB9AC;&#xB41C;&#xB2E4;"><code>%</code> &#xD328;&#xD134; &#xBB38;&#xC790;&#xB294; &#xBCC0;&#xC218;, &#xD568;&#xC218; &#xCC98;&#xB9AC;&#xAC00; &#xC644;&#xB8CC;&#xB41C; &#xD6C4;&#xC5D0; &#xCC98;&#xB9AC;&#xB41C;&#xB2E4;.</h4>
+<p>&#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC5D0;&#xC11C; <code>%</code> &#xBB38;&#xC790;&#xB294; &#xBA3C;&#xC800; &#xBCC0;&#xC218;, &#xD568;&#xC218; &#xCC98;&#xB9AC;&#xAC00; &#xC644;&#xB8CC;&#xB41C; &#xD6C4;&#xC5D0; &#xCC98;&#xB9AC;&#xB429;&#xB2C8;&#xB2E4;.
+&#xB530;&#xB77C;&#xC11C; <code>%</code> &#xBB38;&#xC790;&#xAC00; &#xB300;&#xCCB4;&#xB420; &#xAC12;&#xC744; &#xD568;&#xC218;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218;&#xB294; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB2E4;&#xC74C; &#xC608;&#xC81C;&#xC5D0;&#xC11C; <code>$(notdir %)</code> &#xD568;&#xC218;&#xC758; &#xACBD;&#xC6B0; <code>%</code> &#xBB38;&#xC790;&#xAC00; &#xB300;&#xCCB4;&#xB420; &#xAC12;&#xC758; notdir &#xAC00;
+&#xBC18;&#xD658;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB2E8;&#xC21C;&#xD788; <code>%</code> &#xBB38;&#xC790; &#xC790;&#xCCB4;&#xC758; notdir &#xAC12;&#xC774; &#xBC18;&#xD658;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">obj/%.o : src/%.c  | $(notdir %)
+    @echo $@ : $^ : $|
+</code></pre>
+<h4 id="matchanything-rules">Match-anything rules</h4>
+<p>&#xD0C0;&#xAC9F;&#xC73C;&#xB85C; <code>%</code> &#xBB38;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C; &#xB420;&#xAE4C;&#xC694;?
+&#xC774;&#xB54C;&#xB294; &#xC5B4;&#xB5A4; &#xD0C0;&#xAC9F;&#xB3C4; &#xB2E4; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC5B4; recipe &#xAC00; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-constant">MAKEFLAGS</span> += -rR
+
+% :
+    @echo % : $@
+
+<span class="hljs-comment">#####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####</span>
+sh$ make foo
+% : foo
+
+sh$ make foo/bar
+% : foo/bar
+
+sh$ make foo/bar/zoo.o
+% : foo/bar/zoo.o
+</code></pre>
+<p>match-anything &#xB8F0;&#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; explicit &#xD0C0;&#xAC9F;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xACE0; &#xD328;&#xD134;&#xC740; &#xB9E4;&#xCE6D;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xC2DC;&#xBA74; bar &#xD0C0;&#xAC9F;&#xC774; explicit &#xC77C;&#xACBD;&#xC6B0; (1) &#xB294; <code>%</code> &#xB8F0;&#xACFC; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC5B4; recipe &#xAC00; &#xC2E4;&#xD589;&#xB418;&#xC9C0;&#xB9CC;
+<code>%.bar</code> &#xC640;&#xAC19;&#xC740; &#xD328;&#xD134;&#xC77C; &#xACBD;&#xC6B0; (2) &#xB294; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC9C0; &#xC54A;&#xC544; &#xC885;&#xB8CC;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC774;&#xB54C;&#xB294; (3) &#xACFC;&#xAC19;&#xC774; &#xC9C1;&#xC811; <code>%.bar</code> &#xD328;&#xD134; &#xB8F0;&#xC744; &#xC791;&#xC131;&#xD574;&#xC57C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">foo : bar            (1)       %.foo : %.bar        (2)         %.foo : %.bar        (3)
+    @echo target : $@              @echo target : $@                @echo target : $@
+
+% :                            % :                              %.bar :
+    @echo % : $@                   @echo % : $@                     @echo %.bar : $@
+
+<span class="hljs-comment">#####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####          #####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####            #####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####</span>
+sh$ make foo                   sh$ make a.foo                   sh$ make a.foo 
+% : bar                        make: *** No rule to make        %.bar : a.bar
+target : foo                   target &apos;a.foo&apos;.  Stop.           target : a.foo
+</code></pre>
+<!----------
+
+위의 예제 (2) 에서 `%.bar` 패턴이 매칭에 실패하여 종료될때 
+`% :` 룰 대신에 `% ::` 룰을 사용하면 a.foo 타겟이 직접 `% ::` 룰과 매칭을 합니다.
+
+```makefile
+%.foo : %.bar
+    @echo target : $@
+
+% ::
+    @echo % :: $@
+
+#####  실행 결과  #####
+sh$ make a.foo   # 종료되지 않고 직접 '% ::' 룰과 매칭한다.
+% :: a.foo
+```
+
+------------>
+<h4 id="terminal-&#xACFC;-nonterminal">Terminal &#xACFC; non-terminal</h4>
+<p>Pattern rule &#xC774; double-colon &#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC791;&#xC131;&#xB418;&#xBA74; &#xADF8;&#xAC83;&#xC740; terminal &#xC774;&#xB429;&#xB2C8;&#xB2E4;.
+terminal &#xB8F0;&#xC740; &#xB354;&#xC774;&#xC0C1; prerequisites &#xC5D0; &#xC788;&#xB294; &#xD328;&#xD134; &#xB8F0;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xD558;&#xC9C0;&#xB9CC; &#xB9CC;&#xC57D;&#xC5D0; prerequisites &#xC5D0; &#xC788;&#xB294; &#xD328;&#xD134;&#xACFC; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xBA74;
+&#xADF8;&#xAC83;&#xC740; explicit &#xD30C;&#xC77C;&#xC774; &#xB418;&#xBBC0;&#xB85C; &#xB8F0;&#xC774; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.
+<code>:</code> &#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC791;&#xC131;&#xD558;&#xB294; non-terminal &#xC740; &#xC77C;&#xBC18; &#xB8F0;&#xACFC; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xB8F0;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p>pattern rule &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; double-colon &#xC740; <a href="double_colon_rules.html">double-colon rules</a> &#xACFC; &#xC804;&#xD600; &#xB2E4;&#xB978; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
+<pre><code class="lang-makefile"><span class="hljs-comment"># terminal                                     # non-terminal</span>
+%.foo :: %.bar                                 %.foo : %.bar
+    @echo 11111                                    @echo 11111
+
+%.bar :                                        %.bar :
+    @echo 22222                                    @echo 22222
+
+<span class="hljs-comment">#####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####                          #####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####</span>
+sh$ make a.foo                                 sh$ make a.foo 
+make: *** No rule to make                      22222
+target &apos;a.foo&apos;.  Stop.                         11111
+
+sh$ touch a.bar    <span class="hljs-comment"># %.bar &#xC5D0; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C; &#xC0DD;&#xC131;</span>
+
+sh$ make a.foo     <span class="hljs-comment"># &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xBA74;</span>
+11111              <span class="hljs-comment"># &apos;%.foo :: %.bar&apos; &#xB8F0;&#xC774; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</span>
+</code></pre>
+<h3 id="chains-of-implicit-rules">Chains of implicit rules</h3>
+<p>rule &#xC774; &#xC11C;&#xB85C; &#xC758;&#xC874;&#xC131;&#xC744; &#xAC00;&#xC9C0;&#xACE0; chain &#xCC98;&#xB7FC; &#xC5F0;&#xACB0;&#xB418;&#xC5B4; &#xC788;&#xC744; &#xACBD;&#xC6B0;
+explicit rule &#xACFC; implicit rule &#xC774; &#xCC98;&#xB9AC;&#xB418;&#xB294; &#xBC29;&#xC2DD;&#xC774; &#xB2E4;&#xB985;&#xB2C8;&#xB2E4;.
+explicit &#xB8F0;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xB9D0; &#xADF8;&#xB300;&#xB85C; &#xC0DD;&#xC131;&#xD574;&#xC57C;&#xB420; &#xD30C;&#xC77C;&#xC744; explicit &#xD558;&#xAC8C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC774;&#xBBC0;&#xB85C;
+&#xD30C;&#xC77C;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xACBD;&#xC6B0; &#xC0DD;&#xC131;&#xC774; &#xAC15;&#xC694;&#xB418;&#xC9C0;&#xB9CC; &#xD328;&#xD134;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; implicit &#xB8F0;&#xC758; &#xACBD;&#xC6B0;&#xB294; 
+explicit &#xD558;&#xAC8C; &#xC9C0;&#xC815;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xD30C;&#xC77C;&#xC740; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC0AD;&#xC81C;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC5EC;&#xAE30;&#xC11C; explicit &#xD558;&#xAC8C; &#xC9C0;&#xC815;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xAC83;&#xC740;
+rule &#xC758; &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xD30C;&#xC77C;&#xBA85; &#xC678;&#xC5D0;
+&#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xD0C0;&#xAC9F;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xB418;&#xB294; &#xACBD;&#xC6B0;, 
+&#xD328;&#xD134;&#xACFC; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xD604;&#xC7AC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xB3C4; &#xD574;&#xB2F9;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C; &#xC608;&#xC81C;&#xB97C; &#xBCF4;&#xC2DC;&#xBA74; explicit &#xB8F0;&#xC758; &#xACBD;&#xC6B0;&#xB294; <code>make foo.o</code> &#xBA85;&#xB839; &#xC2E4;&#xD589; &#xD6C4;&#xC5D0; foo.c, foo.o, foo.y
+&#xD30C;&#xC77C;&#xC774; &#xBAA8;&#xB450; &#xC874;&#xC7AC;&#xD558;&#xC9C0;&#xB9CC; implicit &#xB8F0;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; 
+&#xC9C0;&#xC815;&#xD55C; &#xC774;&#xB984;&#xC778; foo.o &#xD30C;&#xC77C; &#xC678;&#xC5D0;&#xB294; make &#xC5D0;&#xC758;&#xD574; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC0AD;&#xC81C;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC774;&#xB807;&#xAC8C; &#xBE4C;&#xB4DC; &#xC911;&#xAC04;&#xC5D0; &#xC784;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xC5C8;&#xB2E4; &#xC0AD;&#xC81C;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC744; intermediate &#xD30C;&#xC77C;&#xC774;&#xB77C;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>implicit &#xB8F0;&#xC758; &#xACBD;&#xC6B0; chain &#xC911;&#xAC04;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xD30C;&#xC77C;&#xC774; intermediate &#xD30C;&#xC77C;&#xC774;&#xBA74; &#xB2E4;&#xC74C;&#xC5D0; make &#xBA85;&#xB839; &#xC2E4;&#xD589;&#xC2DC;
+&#xB2E4;&#xC2DC; &#xC0DD;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC624;&#xB978;&#xCABD; &#xC608;&#xC81C;&#xC5D0;&#xC11C; &#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xD55C; &#xBA85;&#xB839;&#xC744; &#xBCF4;&#xBA74; &#xD604;&#xC7AC; foo.c foo.y &#xD30C;&#xC77C;&#xC774;
+&#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB370;&#xB3C4; &#xBD88;&#xAD6C;&#xD558;&#xACE0; &#xB8F0;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB9CC;&#xC57D;&#xC5D0; explicit rule &#xC774;&#xB77C;&#xBA74; &#xBB34;&#xC870;&#xAC74; &#xB2E4;&#xC2DC; &#xC0DD;&#xC131;&#xD558;&#xACA0;&#xC8E0;.</p>
+<pre><code class="lang-makefile">foo.o: foo.c                               %.o: %.c
+    @echo &quot;&gt;&gt;&gt; $@ from $&lt;&quot;                     @echo &quot;&gt;&gt;&gt; $@ from $&lt;&quot;
+    touch $@                                   touch $@
+
+foo.c: foo.y                               %.c: %.y
+    @echo &quot;&gt;&gt;&gt; $@ from $&lt;&quot;                     @echo &quot;&gt;&gt;&gt; $@ from $&lt;&quot;
+    touch $@                                   touch $@
+
+foo.y:                                     %.y:
+    @echo &quot;&gt;&gt;&gt; $@&quot;                             @echo &quot;&gt;&gt;&gt; $@&quot;
+    touch $@                                   touch $@
+
+<span class="hljs-comment">#######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #######                  #######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #######</span>
+sh$ make foo.o                             sh$ make foo.o 
+&gt;&gt;&gt; foo.y                                  &gt;&gt;&gt; foo.y
+touch foo.y                                touch foo.y
+&gt;&gt;&gt; foo.c from foo.y                       &gt;&gt;&gt; foo.c from foo.y
+touch foo.c                                touch foo.c
+&gt;&gt;&gt; foo.o from foo.c                       &gt;&gt;&gt; foo.o from foo.c
+touch foo.o                                touch foo.o
+                                           rm foo.c foo.y   <span class="hljs-comment"># &lt;--- make &#xC5D0;&#xC758;&#xD574; &#xC790;&#xB3D9; &#xC0AD;&#xC81C;</span>
+sh$ ls                                     
+foo.c  foo.o  foo.y  Makefile              sh$ ls
+                                           foo.o  Makefile
+sh$ make foo.o                                               <span class="hljs-comment"># foo.c foo.y &#xD30C;&#xC77C;&#xC774; &#xC5C6;&#xC9C0;&#xB9CC;</span>
+make: &apos;foo.o&apos; is up to date.               sh$ make foo.o    <span class="hljs-comment"># &#xB2E4;&#xC2DC; &#xC0DD;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</span>
+                                           make: &apos;foo.o&apos; is up to date.
+</code></pre>
+<p>&#xC774;&#xC640; &#xAC19;&#xC740; chain of rules &#xACFC; &#xAD00;&#xB828;&#xD574;&#xC11C; make &#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xD2B9;&#xC218; &#xD0C0;&#xAC9F;&#xB4E4;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+<a href="special_targets.html#precious">.PRECIOUS:</a> &#xB610;&#xB294; <a href="special_targets.html#secondary">.SECONDARY:</a> &#xD0C0;&#xAC9F;&#xC758; prerequisites &#xC73C;&#xB85C; &#xD30C;&#xC77C;&#xC744; &#xB4F1;&#xB85D;&#xD558;&#xBA74; 
+intermediate &#xD30C;&#xC77C;&#xC774; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC0AD;&#xC81C;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBC29;&#xC9C0;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+<a href="special_targets.html#intermediate">.INTERMEDIATE:</a> &#xD0C0;&#xAC9F;&#xC740; &#xBC18;&#xB300;&#xB85C; explicit &#xC9C0;&#xC815;&#xB41C; &#xD30C;&#xC77C;&#xB3C4; intermediate &#xD30C;&#xC77C;&#xCC98;&#xB7FC; &#xC0AD;&#xC81C;&#xB418;&#xAC8C; &#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC880; &#xB354; &#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="special_targets.html">Special Targets</a> &#xBA54;&#xB274;&#xB97C; &#xCC38;&#xC870;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="builtin-rules-and-variables">Built-in rules and variables</h3>
+<p>make &#xC740; &#xC0AC;&#xC6A9;&#xC790; &#xD3B8;&#xC758;&#xB97C; &#xC704;&#xD574;&#xC11C; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xC11C; &#xC790;&#xC8FC;&#xC0AC;&#xC6A9;&#xB418;&#xB294; rule &#xB4E4;&#xACFC; &#xBCC0;&#xC218;&#xC124;&#xC815;&#xC744;
+&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xB0B4;&#xC7A5;&#xD558;&#xC5EC; &#xC81C;&#xACF5;&#xD558;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xD30C;&#xC77C;&#xBA85;&#xC744; &#xC9C1;&#xC811; &#xC0AC;&#xC6A9;&#xD558;&#xB294; explicit rule &#xB85C;&#xB294; &#xBB3C;&#xB860; &#xC548;&#xB418;&#xACE0;
+suffix rule &#xC774;&#xB098; pattern rule &#xAC19;&#xC740; implicit rule &#xC744; &#xC774;&#xC6A9;&#xD574; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.
+&#xB530;&#xB77C;&#xC11C; &#xC774;&#xAC83;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; makefile &#xC5C6;&#xC774;&#xB3C4; &#xCEF4;&#xD30C;&#xC77C;&#xC774; &#xAC00;&#xB2A5;&#xD55C; &#xC77C;&#xC774; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.
+&#xB9CC;&#xC57D;&#xC5D0; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xB3D9;&#xC77C;&#xD55C; &#xB8F0;&#xC744; &#xC7AC;&#xC815;&#xC758;&#xD558;&#xBA74; &#xC0AC;&#xC6A9;&#xC790; &#xB8F0;&#xC774; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p><code>make -p</code> ( print internal database ) &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD574;&#xBCF4;&#xBA74; 
+builtin rules &#xACFC; &#xBCC0;&#xC218;&#xB4E4;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
+<pre><code class="lang-bash">sh$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;int main() {}&quot;</span> &gt; hello.c
+
+sh$ make hello.o                <span class="hljs-comment"># makefile &#xC774; &#xC5C6;&#xB294;&#xB370;&#xB3C4; &#xCEF4;&#xD30C;&#xC77C;&#xC774; &#xB41C;&#xB2E4;.</span>
+cc    -c -o hello.o hello.c
+
+sh$ make hello
+cc   hello.o   -o hello
+</code></pre>
+<p>builtin rule &#xC744; &#xC815;&#xC758;&#xD560; &#xB54C; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBCC0;&#xC218; &#xC774;&#xB984;&#xB4E4;&#xC774; &#xC788;&#xB294;&#xB370; &#xC774;&#xAC83;&#xC744; &#xD65C;&#xC6A9;&#xD558;&#xBA74;
+&#xC635;&#xC158;&#xB3C4; &#xC804;&#xB2EC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB2E4;&#xC74C; &#xC608;&#xC81C;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB41C; <code>CFLAGS</code> &#xBCC0;&#xC218;&#xB294; C &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;&#xC5D0; &#xC635;&#xC158;&#xC744; &#xC804;&#xB2EC;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xB418;&#xACE0; 
+( C++ &#xC77C; &#xACBD;&#xC6B0;&#xB294; <code>CXXFLAGS</code> ) <code>CPPFLAGS</code> &#xBCC0;&#xC218;&#xB294; &#xC804;&#xCC98;&#xB9AC;&#xAE30; &#xAD00;&#xB828; &#xC635;&#xC158; ( C, C++ &#xACF5;&#xD1B5; ),
+<code>LDFLAGS</code> &#xC740; ld &#xB9C1;&#xCEE4; &#xAD00;&#xB828; &#xC635;&#xC158;, <code>LDLIBS</code> &#xB294; &#xB9C1;&#xCEE4;&#xC5D0; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;( <code>-lname</code> ) &#xAD00;&#xB828; 
+&#xC124;&#xC815;&#xC744;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p>&#xBCF4;&#xD1B5; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xC804;&#xCC98;&#xB9AC;&#xAE30; &#xC635;&#xC158;&#xC744; &#xD3EC;&#xD568;&#xD558;&#xC5EC; &#xBAA8;&#xB450; CFLAGS &#xC5D0; &#xC791;&#xC131;&#xD558;&#xACE0; 
+C, C++ &#xACF5;&#xD1B5;&#xC73C;&#xB85C; &#xC635;&#xC158;&#xC744; &#xC124;&#xC815;&#xD560; &#xB54C; CPPFLAGS &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.
+[ &#xAD00;&#xB828;&#xD398;&#xC774;&#xC9C0; &#xCC38;&#xC870; : <a href="https://www.gnu.org/software/make/manual/html_node/Implicit-Variables.html#Implicit-Variables" target="_blank">Variables Used by Implicit Rules</a> ]</p>
+</blockquote>
+<pre><code class="lang-makefile"><span class="hljs-comment"># builtin &#xBCC0;&#xC218;&#xB4E4;&#xC774; &apos;=&apos; recursive &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC815;&#xC758;&#xB418;&#xC5B4; &#xC788;&#xB2E4;.</span>
+sh$ make -p | grep &apos;COMPILE.c &apos;
+COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+----------------------------------------------------------------
+
+<span class="hljs-comment"># &#xB530;&#xB77C;&#xC11C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xAC12;&#xC744; &#xC804;&#xB2EC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</span>
+sh$ make hello.o CFLAGS:=&quot;-g -Wall&quot; CPPFLAGS:=-DDEBUG
+cc -g -Wall -DDEBUG  -c -o hello.o hello.c
+
+sh$ make hello LDFLAGS=-L/usr/local/lib LDLIBS=-lpthread
+cc -L/usr/local/lib  hello.o  -lpthread -o hello
+</code></pre>
+<p>&#xBCC0;&#xC218;&#xB4E4;&#xC744; &#xC6A9;&#xB3C4;&#xBCC4;&#xB85C; &#xAD6C;&#xBD84;&#xC740; &#xD574;&#xB193;&#xC558;&#xC9C0;&#xB9CC; &#xC2E4;&#xC81C; CFLAGS &#xBCC0;&#xC218; &#xD558;&#xB098;&#xC5D0; &#xBAA8;&#xB4E0; &#xAC12;&#xC744; &#xC124;&#xC815;&#xD574;&#xB3C4; &#xBB38;&#xC81C;&#xAC00; &#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xD558;&#xC9C0;&#xB9CC; LDLIBS &#xBCC0;&#xC218;&#xC5D0; &#xC124;&#xC815;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xC21C;&#xC11C;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBC1B;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;
+&#xC62C;&#xBC14;&#xB85C; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">sh$ cat hello.c
+<span class="hljs-comment">#include &lt;pthread.h&gt;</span>
+int <span class="hljs-function"><span class="hljs-title">main</span></span>() {
+    pthread_join(<span class="hljs-number">1</span>,NULL);
+}
+
+<span class="hljs-comment"># CFLAGS &#xBCC0;&#xC218; &#xD558;&#xB098;&#xC5D0; &#xBAA8;&#xB450; &#xC124;&#xC815;&#xD574;&#xB3C4; &#xB41C;&#xB2E4;.</span>
+sh$ make hello.o <span class="hljs-string">&quot;CFLAGS := -g -Wall -DDEBUG&quot;</span>
+cc -g -Wall -DDEBUG   -c -o hello.o hello.c
+
+<span class="hljs-comment"># &#xD558;&#xC9C0;&#xB9CC; &#xB9C1;&#xCEE4;&#xC5D0; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB294; &#xC21C;&#xC11C;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBC1B;&#xC73C;&#xBBC0;&#xB85C; LDLIBS &#xBCC0;&#xC218;&#xC5D0; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</span>
+sh$ make hello <span class="hljs-string">&quot;LDFLAGS := -L/usr/local/lib -lpthread&quot;</span>
+cc -L/usr/<span class="hljs-built_in">local</span>/lib -lpthread  hello.o   -o hello
+/usr/bin/ld: hello.o: <span class="hljs-keyword">in</span> <span class="hljs-keyword">function</span> <span class="hljs-string">&apos;main&apos;</span>:
+/home/mug896/tmp/make/vpath/src/hello.c:<span class="hljs-number">3</span>: undefined reference to <span class="hljs-string">&apos;pthread_join&apos;</span>
+collect2: error: ld returned <span class="hljs-number">1</span> <span class="hljs-built_in">exit</span> status
+make: *** [&lt;<span class="hljs-built_in">builtin</span>&gt;: hello] Error <span class="hljs-number">1</span>
+
+<span class="hljs-comment"># LDLIBS &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; -lpthread &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xAC00; hello.o &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C; &#xB4A4;&#xB85C; &#xC774;&#xB3D9;</span>
+sh$ make hello LDFLAGS:=-L/usr/<span class="hljs-built_in">local</span>/lib LDLIBS:=-lpthread
+cc -L/usr/<span class="hljs-built_in">local</span>/lib  hello.o  -lpthread -o hello
+</code></pre>
+<p>builtin &#xB8F0;&#xACFC; &#xBCC0;&#xC218;&#xB4E4;&#xC740; make &#xC5D0; &#xC775;&#xC219;&#xD55C; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C;&#xB294; &#xD3B8;&#xB9AC;&#xD55C; &#xAE30;&#xB2A5;&#xC774; &#xB420;&#xC218;&#xC788;&#xC9C0;&#xB9CC;
+make &#xC744; &#xD559;&#xC2B5;&#xD558;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C;&#xB294; make &#xC758; &#xAE30;&#xBCF8;&#xAE30;&#xB2A5;&#xC744; &#xC775;&#xD788;&#xB294;&#xB370; &#xB3C4;&#xC6C0;&#xC774; &#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;
+( &#xB098;&#xB3C4; &#xBAA8;&#xB974;&#xAC8C; builtin &#xB8F0;&#xC5D0; &#xC758;&#xD574; &#xCC98;&#xB9AC; &#xB418;&#xBBC0;&#xB85C; ).
+&#xB610;&#xD55C; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xB8F0;&#xC774; &#xC5C6;&#xC744; &#xACBD;&#xC6B0; &#xBAA8;&#xB4E0; implicit rule &#xC744; &#xAC80;&#xC0C9;&#xD558;&#xBBC0;&#xB85C; &#xCC98;&#xB9AC; &#xC18D;&#xB3C4; &#xB610;&#xD55C; &#xB290;&#xB824;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">sh$ touch Makefile    <span class="hljs-comment"># makefile &#xC0DD;&#xC131;</span>
+
+<span class="hljs-comment"># &apos;-d&apos; &#xC635;&#xC158;&#xC740; make &#xC758; debugging &#xC815;&#xBCF4;&#xB97C; &#xCD9C;&#xB825;&#xD569;&#xB2C8;&#xB2E4;.</span>
+sh$ make <span class="hljs-operator">-d</span> | wc <span class="hljs-operator">-l</span>                         sh$ make <span class="hljs-operator">-d</span> -rR | wc <span class="hljs-operator">-l</span>
+<span class="hljs-number">419</span>                                         <span class="hljs-number">14</span>
+</code></pre>
+<p>&#xB530;&#xB77C;&#xC11C; &#xB2E4;&#xC74C;&#xACFC;&#xAC19;&#xC774; builtin &#xB8F0;&#xACFC; &#xBCC0;&#xC218;&#xB97C; disable &#xD558;&#xACE0; &#xC9C1;&#xC811; &#xD544;&#xC694;&#xD55C; &#xB8F0;&#xACFC; &#xBCC0;&#xC218;&#xB97C; &#xC124;&#xC815;&#xD574; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-comment"># &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xC124;&#xC815;</span>
+<span class="hljs-comment"># -r, --no-builtin-rules                         # makefile &#xB0B4;&#xC5D0;&#xC11C; &#xC124;&#xC815;</span>
+<span class="hljs-comment"># -R, --no-builtin-variables                     </span>
+sh$ make -rR                                     MAKEFLAGS += -rR
+</code></pre>
+<p><a name="suffix_rules"></a></p>
+<h3 id="suffix-rules">Suffix Rules</h3>
+<p>suffix rule &#xC740; make &#xCD08;&#xAE30;&#xC5D0; implicit rule &#xC744; &#xC791;&#xC131;&#xD558;&#xB358; &#xBC29;&#xBC95;&#xC778;&#xB370; &#xC9C0;&#xAE08;&#xC740; &#xBCF4;&#xB2E4; &#xAE30;&#xB2A5;&#xC774; &#xB6F0;&#xC5B4;&#xB09C;
+pattern rule &#xC774; &#xC0AC;&#xC6A9;&#xB418;&#xBBC0;&#xB85C; &#xAD6C;&#xBC84;&#xC804; &#xD638;&#xD658;&#xC131;&#xC744; &#xC704;&#xD574;&#xC11C;&#xB9CC; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xAE30;&#xB2A5;&#xC785;&#xB2C8;&#xB2E4;.
+suffix rule &#xC744; &#xC815;&#xC758;&#xD558;&#xACE0;&#xC790; &#xD560;&#xB54C;&#xB294; &#xBA3C;&#xC800; <code>.SUFFIXES:</code> &#xD0C0;&#xAC9F;&#xC5D0; &#xD655;&#xC7A5;&#xC790;&#xB97C; &#xB4F1;&#xB85D;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.
+&#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xB294; &#xD655;&#xC7A5;&#xC790;&#xAC00; &#xC774;&#xBBF8; &#xB514;&#xD3F4;&#xD2B8;&#xB85C; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBA74; &#xB2E4;&#xC2DC; &#xB4F1;&#xB85D;&#xD560; &#xD544;&#xC694;&#xB294; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p>make &#xC2E4;&#xD589;&#xC2DC; &#xB514;&#xD3F4;&#xD2B8;&#xB85C; &#xC124;&#xC815;&#xB418;&#xB294; suffixes &#xAC12;&#xB4E4;&#xC740; <code>SUFFIXES</code> &#xBCC0;&#xC218;&#xB97C; &#xD1B5;&#xD574; &#xC54C;&#xC544;&#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
+<p>suffix rule &#xC740; &#xD655;&#xC7A5;&#xC790; 2 &#xAC1C;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; double-suffix rule &#xACFC; 1 &#xAC1C;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; single-suffix rule &#xC774; &#xC788;&#xB294;&#xB370; &#xBAA8;&#xB450; &#xACF5;&#xD1B5;&#xC73C;&#xB85C; prerequisites &#xC740; &#xC0AC;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB9CC;&#xC57D;&#xC5D0; prerequisites &#xC744; &#xC124;&#xC815;&#xD558;&#xBA74;
+suffix rule &#xB85C; &#xAE30;&#xB2A5;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+C &#xC18C;&#xC2A4; &#xD30C;&#xC77C;&#xC744; &#xCEF4;&#xD30C;&#xC77C; &#xD558;&#xB294; suffix rule &#xC744; &#xB3D9;&#xC77C;&#xD55C; &#xAE30;&#xB2A5;&#xC744; &#xD558;&#xB294; pattern rule &#xACFC; &#xD568;&#xAED8; &#xC791;&#xC131;&#xD574; &#xBCF4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h4 id="doublesuffix-rules">double-suffix rules</h4>
+<p>double-suffix rule &#xC740; &#xD655;&#xC7A5;&#xC790;&#xB97C; &#xACF5;&#xBC31;&#xC5C6;&#xC774; &#xBD99;&#xC774;&#xACE0; &#xC55E;&#xC774; source &#xD655;&#xC7A5;&#xC790;&#xAC00; &#xB418;&#xACE0; &#xB4A4;&#xAC00; target &#xD655;&#xC7A5;&#xC790;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">
+.source.target :
+
+-------------------
+.c.o :
+    $(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $&lt;
+
+<span class="hljs-comment"># &#xC704;&#xC640; &#xAC19;&#xC740; &#xAE30;&#xB2A5;&#xC744; &#xD558;&#xB294; pattern rule</span>
+%.o : %.c
+    $(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $&lt;
+</code></pre>
+<h4 id="singlesuffix-rules">single-suffix rules</h4>
+<pre><code class="lang-makefile">
+.source :
+
+-----------------
+.c :
+    $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $^ $(LDLIBS) -o $@
+
+<span class="hljs-comment"># &#xC704;&#xC640; &#xAC19;&#xC740; &#xAE30;&#xB2A5;&#xC744; &#xD558;&#xB294; pattern rule</span>
+% : %.c
+    $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $^ $(LDLIBS) -o $@
+</code></pre>
+<blockquote>
+<p>&#xD14C;&#xC2A4;&#xD2B8;&#xD560; &#xB54C; suffix rule &#xC740; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xC18C;&#xC2A4;&#xD30C;&#xC77C;&#xC774; &#xC874;&#xC7AC;&#xD574;&#xC57C; &#xB8F0;&#xC774; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./double_colon_rules.html" class="navigation navigation-prev " aria-label="Previous page: Double-Colon Rules"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./static_pattern_rules.html" class="navigation navigation-next " aria-label="Next page: Static Pattern Rules"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

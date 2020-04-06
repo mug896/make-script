@@ -1,0 +1,868 @@
+<!DOCTYPE HTML>
+<html lang="ko" >
+    
+    <head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161001174-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-161001174-4');
+</script>
+
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Multi-Line Variables | Introduction</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./target_specific_variables.html" />
+    
+    
+    <link rel="prev" href="./variables_and_functions.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.1"
+        data-chapter-title="Multi-Line Variables"
+        data-filepath="multiline_variables.md"
+        data-basepath="."
+
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="bug_reports.html">
+            
+                
+                    <a href="./bug_reports.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Bug Reports
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="variables_and_functions.html">
+            
+                
+                    <a href="./variables_and_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Variables and Functions
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1" data-path="multiline_variables.html">
+            
+                
+                    <a href="./multiline_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Multi-Line Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="target_specific_variables.html">
+            
+                
+                    <a href="./target_specific_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Target-Specific Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="automatic_variables.html">
+            
+                
+                    <a href="./automatic_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Automatic Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="substitution_references.html">
+            
+                
+                    <a href="./substitution_references.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Substitution References
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="special_variables.html">
+            
+                
+                    <a href="./special_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Special Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="directives.html">
+            
+                
+                    <a href="./directives.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Directives
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="conditional_directives.html">
+            
+                
+                    <a href="./conditional_directives.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Conditional Directives
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="rules.html">
+            
+                
+                    <a href="./rules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Rules
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="double_colon_rules.html">
+            
+                
+                    <a href="./double_colon_rules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Double-Colon Rules
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="pattern_rules.html">
+            
+                
+                    <a href="./pattern_rules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Pattern Rules
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="static_pattern_rules.html">
+            
+                
+                    <a href="./static_pattern_rules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Static Pattern Rules
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="recipes.html">
+            
+                
+                    <a href="./recipes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Recipes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="DAG.html">
+            
+                
+                    <a href="./DAG.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        DAG
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="special_targets.html">
+            
+                
+                    <a href="./special_targets.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Special Targets
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="recursive_make.html">
+            
+                
+                    <a href="./recursive_make.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Recursive Make
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="include.html">
+            
+                
+                    <a href="./include.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Include
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="one_DAG.html">
+            
+                
+                    <a href="./one_DAG.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        One DAG
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="parallel_execution.html">
+            
+                
+                    <a href="./parallel_execution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Parallel Execution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="builtin_functions.html">
+            
+                
+                    <a href="./builtin_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Built-in Functions
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="builtin_functions/text_functions.html">
+            
+                
+                    <a href="./builtin_functions/text_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Text Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="builtin_functions/file_name_functions.html">
+            
+                
+                    <a href="./builtin_functions/file_name_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        File Name Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="builtin_functions/conditional_functions.html">
+            
+                
+                    <a href="./builtin_functions/conditional_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.3.</b>
+                        
+                        Conditional Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="builtin_functions/foreach_function.html">
+            
+                
+                    <a href="./builtin_functions/foreach_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.4.</b>
+                        
+                        Foreach Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="builtin_functions/file_function.html">
+            
+                
+                    <a href="./builtin_functions/file_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.5.</b>
+                        
+                        File Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="builtin_functions/call_function.html">
+            
+                
+                    <a href="./builtin_functions/call_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.6.</b>
+                        
+                        Call Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.7" data-path="builtin_functions/eval_function.html">
+            
+                
+                    <a href="./builtin_functions/eval_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.7.</b>
+                        
+                        Eval Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.8" data-path="builtin_functions/value_function.html">
+            
+                
+                    <a href="./builtin_functions/value_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.8.</b>
+                        
+                        Value Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.9" data-path="builtin_functions/origin_function.html">
+            
+                
+                    <a href="./builtin_functions/origin_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.9.</b>
+                        
+                        Origin Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.10" data-path="builtin_functions/flavor_function.html">
+            
+                
+                    <a href="./builtin_functions/flavor_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.10.</b>
+                        
+                        Flavor Function
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.11" data-path="builtin_functions/make_control_functions.html">
+            
+                
+                    <a href="./builtin_functions/make_control_functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.11.</b>
+                        
+                        Make Control Functions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.12" data-path="builtin_functions/shell_function.html">
+            
+                
+                    <a href="./builtin_functions/shell_function.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.12.</b>
+                        
+                        Shell Function
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="command_line_options.html">
+            
+                
+                    <a href="./command_line_options.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Command-line Options
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="debugging.html">
+            
+                
+                    <a href="./debugging.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Debugging
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="tips.html">
+            
+                
+                    <a href="./tips.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Tips
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="closing.html">
+            
+                
+                    <a href="./closing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        맺음말
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Introduction</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="multiline-variables">Multi-Line Variables</h1>
+<p>make &#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xB77C;&#xC778; &#xB2E8;&#xC704;&#xC774;&#xBBC0;&#xB85C; &#xBCC0;&#xC218;&#xAC12;&#xC744; &#xC124;&#xC815;&#xD560; &#xB54C; newline &#xC774; &#xD3EC;&#xD568;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xD558;&#xC9C0;&#xB9CC; <code>define</code> ~ <code>endef</code> &#xC9C0;&#xC2DC;&#xC790;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; newline &#xC744; &#xD3EC;&#xD568;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xD568;&#xC218;&#xBA85; &#xB4A4;&#xC5D0;&#xB294; &#xB300;&#xC785; &#xC5F0;&#xC0B0;&#xC790;&#xAC00; &#xC62C; &#xC218; &#xC788;&#xB294;&#xB370; &#xC0DD;&#xB7B5;&#xD560; &#xACBD;&#xC6B0; <code>=</code> recusive &#xC5F0;&#xC0B0;&#xC790;&#xAC00; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-comment"># &#xBCC0;&#xC218;, &#xD568;&#xC218; &#xAC12;&#xC73C;&#xB85C; newline &#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.            # &#xC778;&#xC218;&#xB97C; &#xC804;&#xB2EC;&#xD560;&#xB54C; newline &#xC744; &#xC0AC;&#xC6A9;</span>
+define foo :=            define foo                 foo = $(info [$1] [$2] [$3])
+111                      $(info 111                 define bar
+222                      222                        $(call foo,1
+333                      333)                       11,2
+endef                    endef                      22,3
+                                                    33)
+$(info $(foo))           $(foo)                     endef
+<span class="hljs-comment">####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####      ####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####    </span>
+111                      111                        $(bar)
+222                      222                        <span class="hljs-comment">####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####</span>
+333                      333                        [1
+                                                    11] [2
+                                                    22] [3
+                                                    33]
+</code></pre>
+<h4 id="&#xC2E4;&#xD589;-&#xC911;&#xC5D0;-&#xB3D9;&#xC801;&#xC73C;&#xB85C;-rule-&#xC744;-&#xC815;&#xC758;">&#xC2E4;&#xD589; &#xC911;&#xC5D0; &#xB3D9;&#xC801;&#xC73C;&#xB85C; rule &#xC744; &#xC815;&#xC758;</h4>
+<p>multi-line &#xBCC0;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xC2E4;&#xD589; &#xC911;&#xC5D0; &#xB3D9;&#xC801;&#xC73C;&#xB85C; rule &#xC744; &#xC815;&#xC758;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC544;&#xB798; &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0; call &#xD568;&#xC218; &#xC2E4;&#xD589;&#xC5D0; &#xC758;&#xD574; <code>$1</code> &#xB294; &#xCCAB; &#xBC88;&#xC9F8; &#xC778;&#xC218; &#xAC12;&#xC778; <code>t1</code> &#xC774; &#xB418;&#xACE0;
+<code>$2</code> &#xB294; &#xB450; &#xBC88;&#xC9F8; &#xC778;&#xC218; &#xAC12;&#xC778; <code>p1 p2 p3</code> &#xAC00; &#xB429;&#xB2C8;&#xB2E4;.
+<code>$$</code> &#xBCC0;&#xC218;&#xB294; <code>$</code> &#xBB38;&#xC790;&#xB85C; &#xBCC0;&#xACBD;&#xB418;&#xBBC0;&#xB85C; &#xCD5C;&#xC885;&#xC801;&#xC73C;&#xB85C; <code>$@</code> &#xC640; <code>$^</code> &#xAC00; eval &#xD568;&#xC218;&#xB85C; &#xC804;&#xB2EC;&#xB418;&#xC5B4;
+rule &#xC774; &#xC815;&#xC758;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p>rule &#xC815;&#xC758;&#xB294; global &#xC601;&#xC5ED;&#xC5D0;&#xC11C; &#xC644;&#xB8CC;&#xB418;&#xB294; &#xAC83;&#xC73C;&#xB85C; recipe &#xC2E4;&#xD589; &#xC911;&#xC5D0;&#xB294; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xC815;&#xC758;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
+<pre><code class="lang-makefile">define onerule
+$1 : $2
+    @echo target: $$@, prerequisites: $$^
+endef
+
+$(eval $(call onerule,t1,p1 p2 p3))     <span class="hljs-comment"># eval &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;</span>
+
+.DEFAULT: ;
+
+<span class="hljs-comment">#############  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #############</span>
+
+target: t1, prerequisites: p1 p2 p3
+</code></pre>
+<blockquote>
+<p>&#xD14C;&#xC2A4;&#xD2B8;&#xD560; &#xB54C; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xBA74; recipe &#xC55E;&#xC758; tab &#xBB38;&#xC790;&#xB97C; &#xD655;&#xC778;&#xD574; &#xBCF4;&#xC138;&#xC694;</p>
+</blockquote>
+<h4 id="multiline-&#xBCC0;&#xC218;&#xAC00;-recipe-&#xC5D0;&#xC11C;-&#xC0AC;&#xC6A9;&#xB420;-&#xACBD;&#xC6B0;">multi-line &#xBCC0;&#xC218;&#xAC00; recipe &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB420; &#xACBD;&#xC6B0;</h4>
+<p>multi-line &#xBCC0;&#xC218;&#xB77C;&#xB3C4; recipe &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB420; &#xACBD;&#xC6B0;&#xB294; &#xAC01; &#xB77C;&#xC778;&#xBCC4;&#xB85C; shell &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xAC00; &#xC0DD;&#xC131;&#xB418;&#xC5B4; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">                                           define foo
+define foo                                 $(if 111,             <span class="hljs-comment"># if &#xD568;&#xC218; &#xC0AC;&#xC6A9;</span>
+echo shell PID: $$$$                       echo shell PID: $$$$
+echo shell PID: $$$$                       echo shell PID: $$$$
+echo shell PID: $$$$                       echo shell PID: $$$$)
+endef                                      endef
+
+all :                                      foo :
+    @$(foo)                                    @$(foo)
+
+<span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######                     ######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ###### </span>
+<span class="hljs-comment"># &#xAC01; &#xB77C;&#xC778; &#xBCC4;&#xB85C; shell PID &#xAC00; &#xB2E4;&#xB974;&#xB2E4;.             # &#xAC01; &#xB77C;&#xC778; &#xBCC4;&#xB85C; shell PID &#xAC00; &#xB2E4;&#xB974;&#xB2E4;. </span>
+shell PID: 18426                            shell PID: 11206
+shell PID: 18427                            shell PID: 11207 
+shell PID: 18428                            shell PID: 11208
+</code></pre>
+<p>&#xBA85;&#xB839;&#xC774; &#xBAA8;&#xB450; &#xD558;&#xB098;&#xC758; shell &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xB418;&#xAC8C; &#xD558;&#xB824;&#xBA74; 
+&#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD558;&#xB098;&#xC758; &#xB77C;&#xC778;&#xC73C;&#xB85C; &#xC791;&#xC131;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">define foo
+echo shell PID: $$$$; \
+echo shell PID: $$$$; \
+echo shell PID: $$$$
+endef
+
+all :
+    @$(foo)
+
+ <span class="hljs-comment">#####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####</span>
+
+shell PID: 18550   <span class="hljs-comment"># &#xB3D9;&#xC77C;&#xD55C; shell PID</span>
+shell PID: 18550
+shell PID: 18550
+</code></pre>
+<h4 id="&#xBCC0;&#xC218;-&#xC791;&#xC131;&#xC2DC;--comment-&#xBB38;&#xC790;">&#xBCC0;&#xC218; &#xC791;&#xC131;&#xC2DC; <code>#</code> comment &#xBB38;&#xC790;</h4>
+<p>multi-line &#xBCC0;&#xC218;&#xB97C; &#xC791;&#xC131;&#xD560; &#xB54C;&#xB294; <code>#</code> &#xBB38;&#xC790;&#xAC00; &#xC8FC;&#xC11D;&#xC73C;&#xB85C; &#xAE30;&#xB2A5;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xADF8;&#xB300;&#xB85C; &#xAC12;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.
+&#xB530;&#xB77C;&#xC11C; &#xC544;&#xB798; &#xCCAB; &#xBC88;&#xC9F8; &#xC608;&#xC81C;&#xC5D0;&#xC11C; foo &#xBCC0;&#xC218;&#xAC12;&#xC740; <code>#</code> &#xBB38;&#xC790;&#xC640; newline &#xC774; &#xB429;&#xB2C8;&#xB2E4;.
+( info &#xD568;&#xC218;&#xB294; &#xBC18;&#xD658;&#xAC12;&#xC774; empty &#xC774;&#xBBC0;&#xB85C; )</p>
+<pre><code>define foo                              define foo
+#$(info 111)                            #
+$(info 222)                             endef
+$(info 333)                
+endef                                   bar :
+                                            @echo 111 222
+$(info xxx$(foo)yyy)                        @echo 333 $(foo) 444
+
+### &#xC2E4;&#xD589; &#xACB0;&#xACFC; ###                         ### &#xC2E4;&#xD589; &#xACB0;&#xACFC; ###
+
+111   &lt;--- &#xC8FC;&#xC11D; &#xCC98;&#xB9AC;&#xAC00; &#xC548;&#xB41C;&#xB2E4;               111 222
+222                                     333         # shell &#xC5D0;&#xC11C; &apos;#&apos; &#xBB38;&#xC790;&#xAC00;
+333                                                 # &#xC8FC;&#xC11D;&#xC73C;&#xB85C; &#xCC98;&#xB9AC;&#xB41C;&#xB2E4;.
+xxx#    
+
+yyy
+</code></pre><p><a name="newline"></a></p>
+<h4 id="newline-&#xBCC0;&#xC218;&#xB97C;-&#xC815;&#xC758;&#xD558;&#xB294;-&#xBC29;&#xBC95;">newline &#xBCC0;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD558;&#xB294; &#xBC29;&#xBC95;</h4>
+<p>one-line &#xBCC0;&#xC218; &#xC815;&#xC758;&#xC5D0;&#xC11C;&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; newline &#xC774; &#xBAA8;&#xB450; space &#xB85C; &#xBCC0;&#xACBD;&#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;
+newline &#xBB38;&#xC790;&#xB97C; &#xAC12;&#xC73C;&#xB85C; &#xAC16;&#xB294; &#xBCC0;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB530;&#xB77C;&#xC11C; &#xC774;&#xB54C;&#xB294; multi-line &#xBCC0;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile">                                            define nl :=
+<span class="hljs-comment"># &#xB450;&#xBC88;&#xC9F8; newline &#xBD80;&#xD130; &#xBAA8;&#xB450; space &#xB85C; &#xBCC0;&#xACBD;                        </span>
+<span class="hljs-constant">nl</span> != printf &apos;\012\012\012&apos;
+$(info aaa$(nl)bbb)                         endef
+                                            $(info aaa$(nl)bbb)
+<span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######                     ######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
+                                            aaa
+aaa  bbb                                    bbb
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./variables_and_functions.html" class="navigation navigation-prev " aria-label="Previous page: Variables and Functions"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./target_specific_variables.html" class="navigation navigation-next " aria-label="Next page: Target-Specific Variables"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
