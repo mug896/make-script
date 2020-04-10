@@ -954,6 +954,34 @@ $(BUILD_DIR)/$(SRC_DIR) : ;@mkdir -p $@
 clean :
     $(RM) $(OBJS) $(OBJS_SO) $(STATIC_LIB) $(SHARED_LIB)
 </code></pre>
+<h1 id="quiz">Quiz</h1>
+<p>Shared library &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xCF54;&#xB4DC;&#xB294; &#xBA54;&#xBAA8;&#xB9AC;&#xC758; &#xC784;&#xC758;&#xC758; &#xC8FC;&#xC18C;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xB420; &#xC218; &#xC788;&#xC5B4;&#xC57C; &#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;
+&#xCEF4;&#xD30C;&#xC77C; &#xC2DC;&#xC5D0; <code>-fPIC</code> &#xC635;&#xC158;&#xC744; &#xC8FC;&#xC5B4; Position Independent Code &#xB85C; &#xB9CC;&#xB4DC;&#xB294;&#xB370;&#xC694;.
+shared library &#xB97C; &#xB9CC;&#xB4E4; &#xB54C;&#xAC00; &#xC544;&#xB2CC; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; <code>-fPIC</code> &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC744;&#xAE4C;&#xC694;?</p>
+<blockquote>
+<p>&#xC704;&#xCE58; &#xB3C5;&#xB9BD;&#xC801;&#xC778; &#xCF54;&#xB4DC;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xC635;&#xC158;&#xC5D0;&#xB294; &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4E4;&#xB54C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; 
+<code>-fPIE</code> ( Position Independent Executables ) &#xACFC;
+shared library &#xB97C; &#xB9CC;&#xB4E4;&#xB54C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; <code>-fPIC</code> ( Position Independent Code ) &#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li><p>&#xBA3C;&#xC800; <code>-fPIE</code>, <code>-fPIC</code> &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xCEF4;&#xD30C;&#xC77C;&#xD55C; &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;, static library &#xB294;
+non-PIE &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC744; &#xBE4C;&#xB4DC; &#xD558;&#xB294; &#xB370;&#xB9CC; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB9CC;&#xC57D;&#xC5D0; PIE &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC744; &#xBE4C;&#xB4DC; &#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xD560; &#xACBD;&#xC6B0; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</li>
+<li><p><code>-fPIE</code> &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xCEF4;&#xD30C;&#xC77C;&#xD55C; &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;, static library &#xB294;
+PIE &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC744; &#xBE4C;&#xB4DC; &#xD560; &#xB54C;&#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; non-PIE &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC744; &#xBE4C;&#xB4DC; &#xD558;&#xB294;&#xB370;&#xB3C4; &#xC0AC;&#xC6A9;&#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xD558;&#xC9C0;&#xB9CC; shared library &#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xB370;&#xB294; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</li>
+<li><p><code>-fPIC</code> &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xCEF4;&#xD30C;&#xC77C;&#xD55C; &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;, static library &#xB294;
+non-PIE, PIE &#xC2E4;&#xD589;&#xD30C;&#xC77C; &#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; shared library &#xB97C; &#xB9CC;&#xB4DC;&#xB294;&#xB370;&#xB3C4; &#xBAA8;&#xB450; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</li>
+</ul>
+<p>&#xCF54;&#xB4DC;&#xAC00; &#xC784;&#xC758;&#xC758; &#xC8FC;&#xC18C;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xB418;&#xB824;&#xBA74; &#xAD00;&#xB828; &#xD14C;&#xC774;&#xBE14;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; indirection &#xC744; &#xD574;&#xC57C; &#xD558;&#xBBC0;&#xB85C;
+&#xCF54;&#xB4DC; &#xC0AC;&#xC774;&#xC988;&#xAC00; &#xCEE4;&#xC9C0;&#xACE0; &#xC2E4;&#xD589; &#xC18D;&#xB3C4;&#xAC00; &#xB290;&#xB824;&#xC9C0;&#xB294; &#xB2E8;&#xC810;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xD558;&#xC9C0;&#xB9CC; 64bit CPU &#xC640; &#xCEF4;&#xD30C;&#xC77C;&#xB7EC; &#xC9C0;&#xC6D0;&#xC5D0; &#xC758;&#xD574; &#xC9C0;&#xAE08;&#xC740; &#xD070; &#xCC28;&#xC774;&#xB294; &#xC5C6;&#xB2E4;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;.
+&#xB530;&#xB77C;&#xC11C; &#xC694;&#xC998;&#xC5D0;&#xB294; &#xCEF4;&#xD30C;&#xC77C; &#xC2DC;&#xC5D0; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; <code>-fPIC</code> &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xADF8;&#xB9AC;&#xACE0; &#xB300;&#xBD80;&#xBD84;&#xC758; &#xB9AC;&#xB205;&#xC2A4;&#xAC00; &#xBCF4;&#xC548;&#xACFC; &#xAD00;&#xB828;&#xD574;&#xC11C; <code>-fPIE</code> &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC788;&#xC5B4;&#xC11C;
+&#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC774; &#xB9E4;&#xBC88; &#xB2E4;&#xB978; &#xC8FC;&#xC18C;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xC774; &#xB429;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
 
                     
                     </section>
