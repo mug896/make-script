@@ -790,7 +790,7 @@ make: &apos;foo&apos; is up to date.
 <pre><code class="lang-makefile"><span class="hljs-comment"># &#xD604;&#xC7AC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; main.o main.c main.h &#xD30C;&#xC77C;&#xC774; &#xBAA8;&#xB450; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xBA74;</span>
 
 main.o : main.c main.h
-    @echo gcc -c $&lt; -o $@
+    @echo gcc -c -o $@ $&lt;
 
 ----------------------------
 sh$ make              <span class="hljs-comment"># main.c &#xD30C;&#xC77C; &#xC0DD;&#xC131;&#xC744; &#xC704;&#xD55C; rule &#xC774; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBBC0;&#xB85C; &#xC885;&#xB8CC;&#xB41C;&#xB2E4;.</span>
@@ -942,7 +942,7 @@ all : $(OBJS)
 $(OBJS) : $(BUILD_DIR)     <span class="hljs-comment"># $(OBJS) &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xBE4C;&#xB4DC;&#xD558;&#xAE30;&#xC804;&#xC5D0; &#xBA3C;&#xC800; $(BUILD_DIR) &#xD0C0;&#xAC9F; &#xC2E4;&#xD589;</span>
 
 $(BUILD_DIR)/%.o : %.c
-    gcc -c $&lt; -o $@
+    gcc -c -o $@ $&lt;
 
 $(BUILD_DIR) : 
     mkdir -p $@

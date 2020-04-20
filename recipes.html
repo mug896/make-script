@@ -1123,11 +1123,11 @@ endif
 &#xC544;&#xB798; &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0; make &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD560;&#xB54C; &#xB530;&#xB85C; &#xC635;&#xC158;&#xC744; &#xC124;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xC5B4; 
 &#xBCF5;&#xC7A1;&#xD55C; gcc &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC740; &#xCD9C;&#xB825;&#xB418;&#xC9C0; &#xC54A;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <blockquote>
-<p>@echo &quot;CC  $&lt;&quot;; gcc -Wall -O2 -I./include -c $&lt; -o $@</p>
+<p>@echo &quot;CC  $&lt;&quot;; gcc -Wall -O2 -I./include -c -o $@ $&lt;</p>
 </blockquote>
 <p>&#xBC18;&#xBA74;&#xC5D0; &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; verbose &#xAC12;&#xC744; 1 &#xB85C; &#xC124;&#xC815;&#xD558;&#xBA74; make &#xC5D0;&#xC758;&#xD574; gcc &#xBA85;&#xB839; &#xB77C;&#xC778; &#xC804;&#xCCB4;&#xAC00; &#xCD9C;&#xB825;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <blockquote>
-<p>gcc -Wall -O2 -I./include -c $&lt; -o $@</p>
+<p>gcc -Wall -O2 -I./include -c -o $@ $&lt;</p>
 </blockquote>
 <pre><code class="lang-makefile"><span class="hljs-constant">MAKEFLAGS</span> += -rR
 
@@ -1148,7 +1148,7 @@ $(BIN_DIR)/foo : $(OBJ_DIR)/foo.o | $(BIN_DIR)
     $(QUIET_LD)$(CC) $(LDFLAGS) $+ $(LDLIBS) -o $@
 
 $(OBJ_DIR)/foo.o : src/foo.c | $(OBJ_DIR)
-    $(QUIET_CC)$(CC) -c $(CFLAGS) $&lt; -o $@
+    $(QUIET_CC)$(CC) -c $(CFLAGS) -o $@ $&lt;
 
 $(BIN_DIR) $(OBJ_DIR) :
     $(Q)mkdir -p $@
@@ -1167,7 +1167,7 @@ sh$ rm -rf BUILD
 
 sh$ make verbose=1       <span class="hljs-comment"># verbose &#xAC12;&#xC744; 1 &#xB85C; &#xC124;&#xC815;</span>
 mkdir -p BUILD/obj
-gcc -c -Wall -O2 -I./include src/foo.c -o BUILD/obj/foo.o
+gcc -c -Wall -O2 -I./include -o BUILD/obj/foo.o src/foo.c
 mkdir -p BUILD/bin
 gcc -L/usr/local/lib BUILD/obj/foo.o -lpthread -o BUILD/bin/foo
 </code></pre>

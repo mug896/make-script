@@ -763,11 +763,11 @@ resource/xml/foo.xml resource/xml/bar.xml resource/html/zoo.html
 <code>vpath</code> -&gt; <code>VPATH</code> -&gt; <code>/lib</code> -&gt; <code>/usr/lib</code> -&gt; <code>/usr/local/lib</code> &#xC5D0;&#xC11C; &#xCC3E;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.
 &#xB2E4;&#xB978; prerequisites &#xACFC; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xD30C;&#xC77C;&#xC774; &#xD0C0;&#xAC9F; &#xD30C;&#xC77C; &#xBCF4;&#xB2E4; &#xCD5C;&#xC2E0;&#xC774;&#xBA74; recipe &#xAC00; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile">prog : foo.c -lcurses
-    @echo gcc -o $@ $^
+    @echo gcc $^ -o $@
 
 <span class="hljs-comment">#######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #######</span>
 
-gcc -o prog foo.c /usr/lib/libcurses.a
+gcc foo.c /usr/lib/libcurses.a -o prog
 </code></pre>
 
                     

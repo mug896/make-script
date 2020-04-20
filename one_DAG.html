@@ -848,7 +848,7 @@ TLPI_LIB.$d := $(TLPI_LIB.lib)   <span class="hljs-comment"># &#xB2E4;&#xB978; &
 $(BDIR.$d) : ;@mkdir -p $@
 
 $(OBJS.$d) : $(BUILD_DIR)/%.o : %.c | $(BDIR.$d)
-    $(CC) -c $(CFLAGS.$d) $&lt; -o $@
+    $(CC) -c $(CFLAGS.$d) -o $@ $&lt;
 
 $(EXES.$d) : $(TLPI_LIB.$d)      <span class="hljs-comment"># &#xB2E4;&#xB978; &#xBAA8;&#xB4C8;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xD30C;&#xC77C;&#xACFC; &#xC758;&#xC874;&#xAD00;&#xACC4; &#xC124;&#xC815;</span>
 $(EXES.$d) : % : %.o
@@ -911,7 +911,7 @@ sh$ cat mk/body.mk
 $(BDIR.$d) : ;@mkdir -p $@
 
 $(OBJS.$d) : $(BUILD_DIR)/%.o : %.c | $(BDIR.$d)
-    $(CC) -c $(CFLAGS.$d) $&lt; -o $@
+    $(CC) -c $(CFLAGS.$d) -o $@ $&lt;
 . . . .
 ---------------------------------------------------
 sh$ cat mk/footer.mk 

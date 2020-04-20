@@ -817,21 +817,21 @@ ifneq <span class="hljs-string">&quot;<span class="hljs-variable">$(strip $(if $
 <pre><code class="lang-makefile"><span class="hljs-comment"># recipe &#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xB418;&#xBBC0;&#xB85C; shell &#xBA85;&#xB839;&#xC744; &#xC791;&#xC131;&#xD560; &#xB54C;&#xB294; &#xC55E;&#xC5D0; tab &#xBB38;&#xC790;&#xB97C; &#xBD99;&#xC785;&#xB2C8;&#xB2E4;.</span>
 prog : $(OBJS)
 ifeq &quot;$(MYVAR)&quot; &quot;foo&quot;
-    $(CC) -o $@ $^ $(libs_for_foo)   <span class="hljs-comment"># tab</span>
+    $(CC) $+ $(libs_for_foo) -o $@  <span class="hljs-comment"># tab</span>
 else
-    $(CC) -o $@ $^ $(normal_libs)
+    $(CC) $+ $(normal_libs) -o $@
 endif
 </code></pre>
 <p>2 . global &#xC601;&#xC5ED;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xACBD;&#xC6B0;</p>
 <pre><code class="lang-makefile">ifeq &quot;$(MYVAR)&quot; &quot;foo&quot;
 
 prog : foo.o bar.o zoo.o
-    $(CC) -o $@ $^
+    $(CC) $+ -o $@
 
 else
 
 prog : xxx.o yyy.o zzz.o
-    $(CC) -o $@ $^
+    $(CC) $+ -o $@
 
 endif
 </code></pre>

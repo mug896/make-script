@@ -760,14 +760,14 @@ target : xxx.o                           make: *** No rule to make target &apos;
 all : $(EXES)
 
 $(EXES) : % : %.o
-    @echo gcc -o $@ $+
+    @echo gcc $+ -o $@
 
 .DEFAULT: ;
 
 <span class="hljs-comment">#########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #########</span>
-gcc -o BUILD/foo BUILD/foo.o
-gcc -o BUILD/bar BUILD/bar.o
-gcc -o BUILD/zoo BUILD/zoo.o
+gcc BUILD/foo.o -o BUILD/foo 
+gcc BUILD/bar.o -o BUILD/bar 
+gcc BUILD/zoo.o -o BUILD/zoo
 </code></pre>
 <h3 id="grouping">Grouping</h3>
 <p>&#xD558;&#xB098;&#xC758; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xC5EC;&#xB7EC; &#xADF8;&#xB8F9;&#xC73C;&#xB85C; &#xB098;&#xB204;&#xAC70;&#xB098;
@@ -800,7 +800,7 @@ $(GROUP_B) : BUILD/%.o : %.c
 <pre><code class="lang-makefile"><span class="hljs-constant">EXES</span>:= foo bar zoo
 
 $(EXES) : % : %.o
-    @echo gcc -o $@ $+
+    @echo gcc $+ -o $@
 
 bar : aaa.o
 zoo : aaa.o libxxx.a bbb.o libyyy.a ccc.o libxxx.a
@@ -809,13 +809,13 @@ zoo : aaa.o libxxx.a bbb.o libyyy.a ccc.o libxxx.a
 
 <span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
 sh$ make foo
-gcc -o foo foo.o
+gcc foo.o -o foo
 
 sh$ make bar
-gcc -o bar bar.o aaa.o
+gcc bar.o aaa.o -o bar
 
 sh$ make zoo
-gcc -o zoo zoo.o aaa.o libxxx.a bbb.o libyyy.a ccc.o libxxx.a
+gcc zoo.o aaa.o libxxx.a bbb.o libyyy.a ccc.o libxxx.a -o zoo
 </code></pre>
 <h4 id="static-pattern-rule-&#xC740;-explicit-rule-&#xC774;&#xB2E4;">Static pattern rule &#xC740; explicit rule &#xC774;&#xB2E4;</h4>
 <p>static pattern rule &#xC740; explicit rule &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; targets &#xC5D0; &#xD328;&#xD134;&#xC744; &#xC124;&#xC815;&#xD558;&#xB294; &#xD615;&#xD0DC;&#xC785;&#xB2C8;&#xB2E4;.
@@ -845,7 +845,7 @@ Makefile:3: warning: ignoring old recipe for target &apos;bar.o&apos;
     @echo $@ : $&lt; : $(CFLAGS)
 
 foo.o bar.o : CFLAGS := -g
-bar.o :       CFLAGS := -O2
+bar.o :       CFLAGS += -Wall
 
 %.c : ;
 
@@ -855,15 +855,15 @@ sh$ make
 foo.o : foo.c : -g
 
 sh$ make bar.o
-bar.o : bar.c : -O2
+bar.o : bar.c : -g -Wall
 </code></pre>
 <h4 id="pattern-rule-&#xC0AC;&#xC6A9;&#xC2DC;-&#xD2B9;&#xC815;-&#xD30C;&#xC77C;&#xC5D0;-&#xB300;&#xD574;&#xC11C;&#xB9CC;-&#xB2E4;&#xB978;-rule-&#xC744;-&#xC801;&#xC6A9;">pattern rule &#xC0AC;&#xC6A9;&#xC2DC; &#xD2B9;&#xC815; &#xD30C;&#xC77C;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xB2E4;&#xB978; rule &#xC744; &#xC801;&#xC6A9;</h4>
 <p>&#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774;&#xD558;&#xBA74; pattern rule &#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C; &#xD2B9;&#xC815; &#xD30C;&#xC77C;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xB2E4;&#xB978; rule &#xC744; &#xC801;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile">%.o : %.c                               <span class="hljs-comment"># &#xB514;&#xD3F4;&#xD2B8;&#xB85C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xB8F0;</span>
-    @echo gcc -c -DFOO $&lt; -o $@
+    @echo gcc -c -DFOO -o $@ $&lt;
 
 foo.o bar.o : %.o : %.c                 <span class="hljs-comment"># foo.o bar.o &#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xB2E4;&#xB978; &#xB8F0;&#xC744; &#xC801;&#xC6A9;</span>
-    @echo gcc -c -DBAR $&lt; -o $@
+    @echo gcc -c -DBAR -o $@ $&lt;
 
 %.c : ;
 
@@ -933,7 +933,7 @@ $(NAME).so : $(SHARED_LIB)
 <span class="hljs-comment">###########  static library  ###########</span>
 
 $(OBJS) : $(BUILD_DIR)/$(SRC_DIR)/%.o : %.c | $(BUILD_DIR)/$(SRC_DIR)
-    $(CC) -c $(CFLAGS) $&lt; -o $@
+    $(CC) -c $(CFLAGS) -o $@ $&lt;
 
 $(STATIC_LIB) : $(OBJS)
     $(RM) $@
@@ -942,7 +942,7 @@ $(STATIC_LIB) : $(OBJS)
 <span class="hljs-comment">###########  shared library  ###########</span>
 
 $(OBJS_SO) : $(BUILD_DIR)/$(SRC_DIR)/%.lo : %.c | $(BUILD_DIR)/$(SRC_DIR)
-    $(CC) -c -fPIC $(CFLAGS) $&lt; -o $@
+    $(CC) -c -fPIC $(CFLAGS) -o $@ $&lt;
 
 $(SHARED_LIB) : $(OBJS_SO)
     $(CC) -shared -Wl,-soname,$(NAME).so $^ -o $@
