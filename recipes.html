@@ -940,7 +940,7 @@ endef
 
 foo :
     @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> start ...
-    @<span class="hljs-built_in">exec</span> /bin/bash -c <span class="hljs-string">&apos;eval &quot;$$cmd&quot;&apos;</span>
+    @<span class="hljs-built_in">exec</span> /bin/bash -c <span class="hljs-string">&quot;$<span class="hljs-variable">$cmd</span>&quot;</span>
     @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> end ...
 
 <span class="hljs-comment">############  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ############</span>
