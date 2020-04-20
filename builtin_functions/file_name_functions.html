@@ -771,10 +771,10 @@ $(wildcard ../../foo/./bar//xxx.c)       <span class="hljs-comment"># &#xD30C;&#
 <p>rule &#xC758; prerequisite &#xBD80;&#xBD84;&#xC5D0; &#xC9C1;&#xC811; globbing &#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC9C0;&#xB9CC; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC5C6;&#xC744; &#xACBD;&#xC6B0;
 &#xD328;&#xD134;&#xC744; &#xADF8;&#xB300;&#xB85C; &#xB9AC;&#xD134;&#xD558;&#xBBC0;&#xB85C; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile"><span class="hljs-comment"># &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC788;&#xC744;&#xACBD;&#xC6B0;      # &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC5C6;&#xC744;&#xACBD;&#xC6B0;       # wildcard &#xD568;&#xC218;&#xB294; empty &#xB97C;&#xBC18;&#xD658;</span>
-foo : *.c                    foo : *.cpp                 foo : $(wildcard *.cpp)            
-    @echo $^                     @echo $^                    @echo $^         
+foo : *.c                    foo : *.cpp                 foo : $(wildcard *.cpp)
+    @echo $^                     @echo $^                    @echo $^
 
-.DEFAULT: ;                  .DEFAULT: ;                 .DEFAULT: ;          
+.DEFAULT: ;                  .DEFAULT: ;                 .DEFAULT: ;
 <span class="hljs-comment">#### &#xC2E4;&#xD589; &#xACB0;&#xACFC; ####            #### &#xC2E4;&#xD589; &#xACB0;&#xACFC; ####           #### &#xC2E4;&#xD589; &#xACB0;&#xACFC; ####</span>
 read.c write.c               *.cpp
 </code></pre>
