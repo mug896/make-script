@@ -744,7 +744,7 @@ shell PID: 10792, COUNT:
 make &#xC2E4;&#xD589;&#xC744; &#xC885;&#xB8CC;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xC785;&#xB2C8;&#xB2E4;.
 &#xD0C0;&#xAC9F; &#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4DC;&#xB294; &#xC791;&#xC5C5; &#xC911;&#xC5D0; &#xD558;&#xB098;&#xC758; &#xB77C;&#xC778;&#xC5D0;&#xC11C;&#xB77C;&#xB3C4; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xBA74; &#xC548;&#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC785;&#xB2C8;&#xB2E4;.
 &#xB9CC;&#xC57D;&#xC5D0; &#xD558;&#xB098;&#xC758; <code>sh -c</code> &#xC5D0;&#xC11C; &#xBAA8;&#xB450; shell &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xACE0; &#xC2F6;&#xC73C;&#xBA74; 
-<code>;</code> shell &#xBA85;&#xB839; &#xC885;&#xB8CC;&#xBB38;&#xC790;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC5F0;&#xC774;&#xC5B4;&#xC11C; &#xC791;&#xC131;&#xD558;&#xACE0; &#xB77C;&#xC778;&#xC774; &#xAE38;&#xC5B4;&#xC9C8; &#xACBD;&#xC6B0;&#xB294; 
+<code>&amp;&amp;</code> &#xB098; <code>;</code> &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC5F0;&#xC774;&#xC5B4;&#xC11C; &#xC791;&#xC131;&#xD558;&#xACE0; &#xB77C;&#xC778;&#xC774; &#xAE38;&#xC5B4;&#xC9C8; &#xACBD;&#xC6B0;&#xB294; 
 newline &#xC744; escape &#xD574;&#xC11C; &#xD558;&#xB098;&#xC758; &#xB77C;&#xC778;&#xC73C;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile"><span class="hljs-comment"># newline &#xC744; escape &#xD558;&#xC5EC; &#xD558;&#xB098;&#xC758; &#xB77C;&#xC778;&#xC774; &#xB418;&#xBBC0;&#xB85C; tab &#xBB38;&#xC790;&#xB294; &#xCC98;&#xC74C;&#xC5D0;&#xB9CC; &#xC785;&#xB825;&#xD574;&#xB3C4; &#xB41C;&#xB2E4;.</span>
 foo :
@@ -761,7 +761,7 @@ shell PID: 10909, COUNT: 100
 
 <span class="hljs-constant">LIST</span> = one two three
 <span class="hljs-title">all:</span>
-    @for i in $(LIST); do \     <span class="hljs-comment"># &#xBAA8;&#xB450; &#xD558;&#xB098;&#xC758; &#xB77C;&#xC778;&#xC774; &#xB418;&#xBBC0;&#xB85C; shell &#xBA85;&#xB839;&#xC744; &#xC791;&#xC131;&#xD560; &#xB54C;&#xB294; </span>
+    @for i in $(LIST); do \     <span class="hljs-comment"># &#xBAA8;&#xB450; &#xD558;&#xB098;&#xC758; &#xB77C;&#xC778;&#xC774; &#xB418;&#xBBC0;&#xB85C; &#xBA85;&#xB839;&#xC744; &#xC791;&#xC131;&#xD560; &#xB54C;&#xB294; </span>
         echo $$i; \             <span class="hljs-comment"># &apos;;&apos; &#xBB38;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</span>
     done
 
@@ -869,7 +869,7 @@ call &#xD568;&#xC218;&#xC758; &#xBC18;&#xD658;&#xAC12;&#xC73C;&#xB85C; shell &#x
 &#xACB0;&#xACFC;&#xC801;&#xC73C;&#xB85C; <code>sh -c</code> &#xC758; &#xC885;&#xB8CC; &#xC0C1;&#xD0DC; &#xAC12;&#xC740; &#xC815;&#xC0C1;&#xC774; &#xB429;&#xB2C8;&#xB2E4;.
 &#xB530;&#xB77C;&#xC11C; make &#xC2E4;&#xD589;&#xC774; &#xC911;&#xB2E8;&#xB418;&#xC9C0; &#xC54A;&#xACE0; &#xB2E4;&#xC74C; date &#xBA85;&#xB839;&#xB3C4; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xBC18;&#xBA74;&#xC5D0; &#xB450; &#xBC88;&#xC9F8; &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; <code>&amp;&amp;</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC;
-&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xBA85;&#xB839;&#xC758; &#xC885;&#xB8CC; &#xC0C1;&#xD0DC; &#xAC12;&#xC774; &#xC624;&#xB958;&#xAC00; &#xB418;&#xBBC0;&#xB85C; make &#xC2E4;&#xD589;&#xC774; &#xC885;&#xB8CC;&#xB429;&#xB2C8;&#xB2E4;. </p>
+&#xC804;&#xCCB4; &#xBA85;&#xB839;&#xC758; &#xC885;&#xB8CC; &#xC0C1;&#xD0DC; &#xAC12;&#xC774; &#xC624;&#xB958;&#xAC00; &#xB418;&#xBBC0;&#xB85C; make &#xC2E4;&#xD589;&#xC774; &#xC885;&#xB8CC;&#xB429;&#xB2C8;&#xB2E4;. </p>
 <pre><code class="lang-makefile">foo :        (&apos;;&apos; &#xB97C; &#xC0AC;&#xC6A9;)                    foo :        (&apos;&amp;&amp;&apos; &#xB97C; &#xC0AC;&#xC6A9;)
     @cd not-exist; date                          @cd not-exist &amp;&amp; date
     @date                                        @date
@@ -893,6 +893,34 @@ foo :                                         foo :
 
 /bin/sh: 0: Can&apos;t open cd not-exist; date
 make: *** [Makefile:4: foo] Error 127
+</code></pre>
+<p>pipe &#xB85C; &#xBA85;&#xB839;&#xC744; &#xC5F0;&#xACB0;&#xD574; &#xC0AC;&#xC6A9;&#xD560; &#xACBD;&#xC6B0;&#xB3C4; &#xB9C8;&#xC9C0;&#xB9C9; &#xBA85;&#xB839;&#xC758; &#xC885;&#xB8CC; &#xC0C1;&#xD0DC; &#xAC12;&#xC774; &#xC0AC;&#xC6A9;&#xB418;&#xBBC0;&#xB85C;
+&#xC911;&#xAC04;&#xC5D0; &#xC5B4;&#xB5A4; &#xBA85;&#xB839;&#xC5D0;&#xC11C; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xB9C8;&#xC9C0;&#xB9C9; &#xBA85;&#xB839;&#xC774; &#xC815;&#xC0C1; &#xC885;&#xB8CC;&#xD558;&#xBA74;
+&#xC804;&#xCCB4; &#xBA85;&#xB839;&#xC758; &#xC885;&#xB8CC; &#xC0C1;&#xD0DC; &#xAC12;&#xC740; <code>0</code> &#xC774;&#xB429;&#xB2C8;&#xB2E4;.
+&#xB530;&#xB77C;&#xC11C; &#xC774;&#xC640; &#xAC19;&#xC740; &#xACBD;&#xC6B0;&#xB3C4; make &#xC2E4;&#xD589;&#xC774; &#xC885;&#xB8CC;&#xB3FC;&#xC57C; &#xD55C;&#xB2E4;&#xBA74; bash &#xB97C; &#xC774;&#xC6A9;&#xD574; <code>pipefail</code> &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># error_command &#xC5D0;&#xC11C; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD588;&#xC9C0;&#xB9CC; sed &#xBA85;&#xB839;&#xC740; &#xD56D;&#xC0C1; &#xCC38;&#xC774; &#xB418;&#xBBC0;&#xB85C; &#xC885;&#xB8CC; &#xC0C1;&#xD0DC; &#xAC12;&#xC740; 0 &#xC774;&#xB41C;&#xB2E4;.</span>
+$ error_<span class="hljs-built_in">command</span> ... | sed <span class="hljs-string">&apos;s/foo/bar/&apos;</span> &gt; file
+$ <span class="hljs-built_in">echo</span> $?
+<span class="hljs-number">0</span>
+
+-----------------------------------------------
+<span class="hljs-comment"># date -@ &#xBA85;&#xB839;&#xC5D0;&#xC11C; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD588;&#xC9C0;&#xB9CC;          # bash &#xB97C; &#xC774;&#xC6A9;&#xD574; pipefail &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</span>
+<span class="hljs-comment"># &#xC885;&#xB8CC;&#xB418;&#xC9C0; &#xC54A;&#xACE0; &#xB05D;&#xAE4C;&#xC9C0; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</span>
+foo :                                   foo :
+    @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> start ...                      @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> start ...
+    @date -@ | date                         @<span class="hljs-built_in">exec</span> /bin/bash -c <span class="hljs-string">&apos;set -o pipefail &amp;&amp; date -@ | date&apos;</span>
+    @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> end ...                        @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> end ...
+
+<span class="hljs-comment">########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ########             ########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ########</span>
+
+foo start ...                           foo start ...
+date: invalid option -- <span class="hljs-string">&apos;@&apos;</span>             date: invalid option -- <span class="hljs-string">&apos;@&apos;</span>
+Try <span class="hljs-string">&apos;date --help&apos;</span> <span class="hljs-keyword">for</span> more information. Try <span class="hljs-string">&apos;date --help&apos;</span> <span class="hljs-keyword">for</span> more information.
+Mon Apr <span class="hljs-number">20</span> <span class="hljs-number">09</span>:<span class="hljs-number">48</span>:<span class="hljs-number">16</span> KST <span class="hljs-number">2020</span>            Mon Apr <span class="hljs-number">20</span> <span class="hljs-number">10</span>:<span class="hljs-number">03</span>:<span class="hljs-number">05</span> KST <span class="hljs-number">2020</span>
+foo end ...                             make: *** [Makefile:<span class="hljs-number">4</span>: foo] Error <span class="hljs-number">1</span>
+
+$ <span class="hljs-built_in">echo</span> $?                               $ <span class="hljs-built_in">echo</span> $?
+<span class="hljs-number">0</span>                                       <span class="hljs-number">2</span>
 </code></pre>
 <h4 id="echo-&#xBA85;&#xB839;-&#xC0AC;&#xC6A9;&#xC2DC;-&#xC8FC;&#xC758;&#xD560;-&#xC810;">echo &#xBA85;&#xB839; &#xC0AC;&#xC6A9;&#xC2DC; &#xC8FC;&#xC758;&#xD560; &#xC810;</h4>
 <p>shell &#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xD560; &#xBA85;&#xB839;&#xC774; &#xD558;&#xB098;&#xB9CC; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xAD73;&#xC774; <code>sh -c</code> &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xACE0; &#xAC70;&#xAE30;&#xC11C; &#xB610; &#xD574;&#xB2F9; &#xBA85;&#xB839;&#xC744;
