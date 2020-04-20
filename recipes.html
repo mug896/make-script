@@ -905,7 +905,7 @@ $ <span class="hljs-built_in">echo</span> $?
 
 -----------------------------------------------
 <span class="hljs-comment"># date -@ &#xBA85;&#xB839;&#xC5D0;&#xC11C; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD588;&#xC9C0;&#xB9CC;          # bash &#xB97C; &#xC774;&#xC6A9;&#xD574; pipefail &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</span>
-<span class="hljs-comment"># &#xC885;&#xB8CC;&#xB418;&#xC9C0; &#xC54A;&#xACE0; &#xB05D;&#xAE4C;&#xC9C0; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</span>
+<span class="hljs-comment"># &#xC885;&#xB8CC;&#xB418;&#xC9C0; &#xC54A;&#xACE0; &#xB05D;&#xAE4C;&#xC9C0; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.              # (exec &#xC740; &#xAE30;&#xC874;&#xC758; sh &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC2E4;&#xD589;)</span>
 foo :                                   foo :
     @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> start ...                      @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> start ...
     @date -@ | date                         @<span class="hljs-built_in">exec</span> /bin/bash -c <span class="hljs-string">&apos;set -o pipefail &amp;&amp; date -@ | date&apos;</span>
