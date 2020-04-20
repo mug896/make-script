@@ -860,10 +860,10 @@ bar.o : bar.c : -O2
 <h4 id="pattern-rule-&#xC0AC;&#xC6A9;&#xC2DC;-&#xD2B9;&#xC815;-&#xD30C;&#xC77C;&#xC5D0;-&#xB300;&#xD574;&#xC11C;&#xB9CC;-&#xB2E4;&#xB978;-rule-&#xC744;-&#xC801;&#xC6A9;">pattern rule &#xC0AC;&#xC6A9;&#xC2DC; &#xD2B9;&#xC815; &#xD30C;&#xC77C;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xB2E4;&#xB978; rule &#xC744; &#xC801;&#xC6A9;</h4>
 <p>&#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774;&#xD558;&#xBA74; pattern rule &#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C; &#xD2B9;&#xC815; &#xD30C;&#xC77C;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xB2E4;&#xB978; rule &#xC744; &#xC801;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile">%.o : %.c                               <span class="hljs-comment"># &#xB514;&#xD3F4;&#xD2B8;&#xB85C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xB8F0;</span>
-    @echo gcc -c -DFOO -o $@ $&lt;
+    @echo gcc -c -DFOO $&lt; -o $@
 
 foo.o bar.o : %.o : %.c                 <span class="hljs-comment"># foo.o bar.o &#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xB2E4;&#xB978; &#xB8F0;&#xC744; &#xC801;&#xC6A9;</span>
-    @echo gcc -c -DBAR -o $@ $&lt;
+    @echo gcc -c -DBAR $&lt; -o $@
 
 %.c : ;
 
@@ -933,7 +933,7 @@ $(NAME).so : $(SHARED_LIB)
 <span class="hljs-comment">###########  static library  ###########</span>
 
 $(OBJS) : $(BUILD_DIR)/$(SRC_DIR)/%.o : %.c | $(BUILD_DIR)/$(SRC_DIR)
-    $(CC) -c $(CFLAGS) -o $@ $&lt;
+    $(CC) -c $(CFLAGS) $&lt; -o $@
 
 $(STATIC_LIB) : $(OBJS)
     $(RM) $@
@@ -942,7 +942,7 @@ $(STATIC_LIB) : $(OBJS)
 <span class="hljs-comment">###########  shared library  ###########</span>
 
 $(OBJS_SO) : $(BUILD_DIR)/$(SRC_DIR)/%.lo : %.c | $(BUILD_DIR)/$(SRC_DIR)
-    $(CC) -c -fPIC $(CFLAGS) -o $@ $&lt;
+    $(CC) -c -fPIC $(CFLAGS) $&lt; -o $@
 
 $(SHARED_LIB) : $(OBJS_SO)
     $(CC) -shared -Wl,-soname,$(NAME).so $^ -o $@

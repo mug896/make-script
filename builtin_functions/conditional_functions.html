@@ -718,8 +718,8 @@ recipe &#xC5D0;&#xC11C; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;&#xC774;&#xBBC0
 &#xADF8;&#xB798;&#xC57C; &#xC120;&#xD0DD;&#xB41C; &#xBA85;&#xB839; &#xC55E;&#xC5D0; tab &#xBB38;&#xC790;&#xAC00; &#xBD99;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <pre><code>$(OBJS_DIR)/%.o : %.c
     $(if $(filter $&lt;, $(GROUP_A)), \
-        $(CC) -c $(CFLAGS) -DFOO -o $@ $&lt;, \       ---- (1)
-        $(CC) -c $(CFLAGS) -DBAR -o $@ $&lt; )        ---- (2)
+        $(CC) -c $(CFLAGS) -DFOO $&lt; -o $@, \       ---- (1)
+        $(CC) -c $(CFLAGS) -DBAR $&lt; -o $@ )        ---- (2)
 </code></pre><h4 id="or-condition1---condition2---condition3--">$( or <em>condition1</em> [ , <em>condition2</em> [ , <em>condition3...</em>] ] )</h4>
 <p><code>or</code> &#xD568;&#xC218;&#xB294; condition &#xB4E4;&#xC774; &#xCC28;&#xB840;&#xB85C; &#xC2E4;&#xD589;&#xB418;&#xB294;&#xB370; &#xADF8;&#xC911;&#xC5D0;&#xC11C; &#xCC98;&#xC74C; non-empty &#xAC12;&#xC774; &#xBC1C;&#xC0DD;&#xD558;&#xBA74;
 true &#xAC00; &#xB418;&#xC5B4; &#xC911;&#xB2E8;&#xB418;&#xACE0; &#xBC18;&#xD658;&#xAC12;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.</p>

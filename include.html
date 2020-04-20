@@ -954,13 +954,13 @@ makefile &#xC774; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.
 all : foo                              all : foo
 
 foo : $(OBJS)                          foo : $(OBJS)  
-    $(CC) -o $@ $^                         $(CC) -o $@ $^  
+    $(CC) $+ -o $@                         $(CC) $+ -o $@
 
 $(OBJS) : $(BUILD_DIR)/%.o : %.c       $(OBJS) : $(BUILD_DIR)/%.o : %.c   
-    $(CC) -c $(CFLAGS) -o $@ $&lt;            $(CC) -c $(CFLAGS) -o $@ $&lt;  
+    $(CC) -c $(CFLAGS) $&lt; -o $@            $(CC) -c $(CFLAGS) $&lt; -o $@
 
 $(BUILD_DIR)/%.d : %.c                 depend :
-    @$(CC) -MM -o $@ $&lt;                    @$(CC) -MM -o $(DEPEND_FILE) $(SRCS)
+    @$(CC) -MM $&lt; -o $@                    @$(CC) -MM $(SRCS) &gt; $(DEPEND_FILE)
 
 ifneq &quot;$(MAKECMDGOALS)&quot; &quot;clean&quot;        ifeq &quot;$(filter clean depend,$(MAKECMDGOALS))&quot; &quot;&quot;
 -include $(DEPS)                       -include $(DEPEND_FILE)
@@ -985,7 +985,7 @@ foo : $(OBJS)
 <span class="hljs-constant">CFLAGS</span> += -MMD -MP
 
 $(OBJS) : $(BUILD_DIR)/%.o : %.c   
-    $(CC) -c $(CFLAGS) -o $@ $&lt;  
+    $(CC) -c $(CFLAGS) $&lt; -o $@
 
 ifneq &quot;$(MAKECMDGOALS)&quot; &quot;clean&quot;
 -include $(DEPS)
