@@ -922,6 +922,38 @@ foo end ...                             make: *** [Makefile:<span class="hljs-nu
 $ <span class="hljs-built_in">echo</span> $?                               $ <span class="hljs-built_in">echo</span> $?
 <span class="hljs-number">0</span>                                       <span class="hljs-number">2</span>
 </code></pre>
+<h4 id="bash-c--&#xB610;&#xB294;-sh-c--&#xC0AC;&#xC6A9;&#xC2DC;-multiline-&#xBA85;&#xB839;-&#xC791;&#xC131;&#xBC95;">bash -c ... &#xB610;&#xB294; sh -c ... &#xC0AC;&#xC6A9;&#xC2DC; multi-line &#xBA85;&#xB839; &#xC791;&#xC131;&#xBC95;</h4>
+<p>&#xBCF4;&#xD1B5; <code>bash -c ...</code> &#xD615;&#xD0DC;&#xB85C; &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD560; &#xB54C;&#xB294; quote &#xC744; &#xD558;&#xACE0; single-line &#xC73C;&#xB85C; &#xC791;&#xC131;&#xD558;&#xB294;&#xB370;&#xC694;. 
+&#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; multi-line &#xBCC0;&#xC218;&#xB97C; &#xD65C;&#xC6A9;&#xD558;&#xBA74; shell &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD30C;&#xC77C;&#xC744; &#xC791;&#xC131;&#xD560; &#xB54C;&#xC640; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; 
+&#xC791;&#xC131;&#xD574; &#xC2E4;&#xD589;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">define cmd
+AA=<span class="hljs-number">100</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-operator">-e</span> <span class="hljs-string">&quot;double quotes\n<span class="hljs-variable">$AA</span>&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;single quotes\n$AA&apos;</span>
+cat &lt;&lt;\EOF
+<span class="hljs-string">&apos;here&apos;</span>
+<span class="hljs-string">&quot;document&quot;</span>
+EOF
+endef
+
+<span class="hljs-built_in">export</span> cmd := $(value cmd)<span class="hljs-comment">#       child process &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560;&#xC218; &#xC788;&#xAC8C; export</span>
+
+foo :
+    @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> start ...
+    @<span class="hljs-built_in">exec</span> /bin/bash -c <span class="hljs-string">&apos;eval &quot;$$cmd&quot;&apos;</span>
+    @<span class="hljs-built_in">echo</span> <span class="hljs-variable">$@</span> end ...
+
+<span class="hljs-comment">############  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ############</span>
+
+$ make
+foo start ...
+double quotes
+<span class="hljs-number">100</span>
+single quotes\n<span class="hljs-variable">$AA</span>
+<span class="hljs-string">&apos;here&apos;</span>
+<span class="hljs-string">&quot;document&quot;</span>
+foo end ...
+</code></pre>
 <h4 id="echo-&#xBA85;&#xB839;-&#xC0AC;&#xC6A9;&#xC2DC;-&#xC8FC;&#xC758;&#xD560;-&#xC810;">echo &#xBA85;&#xB839; &#xC0AC;&#xC6A9;&#xC2DC; &#xC8FC;&#xC758;&#xD560; &#xC810;</h4>
 <p>shell &#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xD560; &#xBA85;&#xB839;&#xC774; &#xD558;&#xB098;&#xB9CC; &#xC874;&#xC7AC;&#xD558;&#xBA74; &#xAD73;&#xC774; <code>sh -c</code> &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xACE0; &#xAC70;&#xAE30;&#xC11C; &#xB610; &#xD574;&#xB2F9; &#xBA85;&#xB839;&#xC744;
 &#xC2E4;&#xD589;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xACA0;&#xC8E0;.
