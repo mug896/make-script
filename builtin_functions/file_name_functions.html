@@ -759,10 +759,7 @@ $(join $(dir),$(notdir))
 </code></pre>
 <h4 id="wildcard-pattern-">$( wildcard <em>pattern</em> )</h4>
 <p>shell &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; globbing &#xACFC; &#xAC19;&#xC740; &#xAE30;&#xB2A5;&#xC785;&#xB2C8;&#xB2E4;.<br>&#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC5C6;&#xC744; &#xACBD;&#xC6B0; <code>empty</code> &#xAC00; &#xBC18;&#xD658;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile"><span class="hljs-constant">objects</span> := <span class="hljs-variable">$(patsubst %.c,%.o,$(wildcard *.c)</span>)
-
-foo : $(objects)
-    cc -o foo $(objects)
+<pre><code class="lang-makefile"><span class="hljs-constant">SRCS</span> := <span class="hljs-variable">$(wildcard src/*.c)</span>
 </code></pre>
 <p>wildcard &#xD568;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xD574;&#xB2F9; &#xACBD;&#xB85C;&#xC5D0; &#xD30C;&#xC77C; &#xC874;&#xC7AC; &#xC5EC;&#xBD80;&#xB97C; &#xD14C;&#xC2A4;&#xD2B8;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile">$(wildcard ../../foo/./bar//zoo.c)       <span class="hljs-comment"># &#xD30C;&#xC77C;&#xC774; &#xC874;&#xC7AC;&#xD560; &#xACBD;&#xC6B0;</span>
