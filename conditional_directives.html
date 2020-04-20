@@ -817,7 +817,7 @@ ifneq <span class="hljs-string">&quot;<span class="hljs-variable">$(strip $(if $
 <pre><code class="lang-makefile"><span class="hljs-comment"># recipe &#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xB418;&#xBBC0;&#xB85C; shell &#xBA85;&#xB839;&#xC744; &#xC791;&#xC131;&#xD560; &#xB54C;&#xB294; &#xC55E;&#xC5D0; tab &#xBB38;&#xC790;&#xB97C; &#xBD99;&#xC785;&#xB2C8;&#xB2E4;.</span>
 prog : $(OBJS)
 ifeq &quot;$(MYVAR)&quot; &quot;foo&quot;
-    $(CC) $+ $(libs_for_foo) -o $@  <span class="hljs-comment"># tab</span>
+    $(CC) $+ $(libs_for_foo) -o $@    <span class="hljs-comment"># tab</span>
 else
     $(CC) $+ $(normal_libs) -o $@
 endif
