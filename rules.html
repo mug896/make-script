@@ -1043,13 +1043,13 @@ recipe &#xAC00; &#xC788;&#xB294; &#xB8F0;&#xC758; prerequisites &#xC774; &#xC81C
 <pre><code class="lang-makefile">prog : aaa.o libxxx.a
 prog : bbb.o libyyy.a ccc.o libxxx.a
 prog : main.o
-    @echo gcc -o $@ $+
+    @echo gcc $+ -o $@
 
 .DEFAULT: ;
 
 <span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
 sh$ make
-gcc -o prog main.o aaa.o libxxx.a bbb.o libyyy.a ccc.o libxxx.a
+gcc main.o aaa.o libxxx.a bbb.o libyyy.a ccc.o libxxx.a -o prog
 </code></pre>
 <h4 id="multiple-targets">Multiple Targets</h4>
 <p>&#xBCF4;&#xD1B5; &#xC608;&#xC81C;&#xC5D0;&#xB294; &#xD0C0;&#xAC9F; &#xD30C;&#xC77C;&#xC774; &#xD558;&#xB098;&#xB85C; &#xB098;&#xC624;&#xB294;&#xB370; &#xC2E4;&#xC81C;&#xB294; &#xD0C0;&#xAC9F; &#xD30C;&#xC77C;&#xB3C4; prerequisites &#xCC98;&#xB7FC; &#xC5EC;&#xB7EC;&#xAC1C;&#xB97C; 

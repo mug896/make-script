@@ -709,7 +709,7 @@
 &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; 1 &#xBB38;&#xC790; &#xBCC0;&#xC218;&#xC778;&#xB370; &#xB4A4;&#xC5D0; <code>D</code> &#xAC00; &#xBD99;&#xC740; &#xAC83;&#xC740; Directory &#xBD80;&#xBD84;&#xC744;,
 <code>F</code> &#xAC00; &#xBD99;&#xC740; &#xAC83;&#xC740; File &#xBD80;&#xBD84;&#xC744; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
 <blockquote>
-<p>automatic &#xBCC0;&#xC218;&#xB294; eval &#xD568;&#xC218;&#xB85C; &#xC7AC;&#xC815;&#xD574; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>automatic &#xBCC0;&#xC218;&#xB294; eval &#xD568;&#xC218;&#xB85C; &#xC7AC;&#xC815;&#xC758;&#xD574; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 </blockquote>
 <h4 id="-d--f">$@ , $(@D) , $(@F)</h4>
 <p>&#xD0C0;&#xAC9F; &#xD30C;&#xC77C; &#xC774;&#xB984;&#xC744; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
@@ -724,14 +724,14 @@ foo/bar/zoo.o : foo/bar : zoo.o
 <p>prerequisite &#xB9AC;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xCCAB; &#xBC88;&#xC9F8; &#xD30C;&#xC77C;&#xC744; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.
 &#xC18C;&#xC2A4; &#xD30C;&#xC77C;&#xC744; &#xCEF4;&#xD30C;&#xC77C; &#xD574;&#xC11C; &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4E4;&#xB54C; <code>$&lt;</code> &#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C;&#xC9C0; <code>$^</code> &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74;
 &#xD5E4;&#xB354; &#xD30C;&#xC77C;&#xAE4C;&#xC9C0; &#xCEF4;&#xD30C;&#xC77C;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile">main : aaa/bbb/foo ccc/ddd/bar eee/fff/zoo 
+<pre><code class="lang-makefile">main : aaa/bbb/foo.o ccc/ddd/bar.o eee/fff/zoo.o
     @echo $&lt; : $(&lt;D) : $(&lt;F)
 
 .DEFAULT: ;
 
 <span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
 
-aaa/bbb/foo : aaa/bbb : foo
+aaa/bbb/foo.o : aaa/bbb : foo.o
 
 -------------------------------------------
 
@@ -751,7 +751,7 @@ lib/foo/bar.c : lib/foo : bar.c
 <code>$^</code> &#xB294; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC788;&#xC744; &#xACBD;&#xC6B0; &#xC81C;&#xAC70;&#xB418;&#xB294;&#xB370; &#xBC18;&#xD574;, <code>$+</code> &#xB294; &#xC911;&#xBCF5;&#xC744; &#xD3EC;&#xD568;&#xD558;&#xC5EC; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xCD9C;&#xB825;&#xD569;&#xB2C8;&#xB2E4;. 
 &#xB9C1;&#xD06C; &#xC2DC;&#xC5D0;&#xB294; &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;&#xC774;&#xB098; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xAC00; &#xC911;&#xBCF5;&#xB418;&#xC5B4; &#xB098;&#xD0C0;&#xB0A0; &#xC218; &#xC788;&#xB294;&#xB370; &#xADF8;&#xB54C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC5EC;&#xAE30;&#xC5D0; order-only prerequisites &#xC740; &#xD3EC;&#xD568;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile">main : xxx/yyy/foo aaa/bbb/bar xxx/yyy/foo     <span class="hljs-comment"># xxx/yyy/foo &#xB294; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xD30C;&#xC77C;</span>
+<pre><code class="lang-makefile">main : xxx/yyy/foo.o aaa/bbb/bar.o xxx/yyy/foo.o     <span class="hljs-comment"># xxx/yyy/foo.o &#xB294; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xD30C;&#xC77C;</span>
     @echo $^
     @echo $(^D) : $(^F)
     @echo
@@ -762,16 +762,16 @@ lib/foo/bar.c : lib/foo : bar.c
 
 <span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
 
-xxx/yyy/foo aaa/bbb/bar                   <span class="hljs-comment"># &apos;$^&apos; &#xB294; xxx/yyy/foo &#xC911;&#xBCF5;&#xC774; &#xC81C;&#xAC70;&#xB41C;&#xB2E4;.</span>
-xxx/yyy aaa/bbb : foo bar
+xxx/yyy/foo.o aaa/bbb/bar.o                     <span class="hljs-comment"># &apos;$^&apos; &#xB294; xxx/yyy/foo.o &#xC911;&#xBCF5;&#xC774; &#xC81C;&#xAC70;&#xB41C;&#xB2E4;.</span>
+xxx/yyy aaa/bbb : foo.o bar.o
 
-xxx/yyy/foo aaa/bbb/bar xxx/yyy/foo       <span class="hljs-comment"># &apos;$+&apos; &#xB294; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.</span>
-xxx/yyy aaa/bbb xxx/yyy : foo bar foo
+xxx/yyy/foo.o aaa/bbb/bar.o xxx/yyy/foo.o       <span class="hljs-comment"># &apos;$+&apos; &#xB294; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.</span>
+xxx/yyy aaa/bbb xxx/yyy : foo.o bar.o foo.o
 </code></pre>
 <h4 id="-d--f">$? , $(?D) , $(?F)</h4>
 <p>prerequisites &#xB9AC;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xD0C0;&#xAC9F; &#xD30C;&#xC77C;&#xBCF4;&#xB2E4; newer &#xD30C;&#xC77C;&#xC774; &#xC788;&#xC744; &#xACBD;&#xC6B0; &#xC124;&#xC815;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile"><span class="hljs-comment"># prog &#xD30C;&#xC77C;&#xBCF4;&#xB2E4; xxx/yyy/zoo &#xD30C;&#xC77C;&#xC774; &#xCD5C;&#xC2E0;&#xC774;&#xB77C;&#xBA74;</span>
-prog : aaa/bbb/foo ccc/ddd/bar xxx/yyy/zoo
+<pre><code class="lang-makefile"><span class="hljs-comment"># prog &#xD30C;&#xC77C;&#xBCF4;&#xB2E4; xxx/yyy/zoo.o &#xD30C;&#xC77C;&#xC774; &#xCD5C;&#xC2E0;&#xC774;&#xB77C;&#xBA74;</span>
+prog : aaa/bbb/foo.o ccc/ddd/bar.o xxx/yyy/zoo.o
     @echo $?
     @echo $(?D) : $(?F)
 
@@ -779,8 +779,8 @@ prog : aaa/bbb/foo ccc/ddd/bar xxx/yyy/zoo
 
 <span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
 
-xxx/yyy/zoo               <span class="hljs-comment"># aaa/bbb/foo ccc/ddd/bar &#xD30C;&#xC77C;&#xC740; &#xC81C;&#xC678;&#xB41C;&#xB2E4;.</span>
-xxx/yyy : zoo
+xxx/yyy/zoo.o               <span class="hljs-comment"># aaa/bbb/foo.o ccc/ddd/bar.o &#xD30C;&#xC77C;&#xC740; &#xC81C;&#xC678;&#xB41C;&#xB2E4;.</span>
+xxx/yyy : zoo.o
 </code></pre>
 <h4 id="-d--f">$* , $(*D) , $(*F)</h4>
 <p>pattern rule &#xC5D0;&#xC11C; stem ( <code>%</code> &#xD328;&#xD134;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBD80;&#xBD84; ) &#xC744; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
