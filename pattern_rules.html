@@ -1085,8 +1085,9 @@ cc   hello.o   -o hello
 <p>builtin rule &#xC744; &#xC815;&#xC758;&#xD560; &#xB54C; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBCC0;&#xC218; &#xC774;&#xB984;&#xB4E4;&#xC774; &#xC788;&#xB294;&#xB370; &#xC774;&#xAC83;&#xC744; &#xD65C;&#xC6A9;&#xD558;&#xBA74;
 &#xC635;&#xC158;&#xB3C4; &#xC804;&#xB2EC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xB2E4;&#xC74C; &#xC608;&#xC81C;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB41C; <code>CFLAGS</code> &#xBCC0;&#xC218;&#xB294; C &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;&#xC5D0; &#xC635;&#xC158;&#xC744; &#xC804;&#xB2EC;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xB418;&#xACE0; 
-( C++ &#xC77C; &#xACBD;&#xC6B0;&#xB294; <code>CXXFLAGS</code> ) <code>CPPFLAGS</code> &#xBCC0;&#xC218;&#xB294; &#xC804;&#xCC98;&#xB9AC;&#xAE30; &#xAD00;&#xB828; &#xC635;&#xC158; ( C, C++ &#xACF5;&#xD1B5; ),
-<code>LDFLAGS</code> &#xC740; ld &#xB9C1;&#xCEE4; &#xAD00;&#xB828; &#xC635;&#xC158;, <code>LDLIBS</code> &#xB294; &#xB9C1;&#xCEE4;&#xC5D0; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;( <code>-lname</code> ) &#xAD00;&#xB828; 
+( C++ &#xC77C; &#xACBD;&#xC6B0;&#xB294; <code>CXXFLAGS</code> ), <code>CPPFLAGS</code> &#xBCC0;&#xC218;&#xB294; &#xC804;&#xCC98;&#xB9AC;&#xAE30; &#xAD00;&#xB828; &#xC635;&#xC158; ( C, C++ &#xACF5;&#xD1B5; ),
+<code>LDFLAGS</code> &#xC740; ld &#xB9C1;&#xCEE4; &#xAD00;&#xB828; &#xC635;&#xC158;( -L/nonstandard/dir  -Wl,-z,relro,-z,now ),
+<code>LDLIBS</code> &#xB294; &#xB9C1;&#xCEE4;&#xC5D0; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;( -lpthread ) &#xAD00;&#xB828; 
 &#xC124;&#xC815;&#xC744;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <blockquote>
 <p>&#xBCF4;&#xD1B5; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xC804;&#xCC98;&#xB9AC;&#xAE30; &#xC635;&#xC158;&#xC744; &#xD3EC;&#xD568;&#xD558;&#xC5EC; &#xBAA8;&#xB450; CFLAGS &#xC5D0; &#xC791;&#xC131;&#xD558;&#xACE0; 
@@ -1105,20 +1106,19 @@ cc -g -Wall -DDEBUG  -c -o hello.o hello.c
 sh$ make hello LDFLAGS=-L/usr/local/lib LDLIBS=-lpthread
 cc -L/usr/local/lib  hello.o  -lpthread -o hello
 </code></pre>
-<p>&#xBCC0;&#xC218;&#xB4E4;&#xC744; &#xC6A9;&#xB3C4;&#xBCC4;&#xB85C; &#xAD6C;&#xBD84;&#xC740; &#xD574;&#xB193;&#xC558;&#xC9C0;&#xB9CC; &#xC2E4;&#xC81C; CFLAGS &#xBCC0;&#xC218; &#xD558;&#xB098;&#xC5D0; &#xBAA8;&#xB4E0; &#xAC12;&#xC744; &#xC124;&#xC815;&#xD574;&#xB3C4; &#xBB38;&#xC81C;&#xAC00; &#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
-&#xD558;&#xC9C0;&#xB9CC; LDLIBS &#xBCC0;&#xC218;&#xC5D0; &#xC124;&#xC815;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xC21C;&#xC11C;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBC1B;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;
-&#xC62C;&#xBC14;&#xB85C; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><code>LDLIBS</code> &#xBCC0;&#xC218;&#xC5D0; &#xC124;&#xC815;&#xD558;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB294; &#xC21C;&#xC11C;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBC1B;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;
+<code>LDFLAGS</code> &#xBCC0;&#xC218;&#xC5D0; &#xD568;&#xAED8; &#xC124;&#xC815;&#xD558;&#xBA74; &#xC548;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-bash">sh$ cat hello.c
 <span class="hljs-comment">#include &lt;pthread.h&gt;</span>
 int <span class="hljs-function"><span class="hljs-title">main</span></span>() {
     pthread_join(<span class="hljs-number">1</span>,NULL);
 }
 
-<span class="hljs-comment"># CFLAGS &#xBCC0;&#xC218; &#xD558;&#xB098;&#xC5D0; &#xBAA8;&#xB450; &#xC124;&#xC815;&#xD574;&#xB3C4; &#xB41C;&#xB2E4;.</span>
+<span class="hljs-comment"># CFLAGS &#xBCC0;&#xC218;&#xC5D0; &#xC804;&#xCC98;&#xB9AC;&#xAE30; &#xC635;&#xC158;&#xC744; &#xD568;&#xAED8; &#xC124;&#xC815;&#xD574;&#xB3C4; &#xB41C;&#xB2E4;.</span>
 sh$ make hello.o <span class="hljs-string">&quot;CFLAGS := -g -Wall -DDEBUG&quot;</span>
 cc -g -Wall -DDEBUG   -c -o hello.o hello.c
 
-<span class="hljs-comment"># &#xD558;&#xC9C0;&#xB9CC; &#xB9C1;&#xCEE4;&#xC5D0; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB294; &#xC21C;&#xC11C;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBC1B;&#xC73C;&#xBBC0;&#xB85C; LDLIBS &#xBCC0;&#xC218;&#xC5D0; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</span>
+<span class="hljs-comment"># &#xB9C1;&#xCEE4;&#xC5D0; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB294; &#xC21C;&#xC11C;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBC1B;&#xC73C;&#xBBC0;&#xB85C; LDLIBS &#xBCC0;&#xC218;&#xC5D0; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</span>
 sh$ make hello <span class="hljs-string">&quot;LDFLAGS := -L/usr/local/lib -lpthread&quot;</span>
 cc -L/usr/<span class="hljs-built_in">local</span>/lib -lpthread  hello.o   -o hello
 /usr/bin/ld: hello.o: <span class="hljs-keyword">in</span> <span class="hljs-keyword">function</span> <span class="hljs-string">&apos;main&apos;</span>:
