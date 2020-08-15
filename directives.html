@@ -713,6 +713,15 @@
 <blockquote>
 <p>&#xD2B9;&#xC218;&#xBB38;&#xC790;&#xB85C; &#xAD6C;&#xC131;&#xB41C; &#xBCC0;&#xC218;&#xB97C; export &#xD558;&#xB824;&#xBA74; &#xC9C1;&#xC811; export &#xC9C0;&#xC2DC;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 </blockquote>
+<pre><code class="lang-makefile"><span class="hljs-comment"># Avoid funny character set dependencies           // linux/Makefile &#xCC38;&#xC870;</span>
+unexport LC_ALL
+<span class="hljs-constant">LC_COLLATE</span>=C
+<span class="hljs-constant">LC_NUMERIC</span>=C
+export LC_COLLATE LC_NUMERIC
+
+<span class="hljs-comment"># Avoid interference with shell env settings</span>
+unexport GREP_OPTIONS
+</code></pre>
 <h4 id="define----endef">define . . . endef</h4>
 <p>Multi-line &#xBCC0;&#xC218;, &#xD568;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <h4 id="undefine">undefine</h4>
