@@ -724,27 +724,32 @@ ifeq &apos;a&apos; &apos;b&apos;                 ifneq &apos;a&apos; &apos;b&apo
 -------------------------------------------------
 
 <span class="hljs-comment"># shell &#xD568;&#xC218;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; quotes &#xACFC; &#xC911;&#xCCA9;&#xB418;&#xC5B4; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;.</span>
+$ make -f- &lt;&lt;\@
 ifeq &quot;$(shell echo &quot;foo bar&quot;)&quot; &quot;foo bar&quot;
 $(info 11111 )
 endif
-&#xC2E4;&#xD589;&#xACB0;&#xACFC;: Makefile:1: *** unterminated call to function &apos;shell&apos;: missing &apos;)&apos;.  Stop.
+@
+*** unterminated call to function &apos;shell&apos;: missing &apos;)&apos;.  Stop.
 
 <span class="hljs-comment"># &#xC774;&#xB54C;&#xB294; &#xAD04;&#xD638;&#xD615;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xAC70;&#xB098; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xC785;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</span>
+$ make -f- &lt;&lt;\@
 ifeq ($(shell echo &quot;foo bar&quot;),foo bar)
 $(info 11111 )
 endif
-&#xC2E4;&#xD589;&#xACB0;&#xACFC;: 11111
+@
+11111
 </code></pre>
 <p><code>( )</code> &#xAD04;&#xD638;&#xD615;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xAC00;&#xC6B4;&#xB370; &#xACF5;&#xBC31;&#xC740; &#xAC12;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC9C0; &#xC54A;&#xC9C0;&#xB9CC;
 &#xC591;&#xB05D;&#xC5D0; &#xACF5;&#xBC31;&#xC740; &#xAC12;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xBBC0;&#xB85C; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.
 &#xB530;&#xB77C;&#xC11C; &#xB2E4;&#xC74C; &#xC138; &#xBC88;&#xC9F8; &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0; &#xC2E4;&#xC81C; &#xAC12;&#xC740; <code>&quot; foo&quot;</code> &#xC640; <code>&quot;foo &quot;</code> &#xAC00; &#xB418;&#xC5B4; &#xAC70;&#xC9D3;&#xC774; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile">ifeq (foo,foo)                 ifeq (foo ,   foo)              ifeq ( foo,foo )     
-  $(info equal)                  $(info equal)                   $(info equal)       
-else                           else                            else                  
-  $(info not equal)              $(info not equal)               $(info not equal)   
-endif                          endif                           endif                 
+<pre><code class="lang-makefile">$ make -f- &lt;&lt;\@                $ make -f- &lt;&lt;\@                 $ make -f- &lt;&lt;\@
+ifeq (foo,foo)                 ifeq (foo  ,   foo)             ifeq (  foo,foo  )
+  $(info equal)                  $(info equal)                   $(info equal)
+else                           else                            else
+  $(info not equal)              $(info not equal)               $(info not equal)
+endif                          endif                           endif
+@                              @                               @
 
-<span class="hljs-comment">####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####            ####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####             ####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #### </span>
 equal                          equal                           not equal
 </code></pre>
 <h4 id="ifdef--ifndef----else----endif">ifdef , ifndef . . . else . . . endif</h4>
@@ -756,13 +761,14 @@ undefined &#xC0C1;&#xD0DC;&#xB97C; &#xCCB4;&#xD06C;&#xD558;&#xB294; &#xAC83;&#xC
 
 --------------------------------------------------------
 
+$ make -f- &lt;&lt;\@
 <span class="hljs-constant">AA</span> :=    
 
 ifndef AA         <span class="hljs-comment"># &#xBCC0;&#xC218;&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xC9C0;&#xB9CC; empty &#xC774;&#xBBC0;&#xB85C; &#xCC38;&#xC774;&#xB41C;&#xB2E4;.</span>
 $(info AA is not defined or empty )
 endif
+@
 
-<span class="hljs-comment">#######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
 AA is not defined or empty
 </code></pre>
 <h4 id="and--or-&#xC5F0;&#xC0B0;">and , or &#xC5F0;&#xC0B0;</h4>
