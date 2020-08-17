@@ -951,9 +951,9 @@ $(BUILD_DIR) :
 
 sh$ make
 mkdir -p BUILD                    <span class="hljs-comment"># $(BUILD_DIR) &#xD0C0;&#xAC9F; &#xC2E4;&#xD589;</span>
-gcc -c -o BUILD/foo.o foo.c       <span class="hljs-comment"># foo.o: 15:47:17, BUILD: 15:47:17</span>
-gcc -c -o BUILD/bar.o bar.c       <span class="hljs-comment"># bar.o: 15:47:18, BUILD: 15:47:18</span>
-gcc -c -o BUILD/baz.o baz.c       <span class="hljs-comment"># baz.o: 15:47:19, BUILD: 15:47:19</span>
+gcc -c -o BUILD/foo.o foo.c       <span class="hljs-comment"># foo.o: time 47:17, BUILD: time 47:17</span>
+gcc -c -o BUILD/bar.o bar.c       <span class="hljs-comment"># bar.o: time 47:18, BUILD: time 47:18</span>
+gcc -c -o BUILD/baz.o baz.c       <span class="hljs-comment"># baz.o: time 47:19, BUILD: time 47:19</span>
 
 sh$ make                          <span class="hljs-comment"># &#xBE4C;&#xB4DC;&#xAC00; &#xC644;&#xB8CC;&#xB418;&#xC5C8;&#xC9C0;&#xB9CC; foo.o bar.o &#xD30C;&#xC77C;&#xC758; timestamp &#xB294;</span>
 gcc -c -o BUILD/foo.o foo.c       <span class="hljs-comment"># BUILD &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xBCF4;&#xB2E4; old &#xC0C1;&#xD0DC;&#xAC00; &#xB418;&#xBBC0;&#xB85C; &#xB2E4;&#xC2DC; &#xBE4C;&#xB4DC;&#xAC00; &#xB41C;&#xB2E4;.</span>
