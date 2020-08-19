@@ -1122,7 +1122,7 @@ recursive &#xBCC0;&#xC218;&#xB294; &#xB9E4;&#xBC88; &#xBCC0;&#xC218;&#xAC00; &#x
 <pre><code class="lang-makefile"><span class="hljs-comment"># 1. &#xBCC0;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560;&#xB54C; `=` recursive &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC600;&#xC73C;&#xBBC0;&#xB85C; value &#xBD80;&#xBD84;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xC774; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xAC8C;&#xB429;&#xB2C8;&#xB2E4;.</span>
 <span class="hljs-comment"># 2. $(LAZY) &#xBCC0;&#xC218;&#xAC00; &#xC0AC;&#xC6A9;&#xB420; &#xB54C; value &#xBD80;&#xBD84;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xB294;&#xB370; &#xC774;&#xB54C; shell &#xBA85;&#xB839;&#xC774; &#xC2E4;&#xD589;&#xB428;&#xACFC; &#xB3D9;&#xC2DC;&#xC5D0; </span>
 <span class="hljs-comment">#    eval &#xD568;&#xC218;&#xC5D0; &#xC758;&#xD574; LAZY &#xBCC0;&#xC218;&#xAC00; &#xB2E4;&#xC2DC; simple &#xBCC0;&#xC218;&#xB85C; &#xC815;&#xC758;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;. (`:=` &#xC5F0;&#xC0B0;&#xC790; &#xC0AC;&#xC6A9;)</span>
-<span class="hljs-comment"># 3. &#xB9C8;&#xC9C0;&#xB9C9;&#xC5D0; &#xCD94;&#xAC00;&#xB41C; `$(LAZY)` &#xC5D0;&#xC758;&#xD574; shell &#xBA85;&#xB839; &#xC2E4;&#xD589; &#xACB0;&#xACFC;&#xAC00; &#xCD9C;&#xB825;&#xB429;&#xB2C8;&#xB2E4;.</span>
+<span class="hljs-comment"># 3. &#xB9C8;&#xC9C0;&#xB9C9;&#xC5D0; &#xCD94;&#xAC00;&#xB41C; `$(LAZY)` &#xC5D0; &#xC758;&#xD574; shell &#xBA85;&#xB839; &#xC2E4;&#xD589; &#xACB0;&#xACFC;&#xAC00; &#xCD9C;&#xB825;&#xB429;&#xB2C8;&#xB2E4;.</span>
 <span class="hljs-constant">LAZY</span> = <span class="hljs-variable">$(eval LAZY := $(shell date)</span>)<span class="hljs-variable">$(LAZY)</span>
 $(info $(flavor LAZY))        
 $(info $(LAZY))
