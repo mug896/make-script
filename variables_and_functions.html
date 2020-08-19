@@ -914,7 +914,7 @@ result &#xBCC0;&#xC218;&#xB294; &#xC2E4;&#xD589;&#xC774; &#xC644;&#xB8CC;&#xB41C
 <tr>
 <td style="text-align:center"><strong><code>+=</code></strong></td>
 <td>append</td>
-<td>recursive or simple</td>
+<td>recursive or simple<br>( default &#xB294; recursive )</td>
 <td>deferred or immediate</td>
 </tr>
 <tr>
@@ -934,8 +934,9 @@ result &#xBCC0;&#xC218;&#xB294; &#xC2E4;&#xD589;&#xC774; &#xC644;&#xB8CC;&#xB41C
 <p><code>+=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xC124;&#xBA85;&#xC774; &#xD544;&#xC694;&#xD55C;&#xB370; &#xC608;&#xB97C; &#xB4E4;&#xC5B4; simple &#xBCC0;&#xC218;&#xC5D0; <code>+=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74;
 simple &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xC5EC; value &#xC5D0;&#xC788;&#xB294; &#xC2DD;&#xC774; &#xC2E4;&#xD589;&#xC774; &#xC644;&#xB8CC;&#xB418;&#xC5B4; &#xACB0;&#xACFC;&#xAC00; append &#xB418;&#xACE0;,
 recursive &#xBCC0;&#xC218;&#xC5D0; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; recursive &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xC5EC; value &#xC5D0;&#xC788;&#xB294; &#xC2DD;&#xC774; &#xADF8;&#xB300;&#xB85C; &#xCD94;&#xAC00;&#xB429;&#xB2C8;&#xB2E4;.
-Parse &#xD56D;&#xBAA9;&#xC740; &#xC5B8;&#xC81C; value &#xC5D0;&#xC788;&#xB294; &#xC2DD;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xB294;&#xC9C0;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294;&#xB370; simple &#xC5F0;&#xC0B0;&#xC790;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xB300;&#xC785; &#xC5F0;&#xC0B0;&#xC2DC; 
-&#xC989;&#xC2DC;( immediate ) &#xC2E4;&#xD589;&#xB418;&#xACE0; &#xB098;&#xBA38;&#xC9C0; recursive &#xC5F0;&#xC0B0;&#xC790;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xC5F0;&#xAE30;( deferred ) &#xB429;&#xB2C8;&#xB2E4;.
+default &#xB294; recursive &#xC774;&#xBBC0;&#xB85C; &#xCC98;&#xC74C; &#xBCC0;&#xC218; &#xC0AC;&#xC6A9;&#xC2DC; <code>+=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; recursive &#xBCC0;&#xC218;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.
+Parse &#xD56D;&#xBAA9;&#xC740; &#xC5B8;&#xC81C; value &#xC5D0; &#xC788;&#xB294; &#xC2DD;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xB294;&#xC9C0;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294;&#xB370; simple &#xC5F0;&#xC0B0;&#xC790;&#xC758; &#xACBD;&#xC6B0;&#xB294; 
+&#xB300;&#xC785; &#xC5F0;&#xC0B0;&#xC2DC; &#xC989;&#xC2DC;( immediate ) &#xC2E4;&#xD589;&#xB418;&#xACE0; recursive &#xC5F0;&#xC0B0;&#xC790;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xD574;&#xB2F9; &#xBCC0;&#xC218; &#xC0AC;&#xC6A9; &#xC2DC;&#xAE4C;&#xC9C0; &#xC5F0;&#xAE30;( deferred ) &#xB429;&#xB2C8;&#xB2E4;.
 <code>!=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xC6B0;&#xCE21; value &#xAC12;&#xC744; shell script &#xB85C; &#xC2E4;&#xD589;&#xD558;&#xBBC0;&#xB85C; Parse &#xD56D;&#xBAA9;&#xC740; immediate &#xC774;&#xC9C0;&#xB9CC;
 &#xBCC0;&#xC218;&#xB294; recursive &#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <blockquote>
@@ -1121,10 +1122,10 @@ recursive &#xBCC0;&#xC218;&#xB294; &#xB9E4;&#xBC88; &#xBCC0;&#xC218;&#xAC00; &#x
 <pre><code class="lang-makefile"><span class="hljs-comment"># 1. &#xBCC0;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560;&#xB54C; `=` recursive &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC600;&#xC73C;&#xBBC0;&#xB85C; value &#xBD80;&#xBD84;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xC774; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xAC8C;&#xB429;&#xB2C8;&#xB2E4;.</span>
 <span class="hljs-comment"># 2. $(LAZY) &#xBCC0;&#xC218;&#xAC00; &#xC0AC;&#xC6A9;&#xB420; &#xB54C; value &#xBD80;&#xBD84;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xB294;&#xB370; &#xC774;&#xB54C; shell &#xBA85;&#xB839;&#xC774; &#xC2E4;&#xD589;&#xB428;&#xACFC; &#xB3D9;&#xC2DC;&#xC5D0; </span>
 <span class="hljs-comment">#    eval &#xD568;&#xC218;&#xC5D0; &#xC758;&#xD574; LAZY &#xBCC0;&#xC218;&#xAC00; &#xB2E4;&#xC2DC; simple &#xBCC0;&#xC218;&#xB85C; &#xC815;&#xC758;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;. (`:=` &#xC5F0;&#xC0B0;&#xC790; &#xC0AC;&#xC6A9;)</span>
-<span class="hljs-comment"># 3. &#xB9C8;&#xC9C0;&#xB9C9;&#xC5D0; &#xCD94;&#xAC00;&#xB41C; `$(LAZY)` &#xC5D0;&#xC758;&#xD574; shell &#xBA85;&#xB839; &#xC2E4;&#xD589; &#xACB0;&#xACFC;&#xAC00; simple &#xBCC0;&#xC218;&#xAC00;&#xB41C; LAZY &#xC5D0; &#xC800;&#xC7A5;&#xB429;&#xB2C8;&#xB2E4;.</span>
+<span class="hljs-comment"># 3. &#xB9C8;&#xC9C0;&#xB9C9;&#xC5D0; &#xCD94;&#xAC00;&#xB41C; `$(LAZY)` &#xC5D0;&#xC758;&#xD574; shell &#xBA85;&#xB839; &#xC2E4;&#xD589; &#xACB0;&#xACFC;&#xAC00; &#xCD9C;&#xB825;&#xB429;&#xB2C8;&#xB2E4;.</span>
 <span class="hljs-constant">LAZY</span> = <span class="hljs-variable">$(eval LAZY := $(shell date)</span>)<span class="hljs-variable">$(LAZY)</span>
 $(info $(flavor LAZY))        
-$(info $(LAZY))               
+$(info $(LAZY))
 $(info $(flavor LAZY))        
 
 <span class="hljs-comment">##########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ##########</span>
