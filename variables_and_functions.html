@@ -1267,21 +1267,21 @@ $(info xxx$(space)yyy)
 </code></pre>
 <p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; gcc &#xB97C; clang &#xC73C;&#xB85C; &#xBC14;&#xAFBC;&#xB2E4;&#xAC70;&#xB098; &#xB2E4;&#xB978; &#xACBD;&#xB85C;&#xB85C; &#xC124;&#xC815;&#xD574; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xB420; &#xACBD;&#xC6B0;&#xAC00; &#xC0DD;&#xAE38; &#xC218; &#xC788;&#xB294;&#xB370;
 &#xC774;&#xB7F4; &#xB54C; &#xBCC0;&#xC218;&#xB85C; &#xC124;&#xC815;&#xD574; &#xB193;&#xC558;&#xB2E4;&#xBA74; &#xC815;&#xC758;&#xB41C; &#xACF3;&#xC758; &#xC704;&#xCE58;&#xB97C; &#xCC3E;&#xC544;&#xC11C; &#xD55C;&#xBC88;&#xB9CC; &#xBCC0;&#xACBD;&#xD574;&#xC8FC;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile"><span class="hljs-constant">AS</span>            := <span class="hljs-variable">$(CROSS_COMPILE)</span>as
-<span class="hljs-constant">LD</span>            := <span class="hljs-variable">$(CROSS_COMPILE)</span>ld
-<span class="hljs-constant">CC</span>            := <span class="hljs-variable">$(CROSS_COMPILE)</span>gcc
-<span class="hljs-constant">CPP</span>           := <span class="hljs-variable">$(CC)</span> -E
-<span class="hljs-constant">AR</span>            := <span class="hljs-variable">$(CROSS_COMPILE)</span>ar
-<span class="hljs-constant">NM</span>            := <span class="hljs-variable">$(CROSS_COMPILE)</span>nm
-<span class="hljs-constant">STRIP</span>         := <span class="hljs-variable">$(CROSS_COMPILE)</span>strip
-<span class="hljs-constant">OBJCOPY</span>       := <span class="hljs-variable">$(CROSS_COMPILE)</span>objcopy
-<span class="hljs-constant">OBJDUMP</span>       := <span class="hljs-variable">$(CROSS_COMPILE)</span>objdump
-<span class="hljs-constant">PAHOLE</span>        := pahole
-<span class="hljs-constant">LEX</span>           := flex
-<span class="hljs-constant">YACC</span>          := bison
-<span class="hljs-constant">AWK</span>           := awk
-<span class="hljs-constant">INSTALL</span>       := /usr/local/bin/install -c
-<span class="hljs-constant">INSTALLDATA</span>   := /usr/local/bin/install -c -m 644
+<pre><code class="lang-makefile"><span class="hljs-constant">AS</span>            = <span class="hljs-variable">$(CROSS_COMPILE)</span>as
+<span class="hljs-constant">LD</span>            = <span class="hljs-variable">$(CROSS_COMPILE)</span>ld
+<span class="hljs-constant">CC</span>            = <span class="hljs-variable">$(CROSS_COMPILE)</span>gcc
+<span class="hljs-constant">CPP</span>           = <span class="hljs-variable">$(CC)</span> -E
+<span class="hljs-constant">AR</span>            = <span class="hljs-variable">$(CROSS_COMPILE)</span>ar
+<span class="hljs-constant">NM</span>            = <span class="hljs-variable">$(CROSS_COMPILE)</span>nm
+<span class="hljs-constant">STRIP</span>         = <span class="hljs-variable">$(CROSS_COMPILE)</span>strip
+<span class="hljs-constant">OBJCOPY</span>       = <span class="hljs-variable">$(CROSS_COMPILE)</span>objcopy
+<span class="hljs-constant">OBJDUMP</span>       = <span class="hljs-variable">$(CROSS_COMPILE)</span>objdump
+<span class="hljs-constant">PAHOLE</span>        = pahole
+<span class="hljs-constant">LEX</span>           = flex
+<span class="hljs-constant">YACC</span>          = bison
+<span class="hljs-constant">AWK</span>           = awk
+<span class="hljs-constant">INSTALL</span>       = /usr/local/bin/install -c
+<span class="hljs-constant">INSTALLDATA</span>   = /usr/local/bin/install -c -m 644
 </code></pre>
 
                     
