@@ -944,13 +944,15 @@ Parse &#xD56D;&#xBAA9;&#xC740; &#xC5B8;&#xC81C; value &#xC5D0; &#xC788;&#xB294; 
 simple &#xBCC0;&#xC218;&#xC778;&#xC9C0; recursive &#xBCC0;&#xC218;&#xC778;&#xC9C0; &#xC54C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 </blockquote>
 <h4 id="">:=</h4>
-<p>simple &#xBCC0;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC774; &#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xC804;&#xD1B5;&#xC801;&#xC778; make &#xC5D0;&#xB294; &#xC5C6;&#xB294; gnu make &#xC758; &#xD655;&#xC7A5; &#xAE30;&#xB2A5;&#xC785;&#xB2C8;&#xB2E4;.
+<p>&#xC6D0;&#xB798; &#xC804;&#xD1B5;&#xC801;&#xC778; make &#xC5D0;&#xC11C;&#xB294; simple &#xBCC0;&#xC218; &#xAC1C;&#xB150;&#xC774; &#xC5C6;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xBAA8;&#xB450; recursive &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;. ( &#xC704;&#xC758; &#xD45C;&#xB97C; &#xBCF4;&#xBA74; &#xBAA8;&#xB450; recursive &#xBCC0;&#xC218;&#xC8E0; ).
+<code>:=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; simple &#xBCC0;&#xC218;&#xB294; &#xB098;&#xC911;&#xC5D0; gnu make &#xC5D0; &#xCD94;&#xAC00;&#xB41C; &#xAE30;&#xB2A5;&#xC785;&#xB2C8;&#xB2E4;.
 &#xB2E4;&#xC74C;&#xC740; <code>:=</code> &#xC5F0;&#xC0B0;&#xC790;&#xC640; <code>=</code> &#xB97C; &#xBE44;&#xAD50;&#xD574;&#xBCF8; &#xAC83;&#xC778;&#xB370;&#xC694;.
 <code>=</code> &#xC5F0;&#xC0B0;&#xC790;&#xC758; &#xACBD;&#xC6B0;&#xB294; <code>val</code> &#xBCC0;&#xC218; &#xC815;&#xC758;&#xAC00; <code>foo</code> &#xBCC0;&#xC218; &#xB4A4;&#xC5D0; &#xC640;&#xB3C4; &#xB418;&#xB294; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile"><span class="hljs-comment"># foo &#xBCC0;&#xC218;&#xB294; simple                       # foo &#xBCC0;&#xC218;&#xB294; recursive</span>
 <span class="hljs-constant">val</span> := 100                               val := 100
 
-<span class="hljs-comment"># &#xB300;&#xC785; &#xC644;&#xB8CC;&#xD6C4; foo &#xAC12;&#xC740; 100 &#xC774; &#xB41C;&#xB2E4;.          # &#xB300;&#xC785; &#xC644;&#xB8CC;&#xD6C4; foo &#xAC12;&#xC740; &apos;$(val)&apos; &#xAC00; &#xB41C;&#xB2E4;.</span>
+<span class="hljs-comment"># &#xB300;&#xC785; &#xC644;&#xB8CC;&#xD6C4; foo &#xAC12;&#xC740; 100 &#xC774; &#xB41C;&#xB2E4;.           # &#xB300;&#xC785; &#xC644;&#xB8CC;&#xD6C4; foo &#xAC12;&#xC740; &apos;$(val)&apos; &#xAC00; &#xB41C;&#xB2E4;.</span>
 <span class="hljs-constant">foo</span> := <span class="hljs-variable">$(val)</span>                            foo = <span class="hljs-variable">$(val)</span>
 
 <span class="hljs-constant">val</span> := 200                               val := 200
@@ -984,32 +986,19 @@ $(info $(value foo))
 &#xACB0;&#xACFC;: hello world
 </code></pre>
 <h4 id="">+=</h4>
-<p><code>+=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBCC0;&#xC218;&#xC758; flavor &#xC5D0; &#xB530;&#xB77C; &#xAC01;&#xAC01; &#xB2E4;&#xB974;&#xAC8C; &#xB3D9;&#xC791;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><code>+=</code> &#xB294; append &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBCC0;&#xC218;&#xC758; flavor &#xC5D0; &#xB530;&#xB77C; &#xAC01;&#xAC01; &#xB2E4;&#xB974;&#xAC8C; &#xB3D9;&#xC791;&#xD569;&#xB2C8;&#xB2E4;.
+&#xAC12;&#xC774; &#xB300;&#xC785;&#xB420; &#xB54C;&#xB294; &#xBA3C;&#xC800; &#xC55E;&#xC5D0; space &#xAC00; &#xD558;&#xB098; &#xCD94;&#xAC00;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile"><span class="hljs-comment"># foo &#xBCC0;&#xC218;&#xB97C; simple &#xBCC0;&#xC218;&#xB85C; &#xCD08;&#xAE30;&#xD654;            # foo &#xBCC0;&#xC218;&#xB97C; recursive &#xBCC0;&#xC218;&#xB85C; &#xCD08;&#xAE30;&#xD654;</span>
-<span class="hljs-constant">foo</span> := 100                               foo = 100
-<span class="hljs-constant">val</span> := 200                               val := 200
+<span class="hljs-constant">foo</span> := aaa.c                             foo = aaa.c
+<span class="hljs-constant">val</span> := bbb.c                             val := bbb.c
 
-<span class="hljs-comment"># &#xB300;&#xC785; &#xC644;&#xB8CC;&#xD6C4; foo &#xAC12;&#xC740; 100 200 &#xC774; &#xB41C;&#xB2E4;.       # &#xB300;&#xC785; &#xC644;&#xB8CC;&#xD6C4; foo &#xAC12;&#xC740; &apos;100 $(val)&apos; &#xC774; &#xB41C;&#xB2E4;.</span>
+<span class="hljs-comment"># &#xB300;&#xC785; &#xC644;&#xB8CC;&#xD6C4; foo &#xAC12;&#xC740; aaa.c bbb.c &#xAC00; &#xB41C;&#xB2E4;.   # &#xB300;&#xC785; &#xC644;&#xB8CC;&#xD6C4; foo &#xAC12;&#xC740; &apos;aaa.c $(val)&apos; &#xC774; &#xB41C;&#xB2E4;.</span>
 <span class="hljs-constant">foo</span> += <span class="hljs-variable">$(val)</span>                            foo += <span class="hljs-variable">$(val)</span>
 
-<span class="hljs-constant">val</span> := 300                               val := 300
+<span class="hljs-constant">val</span> := ccc.c                             val := ccc.c
 
 $(info $(foo))                           $(info $(foo))
-&#xACB0;&#xACFC;: 100 200                             &#xACB0;&#xACFC;: 100 300
-</code></pre>
-<p><code>+=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xB300;&#xC785; &#xC2DC;&#xC5D0; &#xBA3C;&#xC800; &#xC55E;&#xC5D0; space &#xB97C; &#xD558;&#xB098; &#xCD94;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.
-&#xB530;&#xB77C;&#xC11C; &#xCCAB; &#xBC88;&#xC9F8; &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0; &#xD30C;&#xC77C; aaa.c &#xC640; bbb.c &#xC0AC;&#xC774;&#xC5D0; space &#xAC00; &#xD558;&#xB098; &#xC0DD;&#xAE30;&#xAC8C; &#xB418;&#xACE0;
-&#xC624;&#xB978;&#xCABD; &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0;&#xB294; AA &#xAC12;&#xC774; empty &#xAC00; &#xC544;&#xB2C8;&#xB77C; space &#xAC00; &#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; if &#xBB38;&#xC5D0;&#xC11C; &#xCC38;&#xC774; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile"><span class="hljs-constant">AA</span> := aaa.c          
-<span class="hljs-constant">BB</span> := bbb.c             
-
-<span class="hljs-constant">CC</span> += <span class="hljs-variable">$(AA)</span>                         AA :=
-<span class="hljs-constant">CC</span> += <span class="hljs-variable">$(BB)</span>                         AA +=
-
-$(info $(CC))                       $(if $(AA),$(info yes),$(info no))
-
-<span class="hljs-comment">#### &#xC2E4;&#xD589; &#xACB0;&#xACFC; ####                   ####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####</span>
-aaa.c bbb.c                          yes
+&#xACB0;&#xACFC;: aaa.c bbb.c                         &#xACB0;&#xACFC;: aaa.c ccc.c
 </code></pre>
 <h4 id="">?=</h4>
 <p><code>?=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xBCC0;&#xC218;&#xAC00; undefined &#xC0C1;&#xD0DC;&#xC77C; &#xACBD;&#xC6B0;&#xB9CC; &#xAC12;&#xC774; &#xB300;&#xC785;&#xB418;&#xBBC0;&#xB85C; &#xC544;&#xB798; &#xCCAB; &#xBC88;&#xC9F8; &#xC2DD;&#xC740;
@@ -1031,14 +1020,14 @@ $(info $(EXCL_1))
 $(info $(EXCL_2)) 
 
 ----------------------------------------------------------------
-sh$ cat Makefile                       sh$ cat Makefile
+sh$ cat Makefile                    sh$ cat Makefile
 
-include module.mk                      EXCL_1 := baz.c   <span class="hljs-comment"># include &#xC804;&#xC5D0; &#xBCC0;&#xC218;&#xB97C; &#xB2E4;&#xB978;&#xAC12;&#xC73C;&#xB85C; &#xC815;&#xC758;</span>
-                                       include module.mk
+include module.mk                   EXCL_1 := baz.c   <span class="hljs-comment"># include &#xC804;&#xC5D0; &#xBCC0;&#xC218;&#xB97C; &#xB2E4;&#xB978;&#xAC12;&#xC73C;&#xB85C; &#xC815;&#xC758;</span>
+                                    include module.mk
 
-<span class="hljs-comment">#####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####                  #####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####</span>
-foo.c bar.c                            baz.c     <span class="hljs-comment"># &apos;?=&apos; &#xC5F0;&#xC0B0;&#xC790;&#xC5D0; &#xC758;&#xD574; baz.c &#xAC12;&#xC774; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</span>
-zoo.c                                  zoo.c
+<span class="hljs-comment">#####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####               #####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####</span>
+foo.c bar.c                         baz.c     <span class="hljs-comment"># &apos;?=&apos; &#xC5F0;&#xC0B0;&#xC790;&#xC5D0; &#xC758;&#xD574; baz.c &#xAC12;&#xC774; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</span>
+zoo.c                               zoo.c
 </code></pre>
 <h4 id="">!=</h4>
 <p>&#xC774; &#xC5F0;&#xC0B0;&#xC790;&#xB294; <a href="builtin_functions/shell_function.html">shell builtin &#xD568;&#xC218;</a> &#xC640; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xB3D9;&#xC791;&#xD569;&#xB2C8;&#xB2E4;.
@@ -1079,14 +1068,12 @@ $(info xxx$(AA)yyy)
 &#xC8FC;&#xC758;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xAC00;&#xB839; value &#xC5D0; &#xD3EC;&#xD568;&#xB41C; &#xBCC0;&#xC218;&#xAC00; &#xC911;&#xAC04;&#xC5D0; &#xB2E4;&#xB978; &#xAC12;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xB41C;&#xB2E4;&#xB4E0;&#xC9C0; &#xC544;&#xB2C8;&#xBA74; &#xAC12;&#xC774; &#xC124;&#xC815;&#xB418;&#xAE30; &#xC804;&#xC5D0;
 &#xBCC0;&#xC218;&#xAC00; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;&#xB4E0;&#xC9C0; &#xD558;&#xBA74; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xACA0;&#xC8E0;.
-&#xB530;&#xB77C;&#xC11C; &#xAC00;&#xB2A5;&#xD558;&#xBA74; simple &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xD544;&#xC694;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0; recursive &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.
-&#xC804;&#xD1B5;&#xC801;&#xC778; make &#xC5D0;&#xC11C;&#xB294; simple &#xBCC0;&#xC218; &#xAE30;&#xB2A5;&#xC774; &#xC5C6;&#xC5B4;&#xC11C; portability &#xB97C; &#xC704;&#xD574;&#xC11C; recursive
-&#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xB97C; &#xB9CE;&#xC774; &#xBCFC; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xADF8;&#xC640; &#xAC19;&#xC740; &#xACBD;&#xC6B0;&#xAC00; &#xC544;&#xB2C8;&#xB77C;&#xBA74; simple &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>&#xB2E4;&#xC74C;&#xC740; Makefile &#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; SRCS &#xBCC0;&#xC218;&#xC5D0; &#xB450; &#xAC1C;&#xC758; include &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xAC01;&#xAC01;<code>+=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC774;&#xC6A9;&#xD574; append &#xB97C; &#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC785;&#xB2C8;&#xB2E4;.
-&#xC774;&#xB54C; &#xB9CC;&#xC57D;&#xC5D0; Makefile 1 &#xC5D0;&#xC11C;&#xCC98;&#xB7FC; SRCS &#xBCC0;&#xC218;&#xB97C; recursive &#xBCC0;&#xC218;&#xB85C; &#xCD08;&#xAE30;&#xD654;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xBA74; &#xAC01; &#xBAA8;&#xB4C8;&#xC5D0;&#xC11C;
-value &#xAC12;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB41C; <code>$(module_srcs)</code> &#xAC00; &#xC2E4;&#xC81C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xC2DC;&#xC810;&#xC5D0;&#xC11C; &#xD655;&#xC7A5;&#xC774; &#xC77C;&#xC5B4;&#xB098;&#xAC8C; &#xB418;&#xBBC0;&#xB85C; &#xACB0;&#xACFC;&#xC801;&#xC73C;&#xB85C; 
-module2.mk &#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; &#xAC12;&#xC774; &#xB450;&#xBC88; &#xCD9C;&#xB825;&#xB418;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.
-Makefile 2 &#xC5D0;&#xC11C;&#xC640; &#xAC19;&#xC774; SRCS &#xBCC0;&#xC218;&#xB97C; simple &#xBCC0;&#xC218;&#xB85C; &#xCD08;&#xAE30;&#xD654;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xBA74; 
+&#xB530;&#xB77C;&#xC11C; &#xAC00;&#xB2A5;&#xD558;&#xBA74; simple &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xD544;&#xC694;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0; recursive &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xB450; &#xAC1C;&#xC758; include &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xAC01;&#xAC01;<code>+=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC774;&#xC6A9;&#xD574; SRCS &#xBCC0;&#xC218;&#xC5D0; append &#xB97C; &#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC785;&#xB2C8;&#xB2E4;.
+&#xC774;&#xB54C; &#xB9CC;&#xC57D;&#xC5D0; Makefile 1 &#xC5D0;&#xC11C;&#xCC98;&#xB7FC; SRCS &#xBCC0;&#xC218;&#xAC00; recursive &#xBCC0;&#xC218;&#xB85C; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;&#xBA74; &#xAC01; &#xBAA8;&#xB4C8;&#xC5D0;&#xC11C;
+value &#xAC12;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB41C; <code>$(module_srcs)</code> &#xAC00; &#xC2E4;&#xC81C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xC2DC;&#xC810;&#xC5D0;&#xC11C; &#xD655;&#xC7A5;&#xC774; &#xC77C;&#xC5B4;&#xB098;&#xAC8C; &#xB418;&#xBBC0;&#xB85C;
+&#xACB0;&#xACFC;&#xC801;&#xC73C;&#xB85C; module2.mk &#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; &#xAC12;&#xC774; &#xB450;&#xBC88; &#xCD9C;&#xB825;&#xB418;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.
+Makefile 2 &#xC5D0;&#xC11C;&#xC640; &#xAC19;&#xC774; SRCS &#xBCC0;&#xC218;&#xB97C; simple &#xBCC0;&#xC218;&#xB85C; &#xCD08;&#xAE30;&#xD654;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; 
 append &#xC2DC;&#xC5D0; &#xBCC0;&#xC218;&#xAC12;&#xC774; &#xBC14;&#xB85C; &#xD655;&#xC7A5;&#xB418;&#xC5B4; &#xC800;&#xC7A5;&#xB418;&#xBBC0;&#xB85C; &#xC774;&#xC640; &#xAC19;&#xC740; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile">sh$ cat module1.mk
 <span class="hljs-constant">module_srcs</span> := aaa.c bbb.c
@@ -1097,7 +1084,6 @@ sh$ cat module2.mk
 <span class="hljs-constant">SRCS</span> += <span class="hljs-variable">$(module_srcs)</span>
 -----------------------
                          <span class="hljs-comment"># Makefile 1</span>
-<span class="hljs-constant">SRCS</span> =                   # SRCS &#xB97C; recusive &#xBCC0;&#xC218;&#xB85C; &#xCD08;&#xAE30;&#xD654;
 include module1.mk
 include module2.mk
 $(info $(SRCS))          <span class="hljs-comment"># &#xD604;&#xC7AC; $(SRCS) &#xBCC0;&#xC218;&#xAC12;&#xC740; $(module_srcs) $(module_srcs) &#xAC00; &#xB41C;&#xB2E4;.</span>
