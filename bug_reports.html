@@ -710,7 +710,7 @@
 <hr>
 <p>make 4.3 &#xBC84;&#xC804;&#xC758; deb &#xD328;&#xD0A4;&#xC9C0;&#xAC00; &#xC544;&#xC9C1; &#xB098;&#xC624;&#xC9C0; &#xC54A;&#xC558;&#xC744; &#xACBD;&#xC6B0;&#xB294; &#xB2E4;&#xC74C; &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xBA74;
 &#xD604;&#xC7AC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; 4.3 &#xBC84;&#xC804;&#xC758; make &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC774; &#xC0DD;&#xC131;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> `mktemp <span class="hljs-operator">-d</span>` &amp;&amp; 
+<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> `mktemp <span class="hljs-operator">-d</span> -p /dev/shm` &amp;&amp; 
     ( curl -L https://ftp.gnu.org/gnu/make/make-<span class="hljs-number">4.3</span>.tar.gz | tar xvz &amp;&amp; 
     <span class="hljs-built_in">cd</span> make-<span class="hljs-number">4.3</span> &amp;&amp; ./configure &amp;&amp; make -j `nproc` &amp;&amp; strip make ) &amp;&amp; 
     mv make-<span class="hljs-number">4.3</span>/make <span class="hljs-string">&quot;<span class="hljs-variable">$OLDPWD</span>&quot;</span> &amp;&amp; rm -rf <span class="hljs-string">&quot;<span class="hljs-variable">$PWD</span>&quot;</span> &amp;&amp; <span class="hljs-built_in">cd</span> -
