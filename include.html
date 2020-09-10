@@ -923,12 +923,12 @@ make: *** No rule to make target &apos;fooooo.mk&apos;.  Stop.               <sp
 &#xC0AC;&#xC2E4; &#xC774;&#xC640; &#xAC19;&#xC740; &#xC815;&#xBCF4;&#xB97C; &#xC81C;&#xC77C; &#xC798; &#xC54C;&#xC218;&#xC788;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC740; &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;&#xC785;&#xB2C8;&#xB2E4;.
 &#xB530;&#xB77C;&#xC11C; &#xCEF4;&#xD30C;&#xC77C;&#xB7EC;&#xB294; makefile &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xC758;&#xC874;&#xD30C;&#xC77C; <code>.d</code> &#xC0DD;&#xC131;&#xC744; &#xC704;&#xD55C; &#xC804;&#xCC98;&#xB9AC;&#xAE30; &#xC635;&#xC158;&#xB4E4;&#xC744; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-sh">$ cat pty/pty_fork.c
-<span class="hljs-comment">#include &quot;pty_master_open.h&quot;</span>
-<span class="hljs-comment">#include &quot;pty_fork.h&quot;</span>
-<span class="hljs-comment">#include &quot;lib/tlpi_hdr.h&quot;</span>
 <span class="hljs-comment">#include &lt;fcntl.h&gt;</span>
 <span class="hljs-comment">#include &lt;termios.h&gt;</span>
 <span class="hljs-comment">#include &lt;sys/ioctl.h&gt;</span>
+<span class="hljs-comment">#include &quot;pty_master_open.h&quot;</span>
+<span class="hljs-comment">#include &quot;pty_fork.h&quot;</span>
+<span class="hljs-comment">#include &quot;lib/tlpi_hdr.h&quot;</span>
 . . . .
 . . . .
 
@@ -1011,11 +1011,11 @@ endif
 &#xCD9C;&#xB825; &#xD6C4; &#xCEF4;&#xD30C;&#xC77C; &#xC791;&#xC5C5;&#xAE4C;&#xC9C0; &#xC774;&#xC5B4;&#xC9C0;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xB530;&#xB77C;&#xC11C; &#xC544;&#xB798; <code>-M</code> &#xC635;&#xC158;&#xACFC; &#xD568;&#xAED8; &#xC0AC;&#xC6A9;&#xB41C; <code>-o</code> &#xC635;&#xC158;&#xC740; &#xCEF4;&#xD30C;&#xC77C;&#xC2DC; &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xD30C;&#xC77C;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-sh">sh$ cat pty/unbuffer.c
+<span class="hljs-comment">#include &lt;termios.h&gt;</span>
+<span class="hljs-comment">#include &lt;sys/select.h&gt;</span>
 <span class="hljs-comment">#include &quot;pty_fork.h&quot;</span>
 <span class="hljs-comment">#include &quot;lib/tty_functions.h&quot;</span>
 <span class="hljs-comment">#include &quot;lib/tlpi_hdr.h&quot;</span>
-<span class="hljs-comment">#include &lt;termios.h&gt;</span>
-<span class="hljs-comment">#include &lt;sys/select.h&gt;</span>
 . . . .
 . . . .
 
