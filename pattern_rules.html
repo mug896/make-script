@@ -761,7 +761,7 @@ gcc -c -o zoo.o zoo.c
 &#xB450; &#xBC88;&#xC9F8;&#xC640; &#xAC19;&#xC774; pattern &#xC774;&#xB098; <a href="#suffix_rules">suffix</a> &#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;&#xC744; implicit rule &#xC774;&#xB77C;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <h4 id="targetspecific-&#xBCC0;&#xC218;&#xB3C4;-&#xC0AC;&#xC6A9;-&#xAC00;&#xB2A5;">Target-specific &#xBCC0;&#xC218;&#xB3C4; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;</h4>
 <p>pattern rule &#xC5D0;&#xC11C;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; target-specific &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
-&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xC2DC;&#xBA74; global &#xC601;&#xC5ED;&#xC5D0; CFLAGS &#xBCC0;&#xC218;&#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xC9C0;&#xB9CC;
+&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xBA74; global &#xC601;&#xC5ED;&#xC5D0; CFLAGS &#xBCC0;&#xC218;&#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xC9C0;&#xB9CC;
 <code>%.o</code> &#xD0C0;&#xAC9F;&#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; &#xAC12;&#xC774; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile"><span class="hljs-constant">MAKEFLAGS</span> += -rR
 
@@ -779,7 +779,7 @@ foo.o : foo.c : -O2
 </code></pre>
 <h4 id="pattern-rule-&#xACFC;-explicit-&#xD0C0;&#xAC9F;-&#xB77C;&#xC778;&#xC744;-&#xAC19;&#xC774;-&#xC0AC;&#xC6A9;">Pattern rule &#xACFC; explicit &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC744; &#xAC19;&#xC774; &#xC0AC;&#xC6A9;</h4>
 <p>pattern rule &#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C; explicit &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xD2B9;&#xC815; &#xD0C0;&#xAC9F;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xC124;&#xC815;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
-&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xC2DC;&#xBA74; <code>foo.o</code> &#xD0C0;&#xAC9F;&#xC774; pattern rule &#xACFC; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC5B4; &#xC2E4;&#xD589;&#xB420; &#xB54C;
+&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xBA74; <code>foo.o</code> &#xD0C0;&#xAC9F;&#xC774; pattern rule &#xACFC; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC5B4; &#xC2E4;&#xD589;&#xB420; &#xB54C;
 explicit &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; &#xAC12;&#xC774; &#xC801;&#xC6A9;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile"><span class="hljs-constant">MAKEFLAGS</span> += -rR
 
@@ -953,7 +953,7 @@ sh$ make foo/bar/zoo.o
 % : foo/bar/zoo.o
 </code></pre>
 <p>match-anything &#xB8F0;&#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; explicit &#xD0C0;&#xAC9F;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xACE0; &#xD328;&#xD134;&#xC740; &#xB9E4;&#xCE6D;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
-&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xC2DC;&#xBA74; bar &#xD0C0;&#xAC9F;&#xC774; explicit &#xC77C;&#xACBD;&#xC6B0; (1) &#xB294; <code>%</code> &#xB8F0;&#xACFC; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC5B4; recipe &#xAC00; &#xC2E4;&#xD589;&#xB418;&#xC9C0;&#xB9CC;
+&#xB2E4;&#xC74C;&#xC744; &#xBCF4;&#xBA74; bar &#xD0C0;&#xAC9F;&#xC774; explicit &#xC77C;&#xACBD;&#xC6B0; (1) &#xB294; <code>%</code> &#xB8F0;&#xACFC; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC5B4; recipe &#xAC00; &#xC2E4;&#xD589;&#xB418;&#xC9C0;&#xB9CC;
 <code>%.bar</code> &#xC640;&#xAC19;&#xC740; &#xD328;&#xD134;&#xC77C; &#xACBD;&#xC6B0; (2) &#xB294; &#xB9E4;&#xCE6D;&#xC774; &#xB418;&#xC9C0; &#xC54A;&#xC544; &#xC885;&#xB8CC;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC774;&#xB54C;&#xB294; (3) &#xACFC;&#xAC19;&#xC774; &#xC9C1;&#xC811; <code>%.bar</code> &#xD328;&#xD134; &#xB8F0;&#xC744; &#xC791;&#xC131;&#xD574;&#xC57C; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile">foo : bar            (1)       %.foo : %.bar        (2)         %.foo : %.bar        (3)
@@ -1021,7 +1021,7 @@ explicit &#xD558;&#xAC8C; &#xC9C0;&#xC815;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xD
 rule &#xC758; &#xD0C0;&#xAC9F; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xD30C;&#xC77C;&#xBA85; &#xC678;&#xC5D0;
 &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xD0C0;&#xAC9F;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xB418;&#xB294; &#xACBD;&#xC6B0;, 
 &#xD328;&#xD134;&#xACFC; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xD604;&#xC7AC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xB3C4; &#xD574;&#xB2F9;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>&#xB2E4;&#xC74C; &#xC608;&#xC81C;&#xB97C; &#xBCF4;&#xC2DC;&#xBA74; explicit &#xB8F0;&#xC758; &#xACBD;&#xC6B0;&#xB294; <code>make foo.o</code> &#xBA85;&#xB839; &#xC2E4;&#xD589; &#xD6C4;&#xC5D0; foo.c, foo.o, foo.y
+<p>&#xB2E4;&#xC74C; &#xC608;&#xC81C;&#xB97C; &#xBCF4;&#xBA74; explicit &#xB8F0;&#xC758; &#xACBD;&#xC6B0;&#xB294; <code>make foo.o</code> &#xBA85;&#xB839; &#xC2E4;&#xD589; &#xD6C4;&#xC5D0; foo.c, foo.o, foo.y
 &#xD30C;&#xC77C;&#xC774; &#xBAA8;&#xB450; &#xC874;&#xC7AC;&#xD558;&#xC9C0;&#xB9CC; implicit &#xB8F0;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; 
 &#xC9C0;&#xC815;&#xD55C; &#xC774;&#xB984;&#xC778; foo.o &#xD30C;&#xC77C; &#xC678;&#xC5D0;&#xB294; make &#xC5D0;&#xC758;&#xD574; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC0AD;&#xC81C;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC774;&#xB807;&#xAC8C; &#xBE4C;&#xB4DC; &#xC911;&#xAC04;&#xC5D0; &#xC784;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xC5C8;&#xB2E4; &#xC0AD;&#xC81C;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC744; intermediate &#xD30C;&#xC77C;&#xC774;&#xB77C;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;.</p>
