@@ -1140,7 +1140,7 @@ endif
 <span class="hljs-constant">OBJ_DIR</span>   := <span class="hljs-variable">$(BUILD_DIR)</span>/obj
 <span class="hljs-constant">BIN_DIR</span>   := <span class="hljs-variable">$(BUILD_DIR)</span>/bin
 
-<span class="hljs-constant">QUIET_CC</span> = <span class="hljs-variable">$(if $(verbose)</span>,,@echo &quot;CC  $&lt;&quot;;)       # recipe &#xC2E4;&#xD589; &#xC2DC;&#xC810;&#xC5D0; &#xBCC0;&#xC218;&#xAC00;
+<span class="hljs-constant">QUIET_CC</span> = <span class="hljs-variable">$(if $(verbose)</span>,,@echo &quot;CC  $@&quot;;)       # recipe &#xC2E4;&#xD589; &#xC2DC;&#xC810;&#xC5D0; &#xBCC0;&#xC218;&#xAC00;
 <span class="hljs-constant">QUIET_LD</span> = <span class="hljs-variable">$(if $(verbose)</span>,,@echo &quot;LD  $@&quot;;)       # &#xD655;&#xC7A5;&#xB418;&#xAE30; &#xC704;&#xD574; recursive &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;
 <span class="hljs-constant">Q</span>        = <span class="hljs-variable">$(if $(verbose)</span>,,@)
 
@@ -1160,7 +1160,7 @@ $(BIN_DIR) $(OBJ_DIR) :
 sh$ mkdir src &amp;&amp; echo &apos;int main() {}&apos; &gt; src/foo.c
 
 sh$ make 
-CC  src/foo.c
+CC  src/foo.o
 LD  BUILD/bin/foo
 
 sh$ rm -rf BUILD
