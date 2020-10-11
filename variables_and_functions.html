@@ -782,7 +782,7 @@ ifdef PROGRAMS                               ifdef PROGRAMS
   $(info $(PROGRAMS))                           $(info $(PROGRAMS))
 endif                                        endif
 
---------------------------                   ----------------------                          
+--------------------------                   ---------------------- 
 sh$ make                                     sh$ make
 foobar
 </code></pre>
@@ -1050,6 +1050,22 @@ $(info $(flavor AA))
 <span class="hljs-comment">#####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  #####</span>
 /bin/pwd /bin/ping6 /bin/plymouth /bin/ping4 /bin/pidof /bin/ps /bin/ping
 simple
+</code></pre>
+<h4 id="&#xBCC0;&#xC218;&#xC758;-flavor-&#xBCC0;&#xACBD;">&#xBCC0;&#xC218;&#xC758; flavor &#xBCC0;&#xACBD;</h4>
+<p><code>:=</code> &#xC5F0;&#xC0B0;&#xC790;&#xC5D0; &#xC758;&#xD574; simple &#xBCC0;&#xC218;&#xAC00; &#xB418;&#xC5B4;&#xB3C4; &#xC774;&#xD6C4;&#xC5D0; <code>=</code>, <code>!=</code> recursive &#xC5F0;&#xC0B0;&#xC790;&#xAC00;
+&#xC0AC;&#xC6A9;&#xB418;&#xBA74; &#xB2E4;&#xC2DC; recursive &#xBCC0;&#xC218;&#xB85C; &#xBCC0;&#xACBD;&#xB429;&#xB2C8;&#xB2E4;.
+&#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; <code>=</code>, <code>!=</code>, <code>?=</code> &#xC5F0;&#xC0B0;&#xC790;&#xC5D0; &#xC758;&#xD574; recursive &#xBCC0;&#xC218;&#xAC00; &#xB418;&#xC5B4;&#xB3C4; &#xC774;&#xD6C4;&#xC5D0; <code>:=</code> &#xC5F0;&#xC0B0;&#xC790;&#xAC00;
+&#xC0AC;&#xC6A9;&#xB418;&#xBA74; &#xB2E4;&#xC2DC; simple &#xBCC0;&#xC218;&#xB85C; &#xB429;&#xB2C8;&#xB2E4;.
+<code>+=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB9CC; &#xBCC0;&#xACBD;&#xC774; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-constant">AA</span> := 100                      AA := 100                      AA  = 100
+<span class="hljs-constant">AA</span>  = 200                      AA != echo 200                 AA := 200
+$(info $(flavor AA))           $(info $(flavor AA))           $(info $(flavor AA))
+$(info $(AA))                  $(info $(AA))                  $(info $(AA))
+
+<span class="hljs-comment">####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####            ####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####            ####  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ####</span>
+
+recursive                      recursive                      simple
+200                            200                            200
 </code></pre>
 <h4 id="&#xB300;&#xC785;-&#xC5F0;&#xC0B0;&#xC2DC;-&#xACF5;&#xBC31;&#xBB38;&#xC790;">&#xB300;&#xC785; &#xC5F0;&#xC0B0;&#xC2DC; &#xACF5;&#xBC31;&#xBB38;&#xC790;</h4>
 <p>make &#xC5D0;&#xC11C;&#xB294; &#xB300;&#xC785; &#xC5F0;&#xC0B0;&#xC2DC;&#xC5D0; shell &#xC5D0;&#xC11C;&#xCC98;&#xB7FC; &#xC5F0;&#xC0B0;&#xC790;&#xC640; &#xACF5;&#xBC31; &#xC5C6;&#xC774; &#xBD99;&#xC77C; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.
