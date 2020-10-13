@@ -751,8 +751,8 @@ lib/foo/bar.c : lib/foo : bar.c
 <code>$^</code> &#xB294; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC788;&#xC744; &#xACBD;&#xC6B0; &#xC81C;&#xAC70;&#xB418;&#xB294;&#xB370; &#xBC18;&#xD574;, <code>$+</code> &#xB294; &#xC911;&#xBCF5;&#xC744; &#xD3EC;&#xD568;&#xD558;&#xC5EC; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xCD9C;&#xB825;&#xD569;&#xB2C8;&#xB2E4;. 
 &#xB9C1;&#xD06C; &#xC2DC;&#xC5D0;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xAC00; &#xC911;&#xBCF5;&#xB418;&#xC5B4; &#xB098;&#xD0C0;&#xB0A0; &#xC218; &#xC788;&#xB294;&#xB370; &#xADF8;&#xB54C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC5EC;&#xAE30;&#xC5D0; order-only prerequisites &#xC740; &#xD3EC;&#xD568;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile">main : xxx/yyy/foo.o aaa/bbb/bar.o xxx/yyy/foo.o     <span class="hljs-comment"># xxx/yyy/foo.o &#xB294; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xD30C;&#xC77C;</span>
-    @echo $^
+<pre><code class="lang-makefile">main : xxx/yyy/libfoo.a aaa/bbb/libbar.a xxx/yyy/libfoo.a     
+    @echo $^                              <span class="hljs-comment"># xxx/yyy/libfoo.a &#xB294; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xD30C;&#xC77C;</span>
     @echo $(^D) : $(^F)
     @echo
     @echo $+
@@ -762,11 +762,11 @@ lib/foo/bar.c : lib/foo : bar.c
 
 <span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
 
-xxx/yyy/foo.o aaa/bbb/bar.o                     <span class="hljs-comment"># &apos;$^&apos; &#xB294; xxx/yyy/foo.o &#xC911;&#xBCF5;&#xC774; &#xC81C;&#xAC70;&#xB41C;&#xB2E4;.</span>
-xxx/yyy aaa/bbb : foo.o bar.o
+xxx/yyy/libfoo.a aaa/bbb/libbar.a         <span class="hljs-comment"># &apos;$^&apos; &#xB294; xxx/yyy/libfoo.a &#xC911;&#xBCF5;&#xC774; &#xC81C;&#xAC70;&#xB41C;&#xB2E4;.</span>
+xxx/yyy aaa/bbb : libfoo.a libbar.a
 
-xxx/yyy/foo.o aaa/bbb/bar.o xxx/yyy/foo.o       <span class="hljs-comment"># &apos;$+&apos; &#xB294; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.</span>
-xxx/yyy aaa/bbb xxx/yyy : foo.o bar.o foo.o
+xxx/yyy/libfoo.a aaa/bbb/libbar.a xxx/yyy/libfoo.a       <span class="hljs-comment"># &apos;$+&apos; &#xB294; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.</span>
+xxx/yyy aaa/bbb xxx/yyy : libfoo.a libbar.a libfoo.a
 </code></pre>
 <h4 id="-d--f">$? , $(?D) , $(?F)</h4>
 <p>prerequisites &#xB9AC;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xD0C0;&#xAC9F; &#xD30C;&#xC77C;&#xBCF4;&#xB2E4; newer &#xD30C;&#xC77C;&#xC774; &#xC788;&#xC744; &#xACBD;&#xC6B0; &#xC124;&#xC815;&#xB429;&#xB2C8;&#xB2E4;.</p>
