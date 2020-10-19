@@ -800,6 +800,8 @@ $(info sub : MF : $(MAKEFLAGS))
 $(info sub : MO : $(MAKEOVERRIDES))
 $(info sub : AA : $(AA))
 
+0 :
+
 <span class="hljs-comment">###########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ############</span>
 sh$ make 
 top : MF : 
@@ -809,6 +811,7 @@ make[1]: Entering directory &apos;/home/mug896/subdir&apos;
 sub : MF : w                    <span class="hljs-comment"># &apos;-w&apos; &#xC635;&#xC158;&#xC740; sub-make &#xC2E4;&#xD589;&#xC2DC; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC124;&#xC815;&#xB41C;&#xB2E4;.</span>
 sub : MO : 
 sub : AA : 200                  <span class="hljs-comment"># &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; makefile &#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; &#xBCC0;&#xC218;&#xAC12;&#xC774; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</span>
+make[1]: Nothing to be done for &apos;0&apos;.
 make[1]: Leaving directory &apos;/home/mug896/subdir&apos;
 
 sh$ make -rR                    <span class="hljs-comment"># &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xC635;&#xC158; &#xC124;&#xC815;</span>
@@ -819,6 +822,7 @@ make[1]: Entering directory &apos;/home/mug896/subdir&apos;
 sub : MF : rRw                  <span class="hljs-comment"># sub-make &#xC5D0;&#xB3C4; &#xC804;&#xB2EC;&#xB418;&#xC5B4; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</span>
 sub : MO : 
 sub : AA : 200
+make[1]: Nothing to be done for &apos;0&apos;.
 make[1]: Leaving directory &apos;/home/mug896/subdir&apos;
 
 sh$ make -rR AA=111             <span class="hljs-comment"># &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; AA &#xBCC0;&#xC218;&#xAC12; &#xC124;&#xC815;</span>
@@ -829,6 +833,7 @@ make[1]: Entering directory &apos;/home/mug896/subdir&apos;
 sub : MF : rRw
 sub : MO : AA=111               <span class="hljs-comment"># MAKEOVERRIDES &#xBCC0;&#xC218;&#xAC12; &#xC124;&#xC815;&#xC5D0; &#xB530;&#xB77C;</span>
 sub : AA : 111                  <span class="hljs-comment"># sub-make &#xC5D0;&#xC11C;&#xB3C4; override &#xB41C;&#xB2E4;.</span>
+make[1]: Nothing to be done for &apos;0&apos;.
 make[1]: Leaving directory &apos;/home/mug896/subdir&apos;
 </code></pre>
 <p>&#xB2E4;&#xC74C;&#xC740; top makefile &#xC744; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBCC0;&#xACBD;&#xD55C; &#xD6C4;&#xC5D0; &#xC2E4;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</p>
@@ -851,6 +856,7 @@ make[1]: Entering directory &apos;/home/mug896/subdir&apos;
 sub : MF : 
 sub : MO : MAKEFLAGS=
 sub : AA : 200
+make[1]: Nothing to be done for &apos;0&apos;.
 make[1]: Leaving directory &apos;/home/mug896/subdir&apos;
 
 sh$ make -rR                    <span class="hljs-comment"># &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xC635;&#xC158; &#xC124;&#xC815;</span>
@@ -861,6 +867,7 @@ make[1]: Entering directory &apos;/home/mug896/subdir&apos;
 sub : MF :                      <span class="hljs-comment"># MAKEFLAGS &#xAC12;&#xC774; &#xC801;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</span>
 sub : MO : MAKEFLAGS=
 sub : AA : 200
+make[1]: Nothing to be done for &apos;0&apos;.
 make[1]: Leaving directory &apos;/home/mug896/subdir&apos;
 
 sh$ make -rR AA=111             <span class="hljs-comment"># &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; AA &#xBCC0;&#xC218;&#xAC12;&#xC744; &#xC124;&#xC815;&#xD558;&#xC600;&#xC9C0;&#xB9CC;</span>
@@ -871,6 +878,7 @@ make[1]: Entering directory &apos;/home/mug896/subdir&apos;
 sub : MF : 
 sub : MO : MAKEFLAGS=           <span class="hljs-comment"># MAKEOVERRIDES &#xAC12;&#xC774; &#xC124;&#xC815;&#xB418;&#xC9C0; &#xC54A;&#xC544;</span>
 sub : AA : 200                  <span class="hljs-comment"># sub-make &#xC5D0;&#xB294; &#xC801;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</span>
+make[1]: Nothing to be done for &apos;0&apos;.
 make[1]: Leaving directory &apos;/home/mug896/subdir&apos;
 </code></pre>
 
