@@ -809,14 +809,14 @@ yyy
 <p>one-line &#xBCC0;&#xC218; &#xC815;&#xC758;&#xC5D0;&#xC11C;&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; newline &#xC774; &#xBAA8;&#xB450; space &#xB85C; &#xBCC0;&#xACBD;&#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;
 newline &#xBB38;&#xC790;&#xB97C; &#xAC12;&#xC73C;&#xB85C; &#xAC16;&#xB294; &#xBCC0;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xB530;&#xB77C;&#xC11C; &#xC774;&#xB54C;&#xB294; multi-line &#xBCC0;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-makefile">                                            define nl :=
-<span class="hljs-comment"># newline &#xB4E4;&#xC774; &#xD558;&#xB098;&#xC758; space &#xB85C; &#xBCC0;&#xACBD;&#xB41C;&#xB2E4;.</span>
-<span class="hljs-constant">nl</span> != printf &apos;\012\012\012&apos;
-$(info aaa$(nl)bbb)                         endef
-                                            $(info aaa$(nl)bbb)
-<span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######                     ######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
-                                            aaa
-aaa  bbb                                    bbb
+<pre><code class="lang-makefile">                                                    define nl :=
+<span class="hljs-comment"># newline &#xB4E4;&#xC774; space &#xB85C; &#xBCC0;&#xACBD;&#xB41C;&#xB2E4;.</span>
+$ make -f - &lt;&lt;\@ 2&gt; /dev/null | od -a
+<span class="hljs-constant">AA</span> != printf &apos;X\012\012\012X&apos;                       endef
+$(info Y$(AA)Y)                                     $(info aaa$(nl)bbb)
+@                                                   <span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
+0000000   Y   X  sp  sp  sp   X   Y  nl             aaa
+0000010                                             bbb
 </code></pre>
 
                     
