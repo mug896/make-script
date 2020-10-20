@@ -1173,7 +1173,7 @@ dollar != printf &apos;\044&apos;
 text   := hash : $(hash), dollar : $(dollar)
 $(info $(text))
 &#xACB0;&#xACFC;: hash : #, dollar : $
-</code></pre><h4 id="&#xD2B9;&#xC815;-&#xBB38;&#xC790;&#xB97C;-&#xBCC0;&#xC218;&#xC5D0;-&#xB300;&#xC785;&#xD574;&#xC11C;-&#xC0AC;&#xC6A9;">&#xD2B9;&#xC815; &#xBB38;&#xC790;&#xB97C; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xC785;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;</h4>
+</code></pre><h4 id="&#xD2B9;&#xC218;-&#xBB38;&#xC790;&#xB97C;-&#xBCC0;&#xC218;&#xC5D0;-&#xB300;&#xC785;&#xD574;&#xC11C;-&#xC0AC;&#xC6A9;">&#xD2B9;&#xC218; &#xBB38;&#xC790;&#xB97C; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xC785;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;</h4>
 <p>&#xD568;&#xC218; &#xD638;&#xCD9C;&#xC2DC; &#xC778;&#xC218;&#xB97C; &#xAD6C;&#xBD84;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xB418;&#xB294; <code>,</code> &#xBB38;&#xC790;&#xB098; space &#xAC19;&#xC740; &#xBB38;&#xC790;&#xB294;
 &#xC77C;&#xBC18;&#xC801;&#xC778; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xAC12;&#xC744; &#xC804;&#xB2EC;&#xD558;&#xAE30; &#xC5B4;&#xB824;&#xC6B4; &#xACBD;&#xC6B0;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC774;&#xB7F4; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xD574;&#xB2F9; &#xBB38;&#xC790;&#xB97C; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xC785;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
@@ -1241,6 +1241,24 @@ $(info $(AA))
 Here is a message,
 with embedded,
 newlines.
+</code></pre>
+<p><code>#</code> &#xBB38;&#xC790;&#xB294; &#xC8FC;&#xC11D;&#xC758; &#xC2DC;&#xC791;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xBBC0;&#xB85C; &#xBCC0;&#xC218;&#xAC12;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xC785;&#xD574; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-makefile"><span class="hljs-constant">AA</span> := The brown fox # jumped over the lazy dog
+$(info $(AA))
+
+<span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
+
+The brown fox       &apos;<span class="hljs-comment">#&apos; &#xBB38;&#xC790; &#xC774;&#xD6C4;&#xB294; &#xC8FC;&#xC11D;&#xCC98;&#xB9AC;&#xAC00; &#xB418;&#xC5B4; &#xD45C;&#xC2DC;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</span>
+
+--------------------------------
+
+<span class="hljs-constant">pound</span> := \#
+<span class="hljs-constant">AA</span> := The brown fox <span class="hljs-variable">$(pound)</span> jumped over the lazy dog
+$(info $(AA))
+
+<span class="hljs-comment">######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
+
+The brown fox <span class="hljs-comment"># jumped over the lazy dog</span>
 </code></pre>
 <p><a name="comment"></a></p>
 <h4 id="&#xB300;&#xC785;-&#xC5F0;&#xC0B0;&#xC744;-&#xC815;&#xC758;&#xD558;&#xB294;-&#xB77C;&#xC778;&#xC5D0;&#xB294;-&#xC8FC;&#xC11D;&#xC774;-&#xD3EC;&#xD568;&#xB418;&#xBA74;-&#xC548;&#xB41C;&#xB2E4;-">&#xB300;&#xC785; &#xC5F0;&#xC0B0;&#xC744; &#xC815;&#xC758;&#xD558;&#xB294; &#xB77C;&#xC778;&#xC5D0;&#xB294; &#xC8FC;&#xC11D;&#xC774; &#xD3EC;&#xD568;&#xB418;&#xBA74; &#xC548;&#xB41C;&#xB2E4; !</h4>
