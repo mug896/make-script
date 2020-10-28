@@ -1080,7 +1080,7 @@ $$(BUILD_DIR)/pty/unbuffer.o: pty/unbuffer.c pty/pty_fork.h lib/tty_functions.h 
 &#xB530;&#xB77C;&#xC11C; <code>.d</code> &#xD30C;&#xC77C; &#xC0DD;&#xC131; &#xD6C4; &#xC774;&#xC5B4;&#xC11C; &#xCEF4;&#xD30C;&#xC77C; &#xC791;&#xC5C5;&#xC774; &#xC9C4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.
 &#xB2E4;&#xC2DC; &#xB9D0;&#xD574;&#xC11C; &#xCEF4;&#xD30C;&#xC77C;&#xC2DC; side effect &#xB85C; <code>.d</code> &#xD30C;&#xC77C;&#xC774; &#xC0DD;&#xC131;&#xB418;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.
 &#xB098;&#xC911;&#xC5D0; &#xC18C;&#xC2A4;&#xD30C;&#xC77C;&#xC774; &#xC218;&#xC815;&#xB418;&#xBA74; &#xB2E4;&#xC2DC; &#xCEF4;&#xD30C;&#xC77C; &#xB420;&#xAC83;&#xC774;&#xACE0; &#xC774;&#xB54C; <code>.d</code> &#xD30C;&#xC77C;&#xB3C4; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xAC31;&#xC2E0;&#xB418;&#xACA0;&#xC8E0;.</p>
-<pre><code class="lang-sh">sh$ gcc -I. -MMD -o BUILD/pty/unbuffer.o pty/unbuffer.c
+<pre><code class="lang-sh">sh$ gcc -c -I. -MMD -o BUILD/pty/unbuffer.o pty/unbuffer.c
 
 sh$ cat BUILD/pty/unbuffer.d 
 BUILD/pty/unbuffer.o: pty/unbuffer.c pty/pty_fork.h lib/tty_functions.h \
@@ -1092,7 +1092,7 @@ BUILD/pty/unbuffer.o: pty/unbuffer.c pty/pty_fork.h lib/tty_functions.h \
 &#xC758;&#xC874;&#xD30C;&#xC77C;&#xC774; &#xC5C6;&#xB2E4;&#xB294; make &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.
 &#xC774;&#xB54C; <code>-MP</code> &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAC01; &#xD5E4;&#xB354; &#xD30C;&#xC77C;&#xC758; &#xB354;&#xBBF8;&#xB8F0;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xC5EC; 
 make &#xC2E4;&#xD589;&#xC774; &#xC885;&#xB8CC;&#xB418;&#xC9C0; &#xC54A;&#xAC8C; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-sh">sh$ gcc -I. -MMD -MP -o BUILD/pty/unbuffer.o pty/unbuffer.c
+<pre><code class="lang-sh">sh$ gcc -c -I. -MMD -MP -o BUILD/pty/unbuffer.o pty/unbuffer.c
 
 sh$ cat BUILD/pty/unbuffer.d 
 BUILD/pty/unbuffer.o: pty/unbuffer.c pty/pty_fork.h lib/tty_functions.h \
