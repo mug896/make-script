@@ -764,7 +764,7 @@ endif
 <span class="hljs-comment">#############################  (1)  #######################################</span>
 
 <span class="hljs-comment"># &#xC2E4;&#xC81C; .Makefile.mk &#xD30C;&#xC77C;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xD568;&#xC218;&#xB85C; Makefile.mk &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &apos;.$d&apos; &#xC640; &apos;$(d)&apos; &#xC2A4;&#xD2B8;&#xB9C1;&#xC744;</span>
-<span class="hljs-comment"># regexp &#xC744; &#xC774;&#xC6A9;&#xD574; &#xD574;&#xB2F9; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB85C; &#xCE58;&#xD658;&#xD574;&#xC11C; .Makefile.mk &#xD30C;&#xC77C;&#xB85C; &#xC800;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;.</span>
+<span class="hljs-comment"># regex &#xC744; &#xC774;&#xC6A9;&#xD574; &#xD574;&#xB2F9; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB85C; &#xCE58;&#xD658;&#xD574;&#xC11C; .Makefile.mk &#xD30C;&#xC77C;&#xB85C; &#xC800;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;.</span>
 <span class="hljs-comment"># $1 : Makefile.mk</span>
 <span class="hljs-comment"># $2 : .Makefile.mk</span>
 <span class="hljs-comment"># $3 : diretory</span>
@@ -826,7 +826,7 @@ top makefile &#xC774; &#xC704;&#xCE58;&#xD55C; &#xACF3;&#xC73C;&#xB85C;&#xBD80;&
 &#xC9C1;&#xC811; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xBA85;&#xC744; &#xC791;&#xC131;&#xD558;&#xAC70;&#xB098; &#xC544;&#xB2C8;&#xBA74; <code>AA.$d := $(AA.dir1/dir2/dir3)</code> &#xC640; &#xAC19;&#xC774; 
 &#xBA3C;&#xC800; &#xD574;&#xB2F9; &#xBAA8;&#xB4C8; &#xBCC0;&#xC218;&#xB85C; &#xB300;&#xC785;&#xD55C; &#xD6C4; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <blockquote>
-<p><code>.$d</code> &#xC640; <code>$(d)</code> &#xB294; &#xB2E8;&#xC21C; regexp &#xCE58;&#xD658;&#xC774;&#xBBC0;&#xB85C; &#xB2E4;&#xB978; &#xACF3;&#xC5D0;&#xB3C4; &#xC0AC;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><code>.$d</code> &#xC640; <code>$(d)</code> &#xB294; &#xB2E8;&#xC21C; regex &#xCE58;&#xD658;&#xC774;&#xBBC0;&#xB85C; &#xB2E4;&#xB978; &#xACF3;&#xC5D0;&#xB3C4; &#xC0AC;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 </blockquote>
 <pre><code class="lang-makefile">BDIR.$d   := $(BUILD_DIR)/$(d)
 CFLAGS.$d := $(CFLAGS) -MMD -MP -I. -Wall
