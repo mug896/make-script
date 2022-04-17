@@ -1018,7 +1018,7 @@ zoo.c                               zoo.c
 <p>&#xC774; &#xC5F0;&#xC0B0;&#xC790;&#xB294; <a href="builtin_functions/shell_function.html">shell builtin &#xD568;&#xC218;</a> &#xC640; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xB3D9;&#xC791;&#xD569;&#xB2C8;&#xB2E4;.
 &#xB530;&#xB77C;&#xC11C; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xBA85;&#xB839;&#xC758; <code>stdout</code> &#xCD9C;&#xB825;&#xC774; &#xBC18;&#xD658;&#xAC12;&#xC774; &#xB418;&#xACE0; newline &#xC774; &#xBAA8;&#xB450; space &#xB85C; &#xBCC0;&#xD658;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <p><code>!=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xC6B0;&#xCE21; value &#xB294; immediate &#xC2E4;&#xD589;&#xB418;&#xC9C0;&#xB9CC; &#xBCC0;&#xC218;&#xB294; recursive &#xAC00; &#xB429;&#xB2C8;&#xB2E4;.<br><code>$(shell ...)</code> &#xD568;&#xC218;&#xC640; <code>:=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; immediate &#xC2E4;&#xD589;&#xB418;&#xACE0; simple &#xBCC0;&#xC218;&#xAC00; &#xB418;&#xACE0;<br><code>$(shell ...)</code> &#xD568;&#xC218;&#xC640; <code>=</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; defered &#xC2E4;&#xD589;&#xB418;&#xACE0; recursive &#xBCC0;&#xC218;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.  </p>
-<pre><code class="lang-makefile"><span class="hljs-constant">AA</span> != find /bin -name &apos;p*&apos;
+<pre><code class="lang-makefile"><span class="hljs-constant">AA</span> != find /bin/ -name &apos;p*&apos;
 $(info $(AA))
 $(info $(flavor AA))
 
@@ -1028,7 +1028,7 @@ recursive
 
 ----------------------------------
 
-<span class="hljs-constant">AA</span> := <span class="hljs-variable">$(shell find /bin -name &apos;p*&apos;)</span>      # shell &#xD568;&#xC218;&#xC640; &apos;:=&apos; &#xC5F0;&#xC0B0;&#xC790; &#xC0AC;&#xC6A9;
+<span class="hljs-constant">AA</span> := <span class="hljs-variable">$(shell find /bin/ -name &apos;p*&apos;)</span>      # shell &#xD568;&#xC218;&#xC640; &apos;:=&apos; &#xC5F0;&#xC0B0;&#xC790; &#xC0AC;&#xC6A9;
 $(info $(AA))
 $(info $(flavor AA))
 

@@ -699,10 +699,10 @@ trailing newline &#xC774; &#xC788;&#xC744;&#xACBD;&#xC6B0; &#xC81C;&#xAC70;&#xB4
 <p><code>.SHELLFLAGS</code> &#xBCC0;&#xC218; &#xC124;&#xC815;&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; shell &#xD568;&#xC218; &#xC2E4;&#xD589;&#xC2DC; &#xC801;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.
 make 4.2.1 &#xBC84;&#xC804;&#xC5D0; &#xC0C8;&#xB85C; &#xCD94;&#xAC00;&#xB41C; <code>.SHELLSTATUS</code> &#xBCC0;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xC885;&#xB8CC; &#xC0C1;&#xD0DC; &#xAC12;&#xB3C4; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile">
-$(info $(shell find /bin -name &apos;p*&apos;))
+$(info $(shell find /bin/ -name &apos;p*&apos;))
 
 <span class="hljs-comment">#######  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ######</span>
-sh$ find /bin -name &apos;p*&apos;
+sh$ find /bin/ -name &apos;p*&apos;
 /bin/pwd
 /bin/ping6
 /bin/plymouth
@@ -758,7 +758,7 @@ define nl
 
 endef
 $(info aaa$(nl)bbb)
-$(info $(subst $(bel),$(nl),$(shell { find /bin -name &apos;p*&apos; ;} | tr &apos;\n&apos; &apos;\a&apos; )))
+$(info $(subst $(bel),$(nl),$(shell { find /bin/ -name &apos;p*&apos; ;} | tr &apos;\n&apos; &apos;\a&apos; )))
 
 <span class="hljs-comment">########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ########</span>
 sh$ make
