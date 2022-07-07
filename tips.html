@@ -839,9 +839,9 @@ sh$ cat script.sh                          sh$ cat script.sh
 echo -e &quot;escape\ttest&quot;                     echo -e &quot;escape    test&quot;  <span class="hljs-comment"># tab &#xCC98;&#xB9AC;&#xAC00; &#xB41C;&#xB2E4;.</span>
 </code></pre>
 <h4 id="recipe-&#xC5D0;&#xC11C;-trap-&#xC758;-&#xC0AC;&#xC6A9;">recipe &#xC5D0;&#xC11C; trap &#xC758; &#xC0AC;&#xC6A9;</h4>
-<p>recipe &#xC2E4;&#xD589; &#xC911;&#xC5D0; &#xBA85;&#xB839;&#xC774; &#xC624;&#xB958;&#xB85C; &#xC885;&#xB8CC;&#xD558;&#xC5EC; make &#xC2E4;&#xD589;&#xC774; &#xC885;&#xB8CC;&#xB420; &#xACBD;&#xC6B0; &#xB4B7;&#xCC98;&#xB9AC; &#xC791;&#xC5C5;&#xC774; &#xD544;&#xC694;&#xD558;&#xBA74;
+<p>recipe &#xC2E4;&#xD589; &#xC911;&#xC5D0; &#xBA85;&#xB839;&#xC774; &#xC624;&#xB958;&#xB85C; &#xC885;&#xB8CC;&#xD558;&#xC5EC; make &#xC2E4;&#xD589;&#xC774; &#xC885;&#xB8CC;&#xB420; &#xACBD;&#xC6B0; &#xB4A4;&#xCC98;&#xB9AC; &#xC791;&#xC5C5;&#xC774; &#xD544;&#xC694;&#xD558;&#xBA74;
 shell &#xC5D0;&#xC11C;&#xC640; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; trap &#xC744; &#xC124;&#xC815;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.
-<code>EXIT</code> &#xC2E0;&#xD638;&#xB294; <code>set -e</code> shell &#xC635;&#xC158; &#xC124;&#xC815;&#xC5D0; &#xC758;&#xD574; &#xC885;&#xB8CC;&#xB420; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<code>EXIT</code> trap &#xC740; <code>set -e</code> shell &#xC635;&#xC158; &#xC124;&#xC815;&#xC5D0; &#xC758;&#xD574; &#xC885;&#xB8CC;&#xB420; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile"><span class="hljs-constant">TRAP</span> := set -e; trap &apos;test $$? != 0 &amp;&amp; echo [ ERROR EXIT ] some cleaning ...&apos; EXIT; 
 foo :
     @echo $@ recipe start ...
