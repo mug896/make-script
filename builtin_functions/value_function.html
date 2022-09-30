@@ -690,15 +690,15 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="value-function">Value Function</h1>
-<p><code>value</code> &#xD568;&#xC218;&#xB294; &#xBCC0;&#xC218;&#xC5D0; &#xC800;&#xC7A5;&#xB418;&#xC5B4;&#xC788;&#xB294; &#xAC12;&#xC744; &#xBC18;&#xD658;&#xD558;&#xB294;&#xB370;
+<p><code>value</code> &#xD568;&#xC218;&#xB294; &#xBCC0;&#xC218;&#xC5D0; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xAC12;&#xC744; &#xBC18;&#xD658;&#xD558;&#xB294;&#xB370;
 &#xD2B9;&#xD788; recursive &#xBCC0;&#xC218;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xD655;&#xC7A5;&#xB418;&#xAE30; &#xC804;&#xC758; &#xC2DD;&#xC774; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xBC18;&#xD658;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-makefile"><span class="hljs-constant">SRCS</span> := <span class="hljs-variable">$(addprefix lib/,foo.c bar.c zoo.c)</span>     # &apos;:=&apos; simple &#xC5F0;&#xC0B0;&#xC790;
 $(info $(value SRCS))
-&#xC2E4;&#xD589; &#xACB0;&#xACFC;: lib/foo.c lib/bar.c lib/zoo.c
+&#xC2E4;&#xD589;&#xACB0;&#xACFC;: lib/foo.c lib/bar.c lib/zoo.c
 
 <span class="hljs-constant">SRCS</span> = <span class="hljs-variable">$(addprefix lib/,foo.c bar.c zoo.c)</span>      # &apos;=&apos; recursive &#xC5F0;&#xC0B0;&#xC790;
 $(info $(value SRCS))
-&#xC2E4;&#xD589; &#xACB0;&#xACFC;: $(addprefix lib/,foo.c bar.c zoo.c)    <span class="hljs-comment"># &#xC2DD;&#xC774; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xBC18;&#xD658;&#xB41C;&#xB2E4;.</span>
+&#xC2E4;&#xD589;&#xACB0;&#xACFC;: $(addprefix lib/,foo.c bar.c zoo.c)     <span class="hljs-comment"># &#xC2DD;&#xC774; &#xC788;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xBC18;&#xD658;&#xB41C;&#xB2E4;.</span>
 
 -------------------------------------------------------------------------
 
@@ -710,7 +710,7 @@ $(info $(value FOO))           ----- (2)
     @echo $(FOO)               ----- (3)
     @echo $(value FOO)         ----- (4)
 
-<span class="hljs-comment">########  &#xC2E4;&#xD589; &#xACB0;&#xACFC;  ########</span>
+<span class="hljs-comment">########  &#xC2E4;&#xD589;&#xACB0;&#xACFC;  ########</span>
 
 $HOME             <span class="hljs-comment"># (1) FOO &#xBCC0;&#xC218;&#xAC12; &apos;$$HOME&apos; &#xC5D0;&#xC11C; &apos;$$&apos; &#xBCC0;&#xC218;&#xAC00; &apos;$&apos; &#xB85C; &#xBCC0;&#xACBD;&#xB41C;&#xB2E4;.</span>
 $$HOME            <span class="hljs-comment"># (2) value &#xD568;&#xC218;&#xB294; &#xBB38;&#xC790; &#xADF8;&#xB300;&#xB85C; &#xC2DD;&#xC744; &#xBC18;&#xD658;&#xD55C;&#xB2E4;.</span>
