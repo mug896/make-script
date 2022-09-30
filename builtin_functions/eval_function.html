@@ -850,13 +850,13 @@ $(info end.....)
 
 $ make foo
 start.....
-111          ----,
-444444       ----|---&gt; call &#xD568;&#xC218;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
-222             ----,
-555555          ----|---&gt; eval &#xD568;&#xC218;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
+111           ---&gt; call &#xD568;&#xC218;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
+444444        ---&gt; call &#xD568;&#xC218;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
+222           ---&gt; eval &#xD568;&#xC218;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
+555555        ---&gt; eval &#xD568;&#xC218;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
 end.....
-xxxxxxxxxx         ----,
-aaaaaaaaaa         ----|---&gt; foo &#xB8F0; recipe &#xC2E4;&#xD589;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
+xxxxxxxxxx    ---&gt; foo &#xB97C; recipe &#xC2E4;&#xD589;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
+aaaaaaaaaa    ---&gt; foo &#xB8F0; recipe &#xC2E4;&#xD589;&#xC5D0; &#xC758;&#xD574; &#xCD9C;&#xB825;
 </code></pre>
 <p>&#xBA3C;&#xC800; call &#xD568;&#xC218;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xBA74; <code>$(&#xBCC0;&#xC218;)</code> &#xAC00; &#xD655;&#xC7A5;&#xB418;&#xACE0;, <code>$$</code> &#xB294; <code>$</code> &#xB85C; &#xBCC0;&#xACBD;&#xB418;&#xACE0;,
 <code>$(&#xD568;&#xC218; ...)</code> &#xAC00; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
