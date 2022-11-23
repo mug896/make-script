@@ -717,14 +717,14 @@ sh$ make -e      <span class="hljs-comment"># --environment-overrides</span>
 Makefile &#xC5D0;&#xC11C; &#xBCC0;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD560;&#xB54C; override &#xC9C0;&#xC2DC;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</li>
 </ul>
 <h4 id="undefined">undefined</h4>
-<p>&#xB9CC;&#xC57D;&#xC5D0; makefile &#xC5D0; FOO &#xBCC0;&#xC218; &#xC815;&#xC758;&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xACE0;,
+<p>&#xB9CC;&#xC57D;&#xC5D0; Makefile &#xC5D0; foo &#xBCC0;&#xC218; &#xC815;&#xC758;&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xACE0;,
 &#xB610;&#xD55C; &#xD658;&#xACBD; &#xBCC0;&#xC218;&#xB3C4; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xACE0;,
-make &#xBA85;&#xB839; &#xC2E4;&#xD589;&#xC2DC; &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xBCC0;&#xC218;&#xAC12;&#xC744; &#xC804;&#xB2EC;&#xD558;&#xC9C0;&#xB3C4; &#xC54A;&#xC558;&#xB2E4;&#xBA74;
-FOO &#xBCC0;&#xC218;&#xB294; undefined &#xC0C1;&#xD0DC;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
+make &#xBA85;&#xB839; &#xC2E4;&#xD589;&#xC2DC; &#xBA85;&#xB839; &#xB77C;&#xC778;&#xC5D0;&#xC11C; &#xBCC0;&#xC218;&#xAC12;&#xC744; &#xC124;&#xC815;&#xD558;&#xC9C0;&#xB3C4; &#xC54A;&#xC558;&#xB2E4;&#xBA74;
+foo &#xBCC0;&#xC218;&#xB294; undefined &#xC0C1;&#xD0DC;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <blockquote>
 <p>builtin &#xBCC0;&#xC218;&#xB294; undefined &#xC0C1;&#xD0DC;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 </blockquote>
-<pre><code class="lang-makefile">$(info $(origin FOO))
+<pre><code class="lang-makefile">$(info $(origin foo))
 &#xACB0;&#xACFC;: undefined
 </code></pre>
 <h4 id="default">default</h4>
@@ -816,7 +816,7 @@ $(info $(origin CC))
 $(info $(CC))         <span class="hljs-comment"># inc.mk &#xC5D0;&#xC11C; &#xC124;&#xC815;&#xD55C; &#xAC12;&#xC774; &#xC801;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</span>
 &#xACB0;&#xACFC;: gcc
 </code></pre>
-<p>3 . override &#xAE30;&#xB2A5;&#xC740; override &#xC9C0;&#xC2DC;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; &#xD574;&#xB2F9; makefile &#xC5D0;&#xB9CC; &#xC801;&#xC6A9;&#xB418;&#xB294; &#xAE30;&#xB2A5;&#xC73C;&#xB85C; sub-make &#xAE4C;&#xC9C0;
+<p>3 . override &#xAE30;&#xB2A5;&#xC740; override &#xC9C0;&#xC2DC;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; &#xD574;&#xB2F9; Makefile &#xC5D0;&#xC11C;&#xB9CC; &#xC801;&#xC6A9;&#xB418;&#xACE0; sub-make &#xAE4C;&#xC9C0;
 &#xC801;&#xC6A9;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <h4 id="automatic">automatic</h4>
 <p>recipe &#xC2E4;&#xD589; &#xC2DC;&#xC5D0; &#xC124;&#xC815;&#xB418;&#xB294; automatic &#xBCC0;&#xC218;&#xB4E4;</p>
